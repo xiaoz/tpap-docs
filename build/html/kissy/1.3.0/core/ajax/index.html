@@ -1,0 +1,714 @@
+
+<!doctype html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+
+<title>ajax &mdash; OPENJS-v1.0 Document</title>
+
+<link rel="stylesheet" href="http://g.tbcdn.cn/kissy/k/1.3.1/css/dpl/base-min.css"/>
+<link rel="stylesheet" href="../../../../_static/kissy.css"/>
+    <link rel="stylesheet" href="http://a.tbcdn.cn/s/kissy/gallery/sphinx/1.1.3/pygments.css" type="text/css" />
+<link rel="shortcut icon" href="http://a.tbcdn.cn/s/kissy/favicon.ico" type="image/x-icon" />
+<!--<link href='http://fonts.googleapis.com/css?family=Philosopher' rel='stylesheet' type='text/css'>-->
+
+<script>
+    var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE: true
+    };
+</script>
+    <script type="text/javascript" src="http://a.tbcdn.cn/s/kissy/gallery/sphinx/1.1.3/??jquery.js,underscore.js,doctools.js,searchtools.js"></script> 
+<script>
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-31470541-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+</head>
+<body><h1 class="logo">
+    <a alt="KISSY" href="http://10.12.16.7/shop-team/products/openjs/build/html/">
+
+    <h2 style="width: 100%;
+margin: 0 auto;
+color: white;
+font-weight: bold;
+font-size: 44px;padding-left: 100px;">开放JS</h2>
+
+</a></h1>
+<div id="header">
+
+
+    <ul class="navigation">
+        <li><a href="http://docs.kissyui.com">导航在这</a></li>
+    </ul>
+<div id="searchbox" class="searchbox">
+    <form class="search" action="../../../../search.html" method="get">
+        <input type="text" name="q" size="28" class="ipt"/>
+        <input type="submit" value="搜索" class="btn"/>
+        <input type="hidden" name="check_keywords" value="yes"/>
+        <input type="hidden" name="area" value="default"/>
+    </form>
+</div>
+
+</div>
+
+<div id="content">
+	<div  id="layout" class="layout grid-s6m0e7">
+			<div class="col-main">
+				<div class="main-wrap">
+                    
+
+<div class='related'>
+    <h3>导航</h3>
+    
+    <ul>
+    <li class="right" style="margin-right: 10px">
+      <a href="../../../../genindex.html" title="总目录"
+         accesskey="I">索引</a></li>
+    <li class="right" >
+      <a href="../../../../py-modindex.html" title="Python Module Index"
+         >模块</a> | </li>
+    <li class="right" >
+      <a href="../anim/index.html" title="anim"
+         accesskey="N">下一页</a> | </li>
+    <li class="right" >
+      <a href="../index.html" title="core模块"
+         accesskey="P">上一页</a> | </li>
+    <li><a href="../../../../index.html">OPENJS-v1.0 Document</a> &#187; </li>
+      <li><a href="../../index.html" >KISSY文档-v1.3.0</a> &#187; </li>
+      <li><a href="../index.html" accesskey="U">core模块</a> &#187; </li> 
+    </ul>
+</div>
+					<div class="body">
+  <span class="target" id="module-io"></span><div class="section" id="ajax">
+<h1>ajax<a class="headerlink" href="#ajax" title="永久链接至标题">¶</a></h1>
+<div class="admonition hint">
+<p class="first admonition-title">提示</p>
+<p class="last">组件来源于 <a class="reference external" href="http://docs.kissyui.com/docs/html/api/core/ajax/index.html">这里</a></p>
+</div>
+<div class="admonition important">
+<p class="first admonition-title">重要</p>
+<p>组件引入方式</p>
+<div class="last highlight-php"><div class="highlight"><pre><span class="x">&lt;cajamodules include=&quot;kissy/1.3.0/core&quot; /&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>组件<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="#module-io" title="io"><tt class="xref py py-mod docutils literal"><span class="pre">io</span></tt></a></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id3">
+<h2>构造函数<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="#module-io" title="io"><tt class="xref py py-class docutils literal"><span class="pre">io</span></tt></a></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id4">
+<h2>参数配置<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="#io.cfg.url" title="io.cfg.url"><tt class="xref py py-data docutils literal"><span class="pre">cfg.url</span></tt></a></li>
+<li><a class="reference internal" href="#io.cfg.accepts" title="io.cfg.accepts"><tt class="xref py py-data docutils literal"><span class="pre">cfg.accepts</span></tt></a></li>
+<li><a class="reference internal" href="#io.cfg.dataType" title="io.cfg.dataType"><tt class="xref py py-data docutils literal"><span class="pre">cfg.dataType</span></tt></a></li>
+<li><a class="reference internal" href="#io.cfg.processData" title="io.cfg.processData"><tt class="xref py py-data docutils literal"><span class="pre">cfg.processData</span></tt></a></li>
+<li><a class="reference internal" href="#io.cfg.async" title="io.cfg.async"><tt class="xref py py-data docutils literal"><span class="pre">cfg.async</span></tt></a></li>
+<li><a class="reference internal" href="#io.cfg.cache" title="io.cfg.cache"><tt class="xref py py-data docutils literal"><span class="pre">cfg.cache</span></tt></a></li>
+<li><a class="reference internal" href="#io.cfg.contentType" title="io.cfg.contentType"><tt class="xref py py-data docutils literal"><span class="pre">cfg.contentType</span></tt></a></li>
+<li><a class="reference internal" href="#io.cfg.context" title="io.cfg.context"><tt class="xref py py-data docutils literal"><span class="pre">cfg.context</span></tt></a></li>
+<li><a class="reference internal" href="#io.cfg.crossDomain" title="io.cfg.crossDomain"><tt class="xref py py-data docutils literal"><span class="pre">cfg.crossDomain</span></tt></a></li>
+<li><a class="reference internal" href="#io.cfg.data" title="io.cfg.data"><tt class="xref py py-data docutils literal"><span class="pre">cfg.data</span></tt></a></li>
+<li><a class="reference internal" href="#io.cfg.serializeArray" title="io.cfg.serializeArray"><tt class="xref py py-data docutils literal"><span class="pre">cfg.serializeArray</span></tt></a></li>
+<li><a class="reference internal" href="#io.cfg.error" title="io.cfg.error"><tt class="xref py py-data docutils literal"><span class="pre">cfg.error</span></tt></a></li>
+<li><a class="reference internal" href="#io.cfg.success" title="io.cfg.success"><tt class="xref py py-data docutils literal"><span class="pre">cfg.success</span></tt></a></li>
+<li><a class="reference internal" href="#io.cfg.complete" title="io.cfg.complete"><tt class="xref py py-data docutils literal"><span class="pre">cfg.complete</span></tt></a></li>
+<li><a class="reference internal" href="#io.cfg.headers" title="io.cfg.headers"><tt class="xref py py-data docutils literal"><span class="pre">cfg.headers</span></tt></a></li>
+<li><a class="reference internal" href="#io.cfg.jsonp" title="io.cfg.jsonp"><tt class="xref py py-data docutils literal"><span class="pre">cfg.jsonp</span></tt></a></li>
+<li><a class="reference internal" href="#io.cfg.jsonpCallback" title="io.cfg.jsonpCallback"><tt class="xref py py-data docutils literal"><span class="pre">cfg.jsonpCallback</span></tt></a></li>
+<li><a class="reference internal" href="#io.cfg.mimeType" title="io.cfg.mimeType"><tt class="xref py py-data docutils literal"><span class="pre">cfg.mimeType</span></tt></a></li>
+<li><a class="reference internal" href="#io.cfg.password" title="io.cfg.password"><tt class="xref py py-data docutils literal"><span class="pre">cfg.password</span></tt></a></li>
+<li><a class="reference internal" href="#io.cfg.username" title="io.cfg.username"><tt class="xref py py-data docutils literal"><span class="pre">cfg.username</span></tt></a></li>
+<li><a class="reference internal" href="#io.cfg.scriptCharset" title="io.cfg.scriptCharset"><tt class="xref py py-data docutils literal"><span class="pre">cfg.scriptCharset</span></tt></a></li>
+<li><a class="reference internal" href="#io.cfg.timeout" title="io.cfg.timeout"><tt class="xref py py-data docutils literal"><span class="pre">cfg.timeout</span></tt></a></li>
+<li><a class="reference internal" href="#io.cfg.type" title="io.cfg.type"><tt class="xref py py-data docutils literal"><span class="pre">cfg.type</span></tt></a></li>
+<li><a class="reference internal" href="#io.cfg.xdr" title="io.cfg.xdr"><tt class="xref py py-data docutils literal"><span class="pre">cfg.xdr</span></tt></a></li>
+<li><a class="reference internal" href="#io.cfg.xhrFields" title="io.cfg.xhrFields"><tt class="xref py py-data docutils literal"><span class="pre">cfg.xhrFields</span></tt></a></li>
+<li><a class="reference internal" href="#io.cfg.form" title="io.cfg.form"><tt class="xref py py-data docutils literal"><span class="pre">cfg.form</span></tt></a></li>
+<li><a class="reference internal" href="#io.cfg.beforeSend" title="io.cfg.beforeSend"><tt class="xref py py-data docutils literal"><span class="pre">cfg.beforeSend</span></tt></a></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id5">
+<h2>属性<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="#io.readyState" title="io.readyState"><tt class="xref py py-attr docutils literal"><span class="pre">readyState</span></tt></a></li>
+<li><a class="reference internal" href="#io.status" title="io.status"><tt class="xref py py-attr docutils literal"><span class="pre">status</span></tt></a></li>
+<li><a class="reference internal" href="#io.statusText" title="io.statusText"><tt class="xref py py-attr docutils literal"><span class="pre">statusText</span></tt></a></li>
+<li><a class="reference internal" href="#io.responseText" title="io.responseText"><tt class="xref py py-attr docutils literal"><span class="pre">responseText</span></tt></a></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id6">
+<h2>方法详情<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<dl class="class">
+<dt id="io.IO">
+<em class="property">class </em><tt class="descclassname">io.</tt><tt class="descname">IO</tt><a class="headerlink" href="#io.IO" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><strong>IO</strong> ( cfg )</div>
+<div class="line">构建 io 请求并发送, 继承自 <tt class="xref py py-class docutils literal"><span class="pre">Promise</span></tt> .</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>cfg</strong> (<em>Object</em>) &#8211; 用来配置请求的键值对对象.
+所有的配置项都是可选的,可以通过
+<tt class="xref py py-func docutils literal"><span class="pre">io.setupConfig()</span></tt>
+来设置默认配置.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="io-config">
+<span id="id7"></span><h2>参数配置详情<a class="headerlink" href="#io-config" title="永久链接至标题">¶</a></h2>
+<dl class="data">
+<dt id="io.cfg.url">
+<tt class="descclassname">cfg.</tt><tt class="descname">url</tt><a class="headerlink" href="#io.cfg.url" title="永久链接至目标">¶</a></dt>
+<dd><p>{String} - 类型 String. 本次请求发送的地址.
+IO 接口采用白名单机制，换句话说，不是所有url都可以进行io请求的。
+IO接口的url环境白名单为 &#8216;taegrid.taobao.com&#8217;和&#8217;uz.taobao.com&#8217;， 用于线上, 本地url白名单为&#8217;<a href="#id8"><span class="problematic" id="id9">*</span></a>.taobao.net&#8217;, &#8216; <a href="#id10"><span class="problematic" id="id11">*</span></a>.taobaoapps.net&#8217;，可在测试时使用.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="io.cfg.accepts">
+<tt class="descclassname">cfg.</tt><tt class="descname">accepts</tt><a class="headerlink" href="#io.cfg.accepts" title="永久链接至目标">¶</a></dt>
+<dd><p>{Object} - 该配置和 <a class="reference internal" href="#io.cfg.dataType" title="io.cfg.dataType"><tt class="xref py py-data docutils literal"><span class="pre">dataType</span></tt></a>
+一起确定当前发送给服务器的 Accept 头. 默认包括</p>
+<blockquote>
+<div><div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+    <span class="nx">xml</span><span class="o">:</span> <span class="s2">&quot;application/xml, text/xml&quot;</span><span class="p">,</span>
+    <span class="nx">html</span><span class="o">:</span> <span class="s2">&quot;text/html&quot;</span><span class="p">,</span>
+    <span class="nx">text</span><span class="o">:</span> <span class="s2">&quot;text/plain&quot;</span><span class="p">,</span>
+    <span class="nx">json</span><span class="o">:</span> <span class="s2">&quot;application/json, text/javascript&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</dd></dl>
+
+<dl class="data">
+<dt id="io.cfg.dataType">
+<tt class="descclassname">cfg.</tt><tt class="descname">dataType</tt><a class="headerlink" href="#io.cfg.dataType" title="永久链接至目标">¶</a></dt>
+<dd><p>{String} - 期望能够从服务器返回的数据类型.</p>
+<p>如果没有指定，默认是jsonp .</p>
+<p>默认支持的类型（该类型的响应信息会作为第一个参数传到 <tt class="docutils literal"><span class="pre">success</span></tt> <tt class="docutils literal"><span class="pre">complete</span></tt> 回调中）有:</p>
+<blockquote>
+<div><ul class="simple">
+<li>&#8220;json&#8221; : 返回响应信息代表的 json 对象.</li>
+<li>&#8220;jsonp&#8221; : 返回 <a class="reference external" href="http://bob.pythonmac.org/archives/2005/12/05/remote-json-jsonp/">jsonp</a> 的响应信息代表的 json 对象.</li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="data">
+<dt id="io.cfg.processData">
+<tt class="descclassname">cfg.</tt><tt class="descname">processData</tt><a class="headerlink" href="#io.cfg.processData" title="永久链接至目标">¶</a></dt>
+<dd><p>{Boolean} -  默认 true . 当 <a class="reference internal" href="#io.cfg.data" title="io.cfg.data"><tt class="xref py py-data docutils literal"><span class="pre">data</span></tt></a> 为对象时是否用 <tt class="xref py py-func docutils literal"><span class="pre">param()</span></tt> 序列化.
+例如当需要传送一个 xml 或 <a class="reference external" href="http://www.w3.org/TR/XMLHttpRequest/#interface-formdata">formdata</a> 到服务器时就不需要 param data，
+并且最好同时设置 contentType 为合适的值.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="io.cfg.async">
+<tt class="descclassname">cfg.</tt><tt class="descname">async</tt><a class="headerlink" href="#io.cfg.async" title="永久链接至目标">¶</a></dt>
+<dd><p>{Boolean} - 默认 true.本次 xhr 请求是否异步发送，如果你需要同步发送，设置该配置为 false,注意同步请求在完成前会锁死浏览器.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="io.cfg.cache">
+<tt class="descclassname">cfg.</tt><tt class="descname">cache</tt><a class="headerlink" href="#io.cfg.cache" title="永久链接至目标">¶</a></dt>
+<dd><p>{Boolean} -  <a class="reference internal" href="#io.cfg.dataType" title="io.cfg.dataType"><tt class="xref py py-data docutils literal"><span class="pre">dataType</span></tt></a> 为 <strong>script</strong> 或 <strong>jsonp</strong> 时默认 false，其他默认为 true. false 时则会自动给请求 url 加上时间戳.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="io.cfg.contentType">
+<tt class="descclassname">cfg.</tt><tt class="descname">contentType</tt><a class="headerlink" href="#io.cfg.contentType" title="永久链接至目标">¶</a></dt>
+<dd><p>{String} - 设置请求头 Content-type, 默认 &#8220;application/x-www-form-urlencoded&#8221;. 设置 false 则不设置 Content-type 头
+(例如传输 <a class="reference external" href="http://www.w3.org/TR/XMLHttpRequest/#interface-formdata">formdata</a> 时需要设置 false).</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">&#8220;application/x-www-form-urlencoded&#8221; 时的数据总是以 utf-8 的编码传往服务器端.</p>
+</div>
+</dd></dl>
+
+<dl class="data">
+<dt id="io.cfg.context">
+<tt class="descclassname">cfg.</tt><tt class="descname">context</tt><a class="headerlink" href="#io.cfg.context" title="永久链接至目标">¶</a></dt>
+<dd><p>{Object} - 设置回调函数中的 this 值,默认为当前配置项.例如可以把一个 dom 节点作为 complete 回调函数的上下文:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="k">new</span> <span class="nx">IO</span><span class="p">({</span>
+    <span class="nx">url</span><span class="o">:</span><span class="s1">&#39;test.html&#39;</span><span class="p">,</span>
+    <span class="nx">context</span><span class="o">:</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span>
+    <span class="nx">complete</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;complete&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="data">
+<dt id="io.cfg.crossDomain">
+<tt class="descclassname">cfg.</tt><tt class="descname">crossDomain</tt><a class="headerlink" href="#io.cfg.crossDomain" title="永久链接至目标">¶</a></dt>
+<dd><p>{Boolean} - 默认同域请求为 false,不同域间为 true。设置该值为 true，则强制 jsonp 请求通过 <tt class="docutils literal"><span class="pre">script</span></tt> 节点发送，用于服务器重定向到其他域脚本的场景.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="io.cfg.data">
+<tt class="descclassname">cfg.</tt><tt class="descname">data</tt><a class="headerlink" href="#io.cfg.data" title="永久链接至目标">¶</a></dt>
+<dd><p>{String|Object} - 如果为 Object 类型则会通过 <tt class="xref py py-func docutils literal"><span class="pre">param()</span></tt> 格式化为字符串.</p>
+</dd></dl>
+
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p>data 不能为嵌套 object 等复杂类型，例如:</p>
+<dl class="docutils">
+<dt>不能是</dt>
+<dd><div class="first last highlight-javascript"><div class="highlight"><pre><span class="p">{</span><span class="nx">data</span><span class="o">:</span><span class="p">[{</span><span class="nx">x</span><span class="o">:</span><span class="mi">1</span><span class="p">}]}</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p>可以为</p>
+<div class="last highlight-javascript"><div class="highlight"><pre><span class="p">{</span><span class="nx">data</span><span class="o">:</span><span class="p">[</span><span class="mi">1</span><span class="p">]}</span>
+</pre></div>
+</div>
+</div>
+<dl class="data">
+<dt id="io.cfg.serializeArray">
+<tt class="descclassname">cfg.</tt><tt class="descname">serializeArray</tt><a class="headerlink" href="#io.cfg.serializeArray" title="永久链接至目标">¶</a></dt>
+<dd><p>{Boolean} - 默认 true。表示序列化 <a class="reference internal" href="#io.cfg.data" title="io.cfg.data"><tt class="xref py py-data docutils literal"><span class="pre">data</span></tt></a> 时是否给数组值对应的键名加 <tt class="docutils literal"><span class="pre">[]</span></tt> ，例如</p>
+<blockquote>
+<div><ul class="simple">
+<li><tt class="docutils literal"><span class="pre">true</span></tt> 时  <tt class="docutils literal"><span class="pre">{x:[1,2]}</span> <span class="pre">//=&gt;</span> <span class="pre">x[]=1&amp;x[]=2</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">false</span></tt> 时 <tt class="docutils literal"><span class="pre">{x:[1,2]}</span> <span class="pre">//=&gt;</span> <span class="pre">x=1&amp;x=2</span></tt></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="data">
+<dt id="io.cfg.error">
+<tt class="descclassname">cfg.</tt><tt class="descname">error</tt><a class="headerlink" href="#io.cfg.error" title="永久链接至目标">¶</a></dt>
+<dd><p>{Function} -  <strong>error</strong> (null, textStatus, io) 请求失败时的回调函数.这个函数接受 2 个参数：</p>
+<blockquote>
+<div><ul class="simple">
+<li>textStatus 表示错误信息，包括 &#8220;timeout&#8221; , &#8220;error&#8221; , &#8220;abort&#8221; 等</li>
+<li>io 表示这次请求代表的 io 实例.</li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="data">
+<dt id="io.cfg.success">
+<tt class="descclassname">cfg.</tt><tt class="descname">success</tt><a class="headerlink" href="#io.cfg.success" title="永久链接至目标">¶</a></dt>
+<dd><p>{Function} -  <strong>success</strong> ( data , textStatus , io) 请求成功时的回调函数.该函数传入三个参数.</p>
+<blockquote>
+<div><ul class="simple">
+<li>data : 根据 dataType 格式化服务器响应信息的响应对象</li>
+<li>textStatus : 描述成功的状态，一般是 &#8220;success&#8221;</li>
+<li>io : 本次请求的 io 实例.</li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="data">
+<dt id="io.cfg.complete">
+<tt class="descclassname">cfg.</tt><tt class="descname">complete</tt><a class="headerlink" href="#io.cfg.complete" title="永久链接至目标">¶</a></dt>
+<dd><p>{Function} -  <strong>complete</strong> ( data , textStatus , io) 请求完成时的回调函数.该函数传入三个参数.</p>
+<blockquote>
+<div><ul class="simple">
+<li>data : 根据 dataType 格式化服务器响应信息的响应对象，失败触发时为 null</li>
+<li>textStatus : 描述成功的状态，一般是 &#8220;success&#8221;</li>
+<li>io : 本次请求的 io 实例.</li>
+</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">无论成功或失败都会触发改回调.</p>
+</div>
+</dd></dl>
+
+<dl class="data">
+<dt id="io.cfg.headers">
+<tt class="descclassname">cfg.</tt><tt class="descname">headers</tt><a class="headerlink" href="#io.cfg.headers" title="永久链接至目标">¶</a></dt>
+<dd><p>{Object} -  设置这次请求 xhr 的请求头.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="io.cfg.jsonp">
+<tt class="descclassname">cfg.</tt><tt class="descname">jsonp</tt><a class="headerlink" href="#io.cfg.jsonp" title="永久链接至目标">¶</a></dt>
+<dd><p>{String} -  覆盖这次 jsonp 请求的 callback 函数名. 这个值可以取代请求 url 中 <tt class="docutils literal"><span class="pre">callback=?</span></tt> 的 callback.例如   {jsonp:&#8217;onJsonLoad&#8217;} 会导致 &#8216;onJsonLoad=?&#8217; 发送给服务器端.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="io.cfg.jsonpCallback">
+<tt class="descclassname">cfg.</tt><tt class="descname">jsonpCallback</tt><a class="headerlink" href="#io.cfg.jsonpCallback" title="永久链接至目标">¶</a></dt>
+<dd><p>{String|Function} - 覆盖这次 jsonp 请求 callback 函数对应的值 (<tt class="docutils literal"><span class="pre">callback={jsonpCallback}</span></tt>). 这个值将取代 kissy 默认生成的 UUID 值.</p>
+<blockquote>
+<div>当传入函数时，该函数需要返回字符串，每次请求都会调用该函数得到用于替换的字符串.</div></blockquote>
+</dd></dl>
+
+<dl class="data">
+<dt id="io.cfg.mimeType">
+<tt class="descclassname">cfg.</tt><tt class="descname">mimeType</tt><a class="headerlink" href="#io.cfg.mimeType" title="永久链接至目标">¶</a></dt>
+<dd><p>{String} -  跨平台设置 xhr 的 <a class="reference external" href="https://developer.mozilla.org/en/XmlHttpRequest#overrideMimeType%28%29">mimeType</a></p>
+</dd></dl>
+
+<dl class="data">
+<dt id="io.cfg.password">
+<tt class="descclassname">cfg.</tt><tt class="descname">password</tt><a class="headerlink" href="#io.cfg.password" title="永久链接至目标">¶</a></dt>
+<dd><p>{String} -  对于需要验证的 http 请求设置密码.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="io.cfg.username">
+<tt class="descclassname">cfg.</tt><tt class="descname">username</tt><a class="headerlink" href="#io.cfg.username" title="永久链接至目标">¶</a></dt>
+<dd><p>{String} -  对于需要验证的 http 请求设置用户名.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="io.cfg.scriptCharset">
+<tt class="descclassname">cfg.</tt><tt class="descname">scriptCharset</tt><a class="headerlink" href="#io.cfg.scriptCharset" title="永久链接至目标">¶</a></dt>
+<dd><p>{String} -  用于 dataType <tt class="docutils literal"><span class="pre">jsonp</span></tt> ，设定传输用的 script 节点的 <tt class="docutils literal"><span class="pre">charset</span></tt> 属性。只有当返回编码和当前页面编码不一致时使用.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="io.cfg.timeout">
+<tt class="descclassname">cfg.</tt><tt class="descname">timeout</tt><a class="headerlink" href="#io.cfg.timeout" title="永久链接至目标">¶</a></dt>
+<dd><p>{Number} -  对这次请求设个超时时间，单位秒. 当超时后会触发 <tt class="docutils literal"><span class="pre">error</span></tt> 以及 <tt class="docutils literal"><span class="pre">complete</span></tt> 回调 , 状态字符串为 &#8220;timeout&#8221;.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="io.cfg.type">
+<tt class="descclassname">cfg.</tt><tt class="descname">type</tt><a class="headerlink" href="#io.cfg.type" title="永久链接至目标">¶</a></dt>
+<dd><p>{String} -  可取值 &#8220;get&#8221; 或者 &#8220;post&#8221;.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="io.cfg.xhrFields">
+<tt class="descclassname">cfg.</tt><tt class="descname">xhrFields</tt><a class="headerlink" href="#io.cfg.xhrFields" title="永久链接至目标">¶</a></dt>
+<dd><p>{Object} -   设置到原生 xhr 对象的键值对.例如为了在标准浏览器进行跨域请求时携带cookie你可以设置 <a class="reference external" href="https://developer.mozilla.org/en/http_access_control#Requests_with_credentials">withCredentials</a> 为 true.</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="k">new</span> <span class="nx">IO</span><span class="p">({</span>
+    <span class="nx">url</span><span class="o">:</span><span class="s2">&quot;http://y.com/ping.php&quot;</span><span class="p">,</span>
+    <span class="nx">xhrFields</span><span class="o">:</span><span class="p">{</span>
+        <span class="nx">withCredentials</span><span class="o">:</span> <span class="kc">true</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>这样 x.com 发送请求 y.com 会携带 y.com 的 cookie 信息.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="io.cfg.xdr">
+<tt class="descclassname">cfg.</tt><tt class="descname">xdr</tt><a class="headerlink" href="#io.cfg.xdr" title="永久链接至目标">¶</a></dt>
+<dd><p>{Object} - 设置跨域的具体方式和细节，包括以下配置</p>
+<dl class="attribute">
+<dt id="io.cfg.xdr.src">
+<tt class="descclassname">cfg.xdr.</tt><tt class="descname">src</tt><a class="headerlink" href="#io.cfg.xdr.src" title="永久链接至目标">¶</a></dt>
+<dd><p>{String} 完全跨域请求的 flash 发送程序地址。当完全跨域时,KISSY io 在</p>
+<blockquote>
+<div><ul class="simple">
+<li>ie 中将采用 flash 发请求，默认采用 KISSY 自带 flash 发请求，也可将 kissy 自带的 flash 部署到其他地方，在 src 中指定。</li>
+<li>标准浏览器将采用原生机制.</li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="io.cfg.xdr.subDomain">
+<tt class="descclassname">cfg.xdr.</tt><tt class="descname">subDomain</tt><a class="headerlink" href="#io.cfg.xdr.subDomain" title="永久链接至目标">¶</a></dt>
+<dd><p>{Object} 跨子域时的一些请求配置，包括</p>
+<dl class="attribute">
+<dt id="io.cfg.xdr.subDomain.proxy">
+<tt class="descclassname">subDomain.</tt><tt class="descname">proxy</tt><a class="headerlink" href="#io.cfg.xdr.subDomain.proxy" title="永久链接至目标">¶</a></dt>
+<dd><p>{String} 指定代理页面的地址。默认 &#8220;/sub_domain_proxy.html&#8221; .
+例如 x.taobao.com 要发送请求给 y.taobao.com ，那么需要设置 x.taobao.com 的页面 document.domain=&#8217;taobao.com&#8217; ，然后提供 y.taobao.com/sub_domain_proxy.html ，该页面内容为</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;script&gt;</span><span class="nb">document</span><span class="p">.</span><span class="nx">domain</span><span class="o">=</span><span class="s1">&#39;taobao.com&#39;</span><span class="nt">&lt;/script&gt;</span>
+</pre></div>
+</div>
+<p>然后 x.taobao.com 的页面就可以和 y.taobao.com 通信了。</p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="data">
+<dt id="io.cfg.form">
+<tt class="descclassname">cfg.</tt><tt class="descname">form</tt><a class="headerlink" href="#io.cfg.form" title="永久链接至目标">¶</a></dt>
+<dd><p>{String} -  选择器字符串 <em class="xref std std-ref">KISSY selector</em></p>
+<ul class="simple">
+<li>如果 form 的 enctype 为 <cite>&#8220;multipart/form-data`</cite> 则会采用 <a class="reference external" href="http://www.webtoolkit.info/ajax-file-upload.html">iframe</a> 的方式进行无刷新文件上传，</li>
+<li>否则将 form 内的输入域和值序列化后通过 xhr 发送到服务器.</li>
+</ul>
+</dd></dl>
+
+<dl class="data">
+<dt id="io.cfg.beforeSend">
+<tt class="descclassname">cfg.</tt><tt class="descname">beforeSend</tt><a class="headerlink" href="#io.cfg.beforeSend" title="永久链接至目标">¶</a></dt>
+<dd><p>{Function} - 发送请求前的拦截函数，传入参数 （xhrObject, config）</p>
+<ul class="simple">
+<li>xhrObject 为 <tt class="xref py py-class docutils literal"><span class="pre">io.XhrObj</span></tt> 类型</li>
+</ul>
+<p>例如可以通过该函数实现上传进度监控</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">IO</span><span class="p">({</span>
+    <span class="nx">url</span><span class="o">:</span><span class="s1">&#39;./upload.php&#39;</span><span class="p">,</span>
+    <span class="nx">type</span><span class="o">:</span><span class="s2">&quot;post&quot;</span><span class="p">,</span>
+    <span class="nx">processData</span><span class="o">:</span><span class="kc">false</span><span class="p">,</span>
+    <span class="nx">data</span><span class="o">:</span><span class="nx">formData</span><span class="p">,</span>
+    <span class="nx">dataType</span><span class="o">:</span><span class="s1">&#39;json&#39;</span><span class="p">,</span>
+    <span class="nx">contentType</span><span class="o">:</span><span class="kc">false</span><span class="p">,</span>
+    <span class="nx">beforeSend</span><span class="o">:</span><span class="kd">function</span> <span class="p">(</span><span class="nx">xhr</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// 上传监听 upload</span>
+        <span class="nx">xhr</span><span class="p">.</span><span class="nx">getNativeXhr</span><span class="p">().</span><span class="nx">upload</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;progress&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">ev</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">S</span><span class="p">.</span><span class="nx">log</span><span class="p">({</span> <span class="s1">&#39;loaded&#39;</span><span class="o">:</span><span class="nx">ev</span><span class="p">.</span><span class="nx">loaded</span><span class="p">,</span> <span class="s1">&#39;total&#39;</span><span class="o">:</span><span class="nx">ev</span><span class="p">.</span><span class="nx">total</span> <span class="p">});</span>
+        <span class="p">});</span>
+    <span class="p">},</span>
+    <span class="nx">success</span><span class="o">:</span><span class="kd">function</span> <span class="p">(</span><span class="nx">d</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">S</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">d</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="id13">
+<h2>属性详情<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h2>
+<dl class="attribute">
+<dt id="io.readyState">
+<tt class="descclassname">io.</tt><tt class="descname">readyState</tt><a class="headerlink" href="#io.readyState" title="永久链接至目标">¶</a></dt>
+<dd><p>{Number} - 表示请求完成状态。可用于判断当前请求是否完成. 4 表示完成，否则表示正在进行中.(xhr 会有更多取值，jsonp script 只有 0(初始化) 1(发送中) 4(完成))</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="io.status">
+<tt class="descclassname">io.</tt><tt class="descname">status</tt><a class="headerlink" href="#io.status" title="永久链接至目标">¶</a></dt>
+<dd><p>{Number} - 响应状态码. xhr 会有更多取值。<tt class="docutils literal"><span class="pre">jsonp</span> <span class="pre">script</span></tt> 只有 200(成功) , 500(出错)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="io.statusText">
+<tt class="descclassname">io.</tt><tt class="descname">statusText</tt><a class="headerlink" href="#io.statusText" title="永久链接至目标">¶</a></dt>
+<dd><p>{String} - 响应状态字符串. 最终同回调 <a class="reference internal" href="#io.cfg.complete" title="io.cfg.complete"><tt class="xref py py-data docutils literal"><span class="pre">complete</span></tt></a> 中的 <tt class="docutils literal"><span class="pre">textStatus</span></tt> 一致.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="io.responseText">
+<tt class="descclassname">io.</tt><tt class="descname">responseText</tt><big>(</big><em>responseXML</em><big>)</big><a class="headerlink" href="#io.responseText" title="永久链接至目标">¶</a></dt>
+<dd><p>{String} - 返回响应对应的 text 和 xml（如果需要）.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="demo">
+<h2>Demo<a class="headerlink" href="#demo" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><p><strong>发送数据给服务器，服务器返回后通知用户</strong></p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="k">new</span> <span class="nx">IO</span><span class="p">({</span>
+   <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;POST&quot;</span><span class="p">,</span>
+   <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;some.php&quot;</span><span class="p">,</span>
+   <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">x</span><span class="o">:</span><span class="s1">&#39;y&#39;</span>
+   <span class="p">},</span>
+   <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">msg</span><span class="p">){</span>
+     <span class="nx">alert</span><span class="p">(</span> <span class="s2">&quot;Data Saved: &quot;</span> <span class="o">+</span> <span class="nx">msg</span> <span class="p">);</span>
+   <span class="p">}</span>
+ <span class="p">});</span>
+</pre></div>
+</div>
+<p><strong>取得最新的 html 并显示</strong></p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="k">new</span> <span class="nx">IO</span><span class="p">({</span>
+  <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;test.html&quot;</span><span class="p">,</span>
+  <span class="nx">cache</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">html</span><span class="p">){</span>
+    <span class="nx">KISSY</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="s2">&quot;#results&quot;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">html</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p><strong>发送 xml 文档给服务器</strong></p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">xmlDocument</span><span class="o">=</span><span class="nx">S</span><span class="p">.</span><span class="nx">parseXML</span><span class="p">(</span><span class="s2">&quot;&lt;a&gt;h&lt;/a&gt;&quot;</span><span class="p">);</span>
+
+<span class="k">new</span> <span class="nx">IO</span><span class="p">({</span>
+   <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;page.php&quot;</span><span class="p">,</span>
+   <span class="nx">processData</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+   <span class="nx">contentType</span><span class="o">:</span><span class="s1">&#39;text/xml&#39;</span><span class="p">,</span>
+   <span class="nx">data</span><span class="o">:</span> <span class="nx">xmlDocument</span><span class="p">,</span>
+   <span class="nx">type</span><span class="o">:</span><span class="s1">&#39;post&#39;</span>
+ <span class="p">});</span>
+</pre></div>
+</div>
+<p><strong>通过 xhr 发送 form 内容</strong></p>
+<p>自动序列化 <tt class="docutils literal"><span class="pre">form</span></tt> 为查询串通过 <tt class="docutils literal"><span class="pre">xhr</span></tt> 发送给服务器端</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;form&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">&#39;test&#39;</span> <span class="na">value=</span><span class="s">&#39;v&#39;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+
+<span class="nt">&lt;script&gt;</span>
+    <span class="k">new</span> <span class="nx">IO</span><span class="p">({</span>
+        <span class="nx">url</span><span class="o">:</span><span class="s1">&#39;send.php&#39;</span><span class="p">,</span>
+        <span class="nx">form</span><span class="o">:</span><span class="s1">&#39;#test&#39;</span><span class="p">,</span>
+        <span class="nx">type</span><span class="o">:</span><span class="s1">&#39;post&#39;</span><span class="p">,</span>
+        <span class="nx">dataType</span><span class="o">:</span><span class="s1">&#39;json&#39;</span><span class="p">,</span>
+        <span class="nx">success</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">d</span><span class="p">,</span><span class="nx">s</span><span class="p">,</span><span class="nx">xhr</span><span class="p">){</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;success&#39;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+
+</div>
+                    
+
+<div class='related'>
+    <h3>导航</h3>
+    
+    <ul>
+    <li class="right" style="margin-right: 10px">
+      <a href="../../../../genindex.html" title="总目录"
+         accesskey="I">索引</a></li>
+    <li class="right" >
+      <a href="../../../../py-modindex.html" title="Python Module Index"
+         >模块</a> | </li>
+    <li class="right" >
+      <a href="../anim/index.html" title="anim"
+         accesskey="N">下一页</a> | </li>
+    <li class="right" >
+      <a href="../index.html" title="core模块"
+         accesskey="P">上一页</a> | </li>
+    <li><a href="../../../../index.html">OPENJS-v1.0 Document</a> &#187; </li>
+      <li><a href="../../index.html" >KISSY文档-v1.3.0</a> &#187; </li>
+      <li><a href="../index.html" accesskey="U">core模块</a> &#187; </li> 
+    </ul>
+</div>
+					<div id="disqus_thread"></div>
+<script>
+    if(true && window.localStorage.getItem("kissy-commment")!="0"){
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kissy-docs'; // required: replace example with your forum shortname
+
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+     //var disqus_identifier = '/anim';
+     //var disqus_url = window.location;
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    }
+</script>
+<!--<div id="google-search-box">
+    <div id="cse" style="width: 100%;">Loading</div>
+    <script>
+        if(window.location.hostname.indexOf("kissyui.com")!=-1){
+            document.write('<script src="http://www.google.com/jsapi" type="text/javascript"><'+'/script>');
+        }
+    </script>
+    <script>
+        if(window.location.hostname.indexOf("kissyui.com")!=-1){
+            google.load('search', '1', {language : 'zh-CN', style : google.loader.themes.MINIMALIST});
+            google.setOnLoadCallback(function() {
+                var customSearchControl = new google.search.CustomSearchControl('012347804910294994683:n4uzb24gqdm');
+                customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+                customSearchControl.draw('cse');
+            }, true);
+        }
+    </script>
+</div>-->
+				</div>
+			</div>
+		
+    <div class="col-sub">
+
+<div class="s-box">
+    <div class="s-box-bd">
+        <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">KISSY文档-v1.3.0</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../components/index.html">组件API</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">core模块</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="">ajax</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../anim/index.html">anim</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../event/index.html">event</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ua/index.html">ua</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</div>
+    </div>
+    <div class="col-extra">
+        
+	<div class="s-box">
+		<div class="s-box-hd">
+			<h3>本页快速导航</h3>
+		</div>
+		<div class="s-box-bd">
+			<ul>
+<li><a class="reference internal" href="#">ajax</a><ul>
+<li><a class="reference internal" href="#id2">组件</a></li>
+<li><a class="reference internal" href="#id3">构造函数</a></li>
+<li><a class="reference internal" href="#id4">参数配置</a></li>
+<li><a class="reference internal" href="#id5">属性</a></li>
+<li><a class="reference internal" href="#id6">方法详情</a></li>
+<li><a class="reference internal" href="#io-config">参数配置详情</a></li>
+<li><a class="reference internal" href="#id13">属性详情</a></li>
+<li><a class="reference internal" href="#demo">Demo</a></li>
+</ul>
+</li>
+</ul>
+
+		</div>
+	</div>
+
+    </div>
+	</div>
+    <script>
+        if(!$.trim($(".col-extra").html())){
+            $("#layout").removeClass("grid-s6m0e7").addClass("grid-s6m0");
+        }
+    </script>
+</div>
+<div id="footer">
+    &copy; Copyright 2013~2023,  Created by 开放JavaScript-Team
+</div>
+</body>
+</html>

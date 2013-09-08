@@ -1,0 +1,582 @@
+
+<!doctype html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+
+<title>Calendar &mdash; OPENJS-v1.0 Document</title>
+
+<link rel="stylesheet" href="http://g.tbcdn.cn/kissy/k/1.3.1/css/dpl/base-min.css"/>
+<link rel="stylesheet" href="../../../../_static/kissy.css"/>
+    <link rel="stylesheet" href="http://a.tbcdn.cn/s/kissy/gallery/sphinx/1.1.3/pygments.css" type="text/css" />
+<link rel="shortcut icon" href="http://a.tbcdn.cn/s/kissy/favicon.ico" type="image/x-icon" />
+<!--<link href='http://fonts.googleapis.com/css?family=Philosopher' rel='stylesheet' type='text/css'>-->
+
+<script>
+    var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE: true
+    };
+</script>
+    <script type="text/javascript" src="http://a.tbcdn.cn/s/kissy/gallery/sphinx/1.1.3/??jquery.js,underscore.js,doctools.js,searchtools.js"></script> 
+<script>
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-31470541-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+</head>
+<body><h1 class="logo">
+    <a alt="KISSY" href="http://10.12.16.7/shop-team/products/openjs/build/html/">
+
+    <h2 style="width: 100%;
+margin: 0 auto;
+color: white;
+font-weight: bold;
+font-size: 44px;padding-left: 100px;">开放JS</h2>
+
+</a></h1>
+<div id="header">
+
+
+    <ul class="navigation">
+        <li><a href="http://docs.kissyui.com">导航在这</a></li>
+    </ul>
+<div id="searchbox" class="searchbox">
+    <form class="search" action="../../../../search.html" method="get">
+        <input type="text" name="q" size="28" class="ipt"/>
+        <input type="submit" value="搜索" class="btn"/>
+        <input type="hidden" name="check_keywords" value="yes"/>
+        <input type="hidden" name="area" value="default"/>
+    </form>
+</div>
+
+</div>
+
+<div id="content">
+	<div  id="layout" class="layout grid-s6m0e7">
+			<div class="col-main">
+				<div class="main-wrap">
+                    
+
+<div class='related'>
+    <h3>导航</h3>
+    
+    <ul>
+    <li class="right" style="margin-right: 10px">
+      <a href="../../../../genindex.html" title="总目录"
+         accesskey="I">索引</a></li>
+    <li class="right" >
+      <a href="../../../../py-modindex.html" title="Python Module Index"
+         >模块</a> | </li>
+    <li class="right" >
+      <a href="../../core/index.html" title="core模块"
+         accesskey="N">下一页</a> | </li>
+    <li class="right" >
+      <a href="../index.html" title="组件API"
+         accesskey="P">上一页</a> | </li>
+    <li><a href="../../../../index.html">OPENJS-v1.0 Document</a> &#187; </li>
+      <li><a href="../../index.html" >KISSY文档-v1.3.0</a> &#187; </li>
+      <li><a href="../index.html" accesskey="U">组件API</a> &#187; </li> 
+    </ul>
+</div>
+					<div class="body">
+  <span class="target" id="module-calendar"></span><div class="section" id="calendar">
+<h1>Calendar<a class="headerlink" href="#calendar" title="永久链接至标题">¶</a></h1>
+<div class="line-block">
+<div class="line">这是一个交互清爽、功能实用的日历控件.</div>
+<div class="line">支持基本的日期选择、时间选择、嵌入/弹出、范围选择、日期格式化输出等常用功能, 能够满足多数的应用场景, 非常方便用户调用.</div>
+</div>
+<div class="admonition hint">
+<p class="first admonition-title">提示</p>
+<p class="last">组件来源于 <a class="reference external" href="http://docs.kissyui.com/docs/html/api/component/calendar/">这里</a></p>
+</div>
+<div class="admonition important">
+<p class="first admonition-title">重要</p>
+<p>组件引入方式</p>
+<div class="last highlight-php"><div class="highlight"><pre><span class="x">&lt;cajamodules include=&quot;kissy/1.3.0/core,kissy/1.3.0/calendar&quot; /&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>构造函数<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="#calendar.Calendar" title="calendar.Calendar"><tt class="xref py py-class docutils literal"><span class="pre">Calendar</span></tt></a></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id3">
+<h2>参数配置<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="#calendar.date" title="calendar.date"><tt class="xref py py-data docutils literal"><span class="pre">date</span></tt></a></li>
+<li><a class="reference internal" href="#calendar.selected" title="calendar.selected"><tt class="xref py py-data docutils literal"><span class="pre">selected</span></tt></a></li>
+<li><a class="reference internal" href="#calendar.startDay" title="calendar.startDay"><tt class="xref py py-data docutils literal"><span class="pre">startDay</span></tt></a></li>
+<li><a class="reference internal" href="#calendar.pages" title="calendar.pages"><tt class="xref py py-data docutils literal"><span class="pre">pages</span></tt></a></li>
+<li><a class="reference internal" href="#calendar.closable" title="calendar.closable"><tt class="xref py py-data docutils literal"><span class="pre">closable</span></tt></a></li>
+<li><a class="reference internal" href="#calendar.rangeSelect" title="calendar.rangeSelect"><tt class="xref py py-data docutils literal"><span class="pre">rangeSelect</span></tt></a></li>
+<li><a class="reference internal" href="#calendar.range" title="calendar.range"><tt class="xref py py-data docutils literal"><span class="pre">range</span></tt></a></li>
+<li><a class="reference internal" href="#calendar.minDate" title="calendar.minDate"><tt class="xref py py-data docutils literal"><span class="pre">minDate</span></tt></a></li>
+<li><a class="reference internal" href="#calendar.maxDate" title="calendar.maxDate"><tt class="xref py py-data docutils literal"><span class="pre">maxDate</span></tt></a></li>
+<li><a class="reference internal" href="#calendar.multiSelect" title="calendar.multiSelect"><tt class="xref py py-data docutils literal"><span class="pre">multiSelect</span></tt></a></li>
+<li><a class="reference internal" href="#calendar.navigator" title="calendar.navigator"><tt class="xref py py-data docutils literal"><span class="pre">navigator</span></tt></a></li>
+<li><a class="reference internal" href="#calendar.popup" title="calendar.popup"><tt class="xref py py-data docutils literal"><span class="pre">popup</span></tt></a></li>
+<li><a class="reference internal" href="#calendar.showTime" title="calendar.showTime"><tt class="xref py py-data docutils literal"><span class="pre">showTime</span></tt></a></li>
+<li><a class="reference internal" href="#calendar.triggerType" title="calendar.triggerType"><tt class="xref py py-data docutils literal"><span class="pre">triggerType</span></tt></a></li>
+<li><a class="reference internal" href="#calendar.disabled" title="calendar.disabled"><tt class="xref py py-data docutils literal"><span class="pre">disabled</span></tt></a></li>
+<li><a class="reference internal" href="#calendar.align" title="calendar.align"><tt class="xref py py-data docutils literal"><span class="pre">align</span></tt></a></li>
+<li><a class="reference internal" href="#calendar.notLimited" title="calendar.notLimited"><tt class="xref py py-data docutils literal"><span class="pre">notLimited</span></tt></a></li>
+<li><a class="reference internal" href="#calendar.rangLinkage" title="calendar.rangLinkage"><tt class="xref py py-data docutils literal"><span class="pre">rangLinkage</span></tt></a></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id4">
+<h2>实例方法<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="#calendar.toggle" title="calendar.toggle"><tt class="xref py py-meth docutils literal"><span class="pre">toggle()</span></tt></a></li>
+<li><a class="reference internal" href="#calendar.render" title="calendar.render"><tt class="xref py py-meth docutils literal"><span class="pre">render()</span></tt></a></li>
+<li><a class="reference internal" href="#calendar.hide" title="calendar.hide"><tt class="xref py py-meth docutils literal"><span class="pre">hide()</span></tt></a></li>
+<li><a class="reference internal" href="#calendar.show" title="calendar.show"><tt class="xref py py-meth docutils literal"><span class="pre">show()</span></tt></a></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id5">
+<h2>事件<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="#calendar.select" title="calendar.select"><tt class="xref py py-func docutils literal"><span class="pre">select()</span></tt></a></li>
+<li><a class="reference internal" href="#calendar.monthChange" title="calendar.monthChange"><tt class="xref py py-func docutils literal"><span class="pre">monthChange()</span></tt></a></li>
+<li><a class="reference internal" href="#calendar.rangeSelect" title="calendar.rangeSelect"><tt class="xref py py-func docutils literal"><span class="pre">rangeSelect()</span></tt></a></li>
+<li><a class="reference internal" href="#calendar.timeSelect" title="calendar.timeSelect"><tt class="xref py py-func docutils literal"><span class="pre">timeSelect()</span></tt></a></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id6">
+<h2>构造函数详情<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<dl class="class">
+<dt id="calendar.Calendar">
+<em class="property">class </em><tt class="descclassname">calendar.</tt><tt class="descname">Calendar</tt><a class="headerlink" href="#calendar.Calendar" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><strong>Calendar</strong> (trigger,config)</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first last simple">
+<li><strong>trigger</strong> (<em>String|HTMLDOMNode|KISSY.Node</em>) &#8211; 配置项, 触点/容器 .</li>
+<li><strong>config</strong> (<em>Object</em>) &#8211; 配置项, 详细见下方 <strong>参数配置详情</strong> .</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id7">
+<h2>参数配置详情<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+<dl class="data">
+<dt id="calendar.date">
+<tt class="descclassname">calendar.</tt><tt class="descname">date</tt><a class="headerlink" href="#calendar.date" title="永久链接至目标">¶</a></dt>
+<dd><p>{Date} - 可选, 该日期所在月份, 默认为当天</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="calendar.selected">
+<tt class="descclassname">calendar.</tt><tt class="descname">selected</tt><a class="headerlink" href="#calendar.selected" title="永久链接至目标">¶</a></dt>
+<dd><p>{Date} - 可选, 当前选中的日期</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="calendar.startDay">
+<tt class="descclassname">calendar.</tt><tt class="descname">startDay</tt><a class="headerlink" href="#calendar.startDay" title="永久链接至目标">¶</a></dt>
+<dd><p>{Number} - 可选, 日历显示星期x为起始日期, 取值范围为0到6, 默认为0,从星期日开始,若取值为1, 则从星期一开始, 若取值为7, 则从周日开始</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="calendar.pages">
+<tt class="descclassname">calendar.</tt><tt class="descname">pages</tt><a class="headerlink" href="#calendar.pages" title="永久链接至目标">¶</a></dt>
+<dd><p>{Number} - 可选, 日历的页数, 默认为1, 包含一页日历</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="calendar.closable">
+<tt class="descclassname">calendar.</tt><tt class="descname">closable</tt><a class="headerlink" href="#calendar.closable" title="永久链接至目标">¶</a></dt>
+<dd><p>{Boolean} - 可选, 在弹出情况下, 点选日期后是否关闭日历, 默认为false</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="calendar.rangeSelect">
+<tt class="descclassname">calendar.</tt><tt class="descname">rangeSelect</tt><a class="headerlink" href="#calendar.rangeSelect" title="永久链接至目标">¶</a></dt>
+<dd><p>{Boolean} - 可选, 是否支持时间段选择，只有开启时候才会触发rangeSelect事件</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="calendar.range">
+<tt class="descclassname">calendar.</tt><tt class="descname">range</tt><a class="headerlink" href="#calendar.range" title="永久链接至目标">¶</a></dt>
+<dd><p>{Object} - 可选, 默认显示的选择范围, 格式为：{start:s,end:n}</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="calendar.minDate">
+<tt class="descclassname">calendar.</tt><tt class="descname">minDate</tt><a class="headerlink" href="#calendar.minDate" title="永久链接至目标">¶</a></dt>
+<dd><p>{Date} - 可选, 日历可选择的最小日期, 默认不开启</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="calendar.maxDate">
+<tt class="descclassname">calendar.</tt><tt class="descname">maxDate</tt><a class="headerlink" href="#calendar.maxDate" title="永久链接至目标">¶</a></dt>
+<dd><p>{Date} - 可选, 日历可选择的最大, 默认不开启</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="calendar.multiSelect">
+<tt class="descclassname">calendar.</tt><tt class="descname">multiSelect</tt><a class="headerlink" href="#calendar.multiSelect" title="永久链接至目标">¶</a></dt>
+<dd><p>{Boolean} - 可选, 是否支持多选, 默认不开启，只有开启时候才会触发multiSelect事件</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="calendar.navigator">
+<tt class="descclassname">calendar.</tt><tt class="descname">navigator</tt><a class="headerlink" href="#calendar.navigator" title="永久链接至目标">¶</a></dt>
+<dd><p>{Boolean} - 可选, 是否可以通过点击导航输入日期, 默认开启</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="calendar.popup">
+<tt class="descclassname">calendar.</tt><tt class="descname">popup</tt><a class="headerlink" href="#calendar.popup" title="永久链接至目标">¶</a></dt>
+<dd><p>{Boolean} - 可选, 日历是否为弹出,默认为false, 不开启</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="calendar.showTime">
+<tt class="descclassname">calendar.</tt><tt class="descname">showTime</tt><a class="headerlink" href="#calendar.showTime" title="永久链接至目标">¶</a></dt>
+<dd><p>{Boolean} - 可选, 是否显示时间的选择,默认为false, 不开启</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="calendar.triggerType">
+<tt class="descclassname">calendar.</tt><tt class="descname">triggerType</tt><a class="headerlink" href="#calendar.triggerType" title="永久链接至目标">¶</a></dt>
+<dd><p>{Array | String} - 可选, 弹出状态下, 触发弹出日历的事件, 例如：[&#8216;click&#8217;,&#8217;focus&#8217;],也可以直接传入&#8217;focus&#8217;, 默认为[&#8216;click&#8217;]</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="calendar.disabled">
+<tt class="descclassname">calendar.</tt><tt class="descname">disabled</tt><a class="headerlink" href="#calendar.disabled" title="永久链接至目标">¶</a></dt>
+<dd><p>{Array} - 可选, 禁止点击的日期数组[new Date(),new Date(2011,11,26)]</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="calendar.align">
+<tt class="descclassname">calendar.</tt><tt class="descname">align</tt><a class="headerlink" href="#calendar.align" title="永久链接至目标">¶</a></dt>
+<dd><p>{Object} - 可选, 日历和trigger对齐方式，默认{points:[&#8216;bl&#8217;,&#8217;tl&#8217;],offset:[0,0]}</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="calendar.notLimited">
+<tt class="descclassname">calendar.</tt><tt class="descname">notLimited</tt><a class="headerlink" href="#calendar.notLimited" title="永久链接至目标">¶</a></dt>
+<dd><p>{Boolean} - 可选, 是否出现不限的按钮，默认为false不开启，开启后点击触发select事件</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="calendar.rangLinkage">
+<tt class="descclassname">calendar.</tt><tt class="descname">rangLinkage</tt><a class="headerlink" href="#calendar.rangLinkage" title="永久链接至目标">¶</a></dt>
+<dd><p>{Boolean} - 可选, 是多个日历是否联动,默认为true, 开启</p>
+</dd></dl>
+
+</div>
+<div class="section" id="id8">
+<h2>方法详情<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
+<dl class="method">
+<dt id="calendar.toggle">
+<tt class="descclassname">calendar.</tt><tt class="descname">toggle</tt><big>(</big><big>)</big><a class="headerlink" href="#calendar.toggle" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><strong>toggle</strong> ()</div>
+<div class="line">切换日历的状态, 从显示到隐藏和从隐藏到显示</div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="calendar.render">
+<tt class="descclassname">calendar.</tt><tt class="descname">render</tt><big>(</big><big>)</big><a class="headerlink" href="#calendar.render" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><strong>render</strong> (config)</div>
+<div class="line">通过render可以带入如上任意参数并重新渲染日历</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>config</strong> (<em>Object</em>) &#8211; 配置项, 详细见上方 <strong>Configs Detail</strong></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="calendar.destroy">
+<tt class="descclassname">calendar.</tt><tt class="descname">destroy</tt><big>(</big><big>)</big><a class="headerlink" href="#calendar.destroy" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><strong>destroy</strong> ()</div>
+<div class="line">销毁日历</div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="calendar.hide">
+<tt class="descclassname">calendar.</tt><tt class="descname">hide</tt><big>(</big><big>)</big><a class="headerlink" href="#calendar.hide" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><strong>hide</strong> ()</div>
+<div class="line">如果日历是弹出形式, 隐藏日历</div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="calendar.show">
+<tt class="descclassname">calendar.</tt><tt class="descname">show</tt><big>(</big><big>)</big><a class="headerlink" href="#calendar.show" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><strong>show</strong> ()</div>
+<div class="line">显示日历</div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="id9">
+<h2>事件详情<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
+<dl class="function">
+<dt id="calendar.select">
+<tt class="descclassname">calendar.</tt><tt class="descname">select</tt><big>(</big><big>)</big><a class="headerlink" href="#calendar.select" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><strong>select</strong></div>
+<div class="line">选中一个日期事件,通过e.date来获得选中的日期, 这里的e.date为一个时间对象的字符串，可以理解就是Date.toString(),要获取原生Date对象，可以`new Date(e.date);`即可，如果开启notLimited参数，则e.date=null</div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="calendar.monthChange">
+<tt class="descclassname">calendar.</tt><tt class="descname">monthChange</tt><big>(</big><big>)</big><a class="headerlink" href="#calendar.monthChange" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><strong>monthChange</strong></div>
+<div class="line">切换月份事件,通过e.date来获取切换到的日期, 通过new Date(e.date).getMonth() + 1 来获得切换至的月份</div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<tt class="descclassname">calendar.</tt><tt class="descname">rangeSelect</tt><big>(</big><big>)</big></dt>
+<dd><div class="line-block">
+<div class="line"><strong>rangeSelect</strong></div>
+<div class="line">范围选择事件,通过e.start和e.end来获得开始和结束日期</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>e</strong> (<em>Object</em>) &#8211; 默认对象</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<tt class="descclassname">calendar.</tt><tt class="descname">multiSelect</tt><big>(</big><big>)</big></dt>
+<dd><div class="line-block">
+<div class="line"><strong>multiSelect</strong></div>
+<div class="line">多选触发的事件，通过e.multi来获取选中的日期数组</div>
+</div>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param Object e:</th><td class="field-body">默认对象</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="calendar.timeSelect">
+<tt class="descclassname">calendar.</tt><tt class="descname">timeSelect</tt><big>(</big><big>)</big><a class="headerlink" href="#calendar.timeSelect" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><strong>timeSelect</strong> (e)</div>
+<div class="line">确定选中时间事件,通过e.date来获得日期时间</div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="demo">
+<h2>demo 代码样例<a class="headerlink" href="#demo" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><p><strong>三个简单的demo例子</strong></p>
+<iframe width="100%" height="260"  class="iframe-demo" src="http://tpap-docs.taegrid.taobao.com/kissy/1.3.0/component/calendar.php"></iframe><p><strong>对应DEMO html/php的代码</strong></p>
+<p><strong>对应DEMO javascript的代码</strong></p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">DOM</span> <span class="o">=</span> <span class="nx">KISSY</span><span class="p">.</span><span class="nx">DOM</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">Calendar</span> <span class="o">=</span> <span class="nx">KISSY</span><span class="p">.</span><span class="nx">Calendar</span><span class="p">;</span><span class="c1">//namespace in KISSY</span>
+
+
+<span class="c1">//simple calendar  click input, then calendar popup show.</span>
+<span class="k">new</span> <span class="nx">Calendar</span><span class="p">(</span><span class="s1">&#39;.simple-calendar&#39;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">popup</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">});</span>
+
+<span class="k">new</span> <span class="nx">Calendar</span><span class="p">(</span><span class="s1">&#39;.mindate-calendar&#39;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">popup</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nx">minDate</span><span class="o">:</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">()</span>
+<span class="p">});</span>
+
+<span class="c1">//only can select the past time</span>
+<span class="kd">var</span> <span class="nx">input</span> <span class="o">=</span> <span class="nx">DOM</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;.caninput-calendar&#39;</span><span class="p">);</span>
+
+<span class="c1">//dom element supportted too;</span>
+<span class="kd">var</span> <span class="nx">cal</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Calendar</span><span class="p">(</span><span class="nx">input</span><span class="p">,</span> <span class="p">{</span><span class="nx">popup</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">maxDate</span><span class="o">:</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">()});</span>
+<span class="nx">cal</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;select&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">selectDate</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">date</span><span class="p">);</span> <span class="c1">//e.date is string here</span>
+    <span class="nx">input</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">selectDate</span><span class="p">.</span><span class="nx">getFullYear</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;-&quot;</span> <span class="o">+</span> <span class="nx">selectDate</span><span class="p">.</span><span class="nx">getMonth</span><span class="p">();</span>
+    <span class="nx">cal</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span><span class="c1">//hide</span>
+<span class="p">});</span>
+
+<span class="c1">//test event</span>
+<span class="nx">cal</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;monthChange&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">date</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+
+</div>
+                    
+
+<div class='related'>
+    <h3>导航</h3>
+    
+    <ul>
+    <li class="right" style="margin-right: 10px">
+      <a href="../../../../genindex.html" title="总目录"
+         accesskey="I">索引</a></li>
+    <li class="right" >
+      <a href="../../../../py-modindex.html" title="Python Module Index"
+         >模块</a> | </li>
+    <li class="right" >
+      <a href="../../core/index.html" title="core模块"
+         accesskey="N">下一页</a> | </li>
+    <li class="right" >
+      <a href="../index.html" title="组件API"
+         accesskey="P">上一页</a> | </li>
+    <li><a href="../../../../index.html">OPENJS-v1.0 Document</a> &#187; </li>
+      <li><a href="../../index.html" >KISSY文档-v1.3.0</a> &#187; </li>
+      <li><a href="../index.html" accesskey="U">组件API</a> &#187; </li> 
+    </ul>
+</div>
+					<div id="disqus_thread"></div>
+<script>
+    if(true && window.localStorage.getItem("kissy-commment")!="0"){
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kissy-docs'; // required: replace example with your forum shortname
+
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+     //var disqus_identifier = '/anim';
+     //var disqus_url = window.location;
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    }
+</script>
+<!--<div id="google-search-box">
+    <div id="cse" style="width: 100%;">Loading</div>
+    <script>
+        if(window.location.hostname.indexOf("kissyui.com")!=-1){
+            document.write('<script src="http://www.google.com/jsapi" type="text/javascript"><'+'/script>');
+        }
+    </script>
+    <script>
+        if(window.location.hostname.indexOf("kissyui.com")!=-1){
+            google.load('search', '1', {language : 'zh-CN', style : google.loader.themes.MINIMALIST});
+            google.setOnLoadCallback(function() {
+                var customSearchControl = new google.search.CustomSearchControl('012347804910294994683:n4uzb24gqdm');
+                customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+                customSearchControl.draw('cse');
+            }, true);
+        }
+    </script>
+</div>-->
+				</div>
+			</div>
+		
+    <div class="col-sub">
+
+<div class="s-box">
+    <div class="s-box-bd">
+        <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">KISSY文档-v1.3.0</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">组件API</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="">Calendar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/index.html">core模块</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</div>
+    </div>
+    <div class="col-extra">
+        
+	<div class="s-box">
+		<div class="s-box-hd">
+			<h3>本页快速导航</h3>
+		</div>
+		<div class="s-box-bd">
+			<ul>
+<li><a class="reference internal" href="#">Calendar</a><ul>
+<li><a class="reference internal" href="#id2">构造函数</a></li>
+<li><a class="reference internal" href="#id3">参数配置</a></li>
+<li><a class="reference internal" href="#id4">实例方法</a></li>
+<li><a class="reference internal" href="#id5">事件</a></li>
+<li><a class="reference internal" href="#id6">构造函数详情</a></li>
+<li><a class="reference internal" href="#id7">参数配置详情</a></li>
+<li><a class="reference internal" href="#id8">方法详情</a></li>
+<li><a class="reference internal" href="#id9">事件详情</a></li>
+<li><a class="reference internal" href="#demo">demo 代码样例</a></li>
+</ul>
+</li>
+</ul>
+
+		</div>
+	</div>
+
+    </div>
+	</div>
+    <script>
+        if(!$.trim($(".col-extra").html())){
+            $("#layout").removeClass("grid-s6m0e7").addClass("grid-s6m0");
+        }
+    </script>
+</div>
+<div id="footer">
+    &copy; Copyright 2013~2023,  Created by 开放JavaScript-Team
+</div>
+</body>
+</html>
