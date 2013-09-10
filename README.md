@@ -1,4 +1,4 @@
-## 开放JS API文档
+## 前端第三方接入安全 API文档
 
 文档采用树形结构
 
@@ -13,7 +13,7 @@ kissy
             ...
 thirdparty
 
-
+source/raw/tpap 部署到tae系统的demo环境
 
 
 #### api 文档格式

@@ -1,0 +1,625 @@
+
+<!doctype html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+
+<title>AliMap &mdash; OPENJS-v1.0 Document</title>
+
+<link rel="stylesheet" href="http://g.tbcdn.cn/kissy/k/1.3.1/css/dpl/base-min.css"/>
+<link rel="stylesheet" href="../../_static/kissy.css"/>
+    <link rel="stylesheet" href="http://a.tbcdn.cn/s/kissy/gallery/sphinx/1.1.3/pygments.css" type="text/css" />
+<link rel="shortcut icon" href="http://a.tbcdn.cn/s/kissy/favicon.ico" type="image/x-icon" />
+<!--<link href='http://fonts.googleapis.com/css?family=Philosopher' rel='stylesheet' type='text/css'>-->
+
+<script>
+    var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE: true
+    };
+</script>
+    <script type="text/javascript" src="http://a.tbcdn.cn/s/kissy/gallery/sphinx/1.1.3/??jquery.js,underscore.js,doctools.js,searchtools.js"></script> 
+<script>
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-31470541-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+</head>
+<body><h1 class="logo">
+    <a alt="KISSY" href="http://10.12.16.7/shop-team/products/openjs/build/html/">
+
+    <h2 style="width: 100%;
+margin: 0 auto;
+color: white;
+font-weight: bold;
+font-size: 44px;padding-left: 100px;">开放JS</h2>
+
+</a></h1>
+<div id="header">
+
+
+    <ul class="navigation">
+        <li><a href="http://docs.kissyui.com">导航在这</a></li>
+    </ul>
+<div id="searchbox" class="searchbox">
+    <form class="search" action="../../search.html" method="get">
+        <input type="text" name="q" size="28" class="ipt"/>
+        <input type="submit" value="搜索" class="btn"/>
+        <input type="hidden" name="check_keywords" value="yes"/>
+        <input type="hidden" name="area" value="default"/>
+    </form>
+</div>
+
+</div>
+
+<div id="content">
+	<div  id="layout" class="layout grid-s6m0e7">
+			<div class="col-main">
+				<div class="main-wrap">
+                    
+
+<div class='related'>
+    <h3>导航</h3>
+    
+    <ul>
+    <li class="right" style="margin-right: 10px">
+      <a href="../../genindex.html" title="总目录"
+         accesskey="I">索引</a></li>
+    <li class="right" >
+      <a href="../../py-modindex.html" title="Python Module Index"
+         >模块</a> | </li>
+    <li class="right" >
+      <a href="../alievent/index.html" title="Calendar"
+         accesskey="N">下一页</a> | </li>
+    <li class="right" >
+      <a href="../index.html" title="阿里地图"
+         accesskey="P">上一页</a> | </li>
+    <li><a href="../../index.html">OPENJS-v1.0 Document</a> &#187; </li>
+      <li><a href="../index.html" accesskey="U">阿里地图</a> &#187; </li> 
+    </ul>
+</div>
+					<div class="body">
+  <span class="target" id="module-AliMap"></span><div class="section" id="alimap">
+<h1>AliMap<a class="headerlink" href="#alimap" title="永久链接至标题">¶</a></h1>
+<div class="line-block">
+<div class="line">阿里云地图初始化对象</div>
+</div>
+<div class="admonition hint">
+<p class="first admonition-title">提示</p>
+<p class="last">组件来源于 <a class="reference external" href="http://ditu.aliyun.com/jsdoc/map/classes/AliMap.html">这里</a></p>
+</div>
+<div class="admonition important">
+<p class="first admonition-title">重要</p>
+<p>组件引入方式</p>
+<div class="last highlight-php"><div class="highlight"><pre><span class="x">&lt;cajamodules include=&quot;kissy/1.3.0/core,alimap/1.0/index&quot; /&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>构造函数<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="#module-AliMap" title="AliMap"><tt class="xref py py-class docutils literal"><span class="pre">AliMap</span></tt></a></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id3">
+<h2>参数配置<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="#AliMap.container" title="AliMap.container"><tt class="xref py py-data docutils literal"><span class="pre">container</span></tt></a></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id4">
+<h2>实例方法<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="#AliMap.centerAndZoom" title="AliMap.centerAndZoom"><tt class="xref py py-meth docutils literal"><span class="pre">centerAndZoom()</span></tt></a></li>
+<li><a class="reference internal" href="#AliMap.addOverlay" title="AliMap.addOverlay"><tt class="xref py py-meth docutils literal"><span class="pre">addOverlay()</span></tt></a></li>
+<li><a class="reference internal" href="#AliMap.openInfoWindow" title="AliMap.openInfoWindow"><tt class="xref py py-meth docutils literal"><span class="pre">openInfoWindow()</span></tt></a></li>
+<li><a class="reference internal" href="#AliMap.closeInfoWindow" title="AliMap.closeInfoWindow"><tt class="xref py py-meth docutils literal"><span class="pre">closeInfoWindow()</span></tt></a></li>
+<li><a class="reference internal" href="#AliMap.checkResize" title="AliMap.checkResize"><tt class="xref py py-meth docutils literal"><span class="pre">checkResize()</span></tt></a></li>
+<li><a class="reference internal" href="#AliMap.clearOverlays" title="AliMap.clearOverlays"><tt class="xref py py-meth docutils literal"><span class="pre">clearOverlays()</span></tt></a></li>
+<li><a class="reference internal" href="#AliMap.depose" title="AliMap.depose"><tt class="xref py py-meth docutils literal"><span class="pre">depose()</span></tt></a></li>
+<li><a class="reference internal" href="#AliMap.disableDragging" title="AliMap.disableDragging"><tt class="xref py py-meth docutils literal"><span class="pre">disableDragging()</span></tt></a></li>
+<li><a class="reference internal" href="#AliMap.draggingEnabled" title="AliMap.draggingEnabled"><tt class="xref py py-meth docutils literal"><span class="pre">draggingEnabled()</span></tt></a></li>
+<li><a class="reference internal" href="#AliMap.enableDragging" title="AliMap.enableDragging"><tt class="xref py py-meth docutils literal"><span class="pre">enableDragging()</span></tt></a></li>
+<li><a class="reference internal" href="#AliMap.endAutoSlide" title="AliMap.endAutoSlide"><tt class="xref py py-meth docutils literal"><span class="pre">endAutoSlide()</span></tt></a></li>
+<li><a class="reference internal" href="#AliMap.getZoom" title="AliMap.getZoom"><tt class="xref py py-meth docutils literal"><span class="pre">getZoom()</span></tt></a></li>
+<li><a class="reference internal" href="#AliMap.isDragging" title="AliMap.isDragging"><tt class="xref py py-meth docutils literal"><span class="pre">isDragging()</span></tt></a></li>
+<li><a class="reference internal" href="#AliMap.removeOverlay" title="AliMap.removeOverlay"><tt class="xref py py-meth docutils literal"><span class="pre">removeOverlay()</span></tt></a></li>
+<li><a class="reference internal" href="#AliMap.setZoom" title="AliMap.setZoom"><tt class="xref py py-meth docutils literal"><span class="pre">setZoom()</span></tt></a></li>
+<li><a class="reference internal" href="#AliMap.startAutoSlide" title="AliMap.startAutoSlide"><tt class="xref py py-meth docutils literal"><span class="pre">startAutoSlide()</span></tt></a></li>
+<li><a class="reference internal" href="#AliMap.zoomIn" title="AliMap.zoomIn"><tt class="xref py py-meth docutils literal"><span class="pre">zoomIn()</span></tt></a></li>
+<li><a class="reference internal" href="#AliMap.zoomOut" title="AliMap.zoomOut"><tt class="xref py py-meth docutils literal"><span class="pre">zoomOut()</span></tt></a></li>
+<li><a class="reference internal" href="#AliMap.panTo" title="AliMap.panTo"><tt class="xref py py-meth docutils literal"><span class="pre">panTo()</span></tt></a></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id5">
+<h2>构造函数详情<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<dl class="class">
+<dt id="AliMap.AliMap">
+<em class="property">class </em><tt class="descclassname">AliMap.</tt><tt class="descname">AliMap</tt><a class="headerlink" href="#AliMap.AliMap" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><strong>AliMap</strong> (container)</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>Selector|HTMLDOMNode</strong> &#8211; 地图容器节点 .</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id6">
+<h2>参数配置详情<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<dl class="data">
+<dt id="AliMap.container">
+<tt class="descclassname">AliMap.</tt><tt class="descname">container</tt><a class="headerlink" href="#AliMap.container" title="永久链接至目标">¶</a></dt>
+<dd><p>{Selector/HTMLELement} - 必选, 阿里云地图的初始化容器支持selector，或者是HTMLELement元素</p>
+</dd></dl>
+
+</div>
+<div class="section" id="id7">
+<h2>方法详情<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+<dl class="method">
+<dt id="AliMap.centerAndZoom">
+<tt class="descclassname">AliMap.</tt><tt class="descname">centerAndZoom</tt><big>(</big><big>)</big><a class="headerlink" href="#AliMap.centerAndZoom" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><strong>centerAndZoom</strong> (point, zoom)</div>
+<div class="line">设置地图的中心点坐标和缩放级别</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first last simple">
+<li><strong>point</strong> (<em>AliLatLng</em>) &#8211; 中心点坐标 .</li>
+<li><strong>zoom</strong> (<em>Number</em>) &#8211; 缩放级别 .</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="AliMap.addOverlay">
+<tt class="descclassname">AliMap.</tt><tt class="descname">addOverlay</tt><big>(</big><big>)</big><a class="headerlink" href="#AliMap.addOverlay" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><strong>addOverlay</strong> (overlay)</div>
+<div class="line">添加一个标注</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>overlay</strong> (<em>Overlay</em>) &#8211; 需要添加的overlay对象，AliMaker/AliInfoWindow都是overlay对象</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="AliMap.openInfoWindow">
+<tt class="descclassname">AliMap.</tt><tt class="descname">openInfoWindow</tt><big>(</big><big>)</big><a class="headerlink" href="#AliMap.openInfoWindow" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><strong>openInfoWindow</strong> (latlng,title,content)</div>
+<div class="line">在指定点显示信息浮窗</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first last simple">
+<li><strong>latlng</strong> (<em>AliLatLng</em>) &#8211; 显示信息浮窗的位置</li>
+<li><strong>title</strong> (<em>String</em>) &#8211; 信息浮窗的标题</li>
+<li><strong>content</strong> (<em>String</em>) &#8211; 信息浮窗的内容，可以为HTML或HTML元素</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="AliMap.closeInfoWindow">
+<tt class="descclassname">AliMap.</tt><tt class="descname">closeInfoWindow</tt><big>(</big><big>)</big><a class="headerlink" href="#AliMap.closeInfoWindow" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><strong>closeInfoWindow</strong> ()</div>
+<div class="line">关闭信息浮窗</div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="AliMap.checkResize">
+<tt class="descclassname">AliMap.</tt><tt class="descname">checkResize</tt><big>(</big><big>)</big><a class="headerlink" href="#AliMap.checkResize" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><strong>checkResize</strong> ()</div>
+<div class="line">在层或者窗口的大小变化时重新设置地图大小</div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="AliMap.clearOverlays">
+<tt class="descclassname">AliMap.</tt><tt class="descname">clearOverlays</tt><big>(</big><big>)</big><a class="headerlink" href="#AliMap.clearOverlays" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><strong>clearOverlays</strong> ()</div>
+<div class="line">删除所有的标注</div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="AliMap.depose">
+<tt class="descclassname">AliMap.</tt><tt class="descname">depose</tt><big>(</big><big>)</big><a class="headerlink" href="#AliMap.depose" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><strong>depose</strong> ()</div>
+<div class="line">删除所有的标注</div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="AliMap.disableDragging">
+<tt class="descclassname">AliMap.</tt><tt class="descname">disableDragging</tt><big>(</big><big>)</big><a class="headerlink" href="#AliMap.disableDragging" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><strong>disableDragging</strong> ()</div>
+<div class="line">禁用地图的拖拽功能</div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="AliMap.draggingEnabled">
+<tt class="descclassname">AliMap.</tt><tt class="descname">draggingEnabled</tt><big>(</big><big>)</big><a class="headerlink" href="#AliMap.draggingEnabled" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Boolean <strong>draggingEnabled</strong> ()</div>
+<div class="line">判断地图是否已经启用拖拽的功</div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="AliMap.enableDragging">
+<tt class="descclassname">AliMap.</tt><tt class="descname">enableDragging</tt><big>(</big><big>)</big><a class="headerlink" href="#AliMap.enableDragging" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><strong>enableDragging</strong> ()</div>
+<div class="line">启用地图的拖拽功能</div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="AliMap.endAutoSlide">
+<tt class="descclassname">AliMap.</tt><tt class="descname">endAutoSlide</tt><big>(</big><big>)</big><a class="headerlink" href="#AliMap.endAutoSlide" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><strong>endAutoSlide</strong> ()</div>
+<div class="line">在鼠标移动到地图边界时自动滑动地图</div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="AliMap.getZoom">
+<tt class="descclassname">AliMap.</tt><tt class="descname">getZoom</tt><big>(</big><big>)</big><a class="headerlink" href="#AliMap.getZoom" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Number <strong>getZoom</strong> ()</div>
+<div class="line">返回系统目前的缩放级别</div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="AliMap.isDragging">
+<tt class="descclassname">AliMap.</tt><tt class="descname">isDragging</tt><big>(</big><big>)</big><a class="headerlink" href="#AliMap.isDragging" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Boolean <strong>isDragging</strong> ()</div>
+<div class="line">返回地图是否正处在拖动过程之中</div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="AliMap.removeOverlay">
+<tt class="descclassname">AliMap.</tt><tt class="descname">removeOverlay</tt><big>(</big><big>)</big><a class="headerlink" href="#AliMap.removeOverlay" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><strong>removeOverlay</strong> (overlay)</div>
+<div class="line">移除一个标注</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>overlay</strong> (<em>Overlay</em>) &#8211; 需要添加的overlay对象，AliMaker/AliInfoWindow都是overlay对象</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="AliMap.setZoom">
+<tt class="descclassname">AliMap.</tt><tt class="descname">setZoom</tt><big>(</big><big>)</big><a class="headerlink" href="#AliMap.setZoom" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><strong>setZoom</strong> (zoom)</div>
+<div class="line">设置地图的缩放级别</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>zoom</strong> (<em>Number</em>) &#8211; 缩放级别</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="AliMap.startAutoSlide">
+<tt class="descclassname">AliMap.</tt><tt class="descname">startAutoSlide</tt><big>(</big><big>)</big><a class="headerlink" href="#AliMap.startAutoSlide" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><strong>startAutoSlide</strong> (config)</div>
+<div class="line">在鼠标移动到地图边界时自动滑动地图</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first last simple">
+<li><strong>config</strong> (<em>JSON</em>) &#8211; 滑动选项</li>
+<li><strong>config.padding</strong> (<em>Number</em>) &#8211; 边界像素值，鼠标移动到距离边界指定值范围内时，才会开始滑动地图。默认16</li>
+<li><strong>config.speed</strong> (<em>Number</em>) &#8211; 移动的速度参数。 默认8</li>
+<li><strong>config.speedup</strong> (<em>Bollean</em>) &#8211; 是否采用速度持续增加的模式，如果为true，则会慢慢加速直到speed指定的速度. 默认false</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="AliMap.zoomIn">
+<tt class="descclassname">AliMap.</tt><tt class="descname">zoomIn</tt><big>(</big><big>)</big><a class="headerlink" href="#AliMap.zoomIn" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><strong>zoomIn</strong> (zoom)</div>
+<div class="line">放大一级地图</div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="AliMap.zoomOut">
+<tt class="descclassname">AliMap.</tt><tt class="descname">zoomOut</tt><big>(</big><big>)</big><a class="headerlink" href="#AliMap.zoomOut" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><strong>zoomOut</strong> ()</div>
+<div class="line">缩小一级地图</div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="AliMap.panTo">
+<tt class="descclassname">AliMap.</tt><tt class="descname">panTo</tt><big>(</big><big>)</big><a class="headerlink" href="#AliMap.panTo" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><strong>panTo</strong> (point)</div>
+<div class="line">平滑移动地图到指定的经纬度坐标</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>point</strong> (<em>AliLatLng</em>) &#8211; 目标中心点坐标</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="demo">
+<h2>demo 代码样例<a class="headerlink" href="#demo" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><p><strong>三个简单的demo例子</strong></p>
+<iframe width="100%" height="260"  class="iframe-demo" src="http://tpap-docs.taegrid.taobao.com/kissy/1.3.0/component/calendar.php"></iframe><p><strong>对应DEMO html/php的代码</strong></p>
+<div class="highlight-python"><pre>&lt;!--include kissy core and calendar file--&gt;
+&lt;cajamodules include="kissy/1.3.0/core,kissy/1.3.0/calendar"/&gt;
+
+&lt;!--refer js file--&gt;
+&lt;script src="/kissy/1.3.0/component/calendar.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;
+    &lt;label for=""&gt;simple-calendar:&lt;input type="text" class="simple-calendar"/&gt;&lt;/label&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+    &lt;label for=""&gt;min date calendar:&lt;input type="text" class="mindate-calendar"/&gt;&lt;/label&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+    &lt;label for=""&gt;can input date calendar:&lt;input type="text" class="caninput-calendar"/&gt;&lt;/label&gt;
+&lt;/p&gt;
+</pre>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">language:</th><td class="field-body">html</td>
+</tr>
+</tbody>
+</table>
+<p><strong>对应DEMO javascript的代码</strong></p>
+<div class="highlight-python"><pre>var DOM = KISSY.DOM;
+var Calendar = KISSY.Calendar;//namespace in KISSY
+
+
+//simple calendar  click input, then calendar popup show.
+new Calendar('.simple-calendar', {
+    popup: true
+});
+
+new Calendar('.mindate-calendar', {
+    popup: true,
+    minDate: new Date()
+});
+
+//only can select the past time
+var input = DOM.get('.caninput-calendar');
+
+//dom element supportted too;
+var cal = new Calendar(input, {popup: true, maxDate: new Date()});
+cal.on('select', function (e) {
+    var selectDate = new Date(e.date); //e.date is string here
+    input.value = selectDate.getFullYear() + "-" + selectDate.getMonth();
+    cal.hide();//hide
+});
+
+//test event
+cal.on('monthChange',function(e){
+    console.log(e.date);
+});
+</pre>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">language:</th><td class="field-body">javascript</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+
+</div>
+                    
+
+<div class='related'>
+    <h3>导航</h3>
+    
+    <ul>
+    <li class="right" style="margin-right: 10px">
+      <a href="../../genindex.html" title="总目录"
+         accesskey="I">索引</a></li>
+    <li class="right" >
+      <a href="../../py-modindex.html" title="Python Module Index"
+         >模块</a> | </li>
+    <li class="right" >
+      <a href="../alievent/index.html" title="Calendar"
+         accesskey="N">下一页</a> | </li>
+    <li class="right" >
+      <a href="../index.html" title="阿里地图"
+         accesskey="P">上一页</a> | </li>
+    <li><a href="../../index.html">OPENJS-v1.0 Document</a> &#187; </li>
+      <li><a href="../index.html" accesskey="U">阿里地图</a> &#187; </li> 
+    </ul>
+</div>
+					<div id="disqus_thread"></div>
+<script>
+    if(true && window.localStorage.getItem("kissy-commment")!="0"){
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kissy-docs'; // required: replace example with your forum shortname
+
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+     //var disqus_identifier = '/anim';
+     //var disqus_url = window.location;
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    }
+</script>
+<!--<div id="google-search-box">
+    <div id="cse" style="width: 100%;">Loading</div>
+    <script>
+        if(window.location.hostname.indexOf("kissyui.com")!=-1){
+            document.write('<script src="http://www.google.com/jsapi" type="text/javascript"><'+'/script>');
+        }
+    </script>
+    <script>
+        if(window.location.hostname.indexOf("kissyui.com")!=-1){
+            google.load('search', '1', {language : 'zh-CN', style : google.loader.themes.MINIMALIST});
+            google.setOnLoadCallback(function() {
+                var customSearchControl = new google.search.CustomSearchControl('012347804910294994683:n4uzb24gqdm');
+                customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+                customSearchControl.draw('cse');
+            }, true);
+        }
+    </script>
+</div>-->
+				</div>
+			</div>
+		
+    <div class="col-sub">
+
+<div class="s-box">
+    <div class="s-box-bd">
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../kissy/1.3.0/index.html">KISSY-v1.3.0</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">阿里地图</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="">AliMap</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">构造函数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">参数配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">实例方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">构造函数详情</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">参数配置详情</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">方法详情</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#demo">demo 代码样例</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../alievent/index.html">Calendar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aliinfowindow/index.html">AliLatLng 对象</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../alilatlng/index.html">AliLatLng 对象</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</div>
+    </div>
+    <div class="col-extra">
+        
+	<div class="s-box">
+		<div class="s-box-hd">
+			<h3>本页快速导航</h3>
+		</div>
+		<div class="s-box-bd">
+			<ul>
+<li><a class="reference internal" href="#">AliMap</a><ul>
+<li><a class="reference internal" href="#id2">构造函数</a></li>
+<li><a class="reference internal" href="#id3">参数配置</a></li>
+<li><a class="reference internal" href="#id4">实例方法</a></li>
+<li><a class="reference internal" href="#id5">构造函数详情</a></li>
+<li><a class="reference internal" href="#id6">参数配置详情</a></li>
+<li><a class="reference internal" href="#id7">方法详情</a></li>
+<li><a class="reference internal" href="#demo">demo 代码样例</a></li>
+</ul>
+</li>
+</ul>
+
+		</div>
+	</div>
+
+    </div>
+	</div>
+    <script>
+        if(!$.trim($(".col-extra").html())){
+            $("#layout").removeClass("grid-s6m0e7").addClass("grid-s6m0");
+        }
+    </script>
+</div>
+<div id="footer">
+    &copy; Copyright 2013~2023,  Created by 开放JavaScript-Team
+</div>
+</body>
+</html>

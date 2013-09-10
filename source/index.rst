@@ -1,7 +1,7 @@
 .. _index:
 
 
-文档中心
+tpap文档中心
 =============================
 
 
@@ -9,3 +9,4 @@
     :maxdepth: 3
 
     kissy/1.3.0/index
+    alimap/index
