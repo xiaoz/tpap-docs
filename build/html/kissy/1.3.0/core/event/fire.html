@@ -81,13 +81,14 @@ font-size: 44px;padding-left: 100px;">开放JS</h2>
       <a href="../../../../py-modindex.html" title="Python Module Index"
          >模块</a> | </li>
     <li class="right" >
-      <a href="../ua/index.html" title="ua"
+      <a href="event-object.html" title="Object"
          accesskey="N">下一页</a> | </li>
     <li class="right" >
       <a href="detach.html" title="detach"
          accesskey="P">上一页</a> | </li>
     <li><a href="../../../../index.html">OPENJS-v1.0 Document</a> &#187; </li>
-      <li><a href="../../index.html" >KISSY文档-v1.3.0</a> &#187; </li>
+      <li><a href="../../../index.html" >KISSY</a> &#187; </li>
+      <li><a href="../../index.html" >KISSY-v1.3.0</a> &#187; </li>
       <li><a href="../index.html" >core模块</a> &#187; </li>
       <li><a href="index.html" accesskey="U">event</a> &#187; </li> 
     </ul>
@@ -114,7 +115,7 @@ font-size: 44px;padding-left: 100px;">开放JS</h2>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first simple">
-<li><strong>selector</strong> (<em>string|HTMLCollection|Array&lt;HTMLElement&gt;</em>) &#8211; 字符串格式参见 <em class="xref std std-ref">KISSY selector</em></li>
+<li><strong>selector</strong> (<em>string|HTMLCollection|Array&lt;HTMLElement&gt;</em>) &#8211; 字符串格式参见 <a class="reference internal" href="../dom/selector.html#dom-selector"><em>KISSY selector</em></a></li>
 <li><strong>eventType</strong> (<em>string</em>) &#8211; 包含一个或多个事件名称的字符串, 多个事件名以空格分开</li>
 <li><strong>domEvent</strong> (<em>object</em>) &#8211; 模拟原生事件的一些属性值信息</li>
 </ul>
@@ -127,11 +128,11 @@ font-size: 44px;padding-left: 100px;">开放JS</h2>
 </table>
 <p>用 <a class="reference internal" href="on.html#event.on" title="event.on"><tt class="xref py py-func docutils literal"><span class="pre">Event.on</span></tt></a> 绑定的事件处理器可以被用户触发的原生事件调用. 但是这些事件处理器也可以使用 <tt class="docutils literal"><span class="pre">fire</span></tt> 手动调用.
 调用 fire() 和用户触发导致的处理器调用调用是一样的顺序.</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">Event</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;#foo&#39;</span><span class="p">,</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(){</span>
-    <span class="nx">alert</span><span class="p">(</span><span class="nx">DOM</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="k">this</span><span class="p">));</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">KISSY</span><span class="p">.</span><span class="nx">Event</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;#foo&#39;</span><span class="p">,</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">KISSY</span><span class="p">.</span><span class="nx">DOM</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="k">this</span><span class="p">));</span>
 <span class="p">});</span>
 
-<span class="nx">Event</span><span class="p">.</span><span class="nx">fire</span><span class="p">(</span><span class="s1">&#39;#foo&#39;</span><span class="p">,</span><span class="s1">&#39;click&#39;</span><span class="p">);</span>
+<span class="nx">KISSY</span><span class="p">.</span><span class="nx">Event</span><span class="p">.</span><span class="nx">fire</span><span class="p">(</span><span class="s1">&#39;#foo&#39;</span><span class="p">,</span><span class="s1">&#39;click&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -153,13 +154,14 @@ font-size: 44px;padding-left: 100px;">开放JS</h2>
       <a href="../../../../py-modindex.html" title="Python Module Index"
          >模块</a> | </li>
     <li class="right" >
-      <a href="../ua/index.html" title="ua"
+      <a href="event-object.html" title="Object"
          accesskey="N">下一页</a> | </li>
     <li class="right" >
       <a href="detach.html" title="detach"
          accesskey="P">上一页</a> | </li>
     <li><a href="../../../../index.html">OPENJS-v1.0 Document</a> &#187; </li>
-      <li><a href="../../index.html" >KISSY文档-v1.3.0</a> &#187; </li>
+      <li><a href="../../../index.html" >KISSY</a> &#187; </li>
+      <li><a href="../../index.html" >KISSY-v1.3.0</a> &#187; </li>
       <li><a href="../index.html" >core模块</a> &#187; </li>
       <li><a href="index.html" accesskey="U">event</a> &#187; </li> 
     </ul>
@@ -207,8 +209,34 @@ font-size: 44px;padding-left: 100px;">开放JS</h2>
 
 <div class="s-box">
     <div class="s-box-bd">
-        <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../index.html">KISSY文档-v1.3.0</a></li>
+        <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">KISSY</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">KISSY-v1.3.0</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">core模块</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../node/index.html">node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ajax/index.html">ajax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../anim/index.html">anim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dom/index.html">dom</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">event</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="on.html">on</a></li>
+<li class="toctree-l5"><a class="reference internal" href="delegate.html">delegate</a></li>
+<li class="toctree-l5"><a class="reference internal" href="detach.html">detach</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="">fire</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="event-object.html">Object</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../ua/index.html">ua</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../components/index.html">组件API</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gallery/index.html">Kissy Gallery</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../alimap/index.html">阿里地图</a></li>
 </ul>
 
     </div>

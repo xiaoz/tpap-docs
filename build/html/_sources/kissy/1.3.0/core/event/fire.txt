@@ -29,11 +29,11 @@ fire
 
     .. code-block:: javascript
 
-        Event.on('#foo','click',function(){
-            alert(DOM.text(this));
+        KISSY.Event.on('#foo','click',function(){
+            console.log(KISSY.DOM.text(this));
         });
 
-        Event.fire('#foo','click');
+        KISSY.Event.fire('#foo','click');
 
     .. note:
 

@@ -87,7 +87,8 @@ font-size: 44px;padding-left: 100px;">开放JS</h2>
       <a href="on.html" title="on"
          accesskey="P">上一页</a> | </li>
     <li><a href="../../../../index.html">OPENJS-v1.0 Document</a> &#187; </li>
-      <li><a href="../../index.html" >KISSY文档-v1.3.0</a> &#187; </li>
+      <li><a href="../../../index.html" >KISSY</a> &#187; </li>
+      <li><a href="../../index.html" >KISSY-v1.3.0</a> &#187; </li>
       <li><a href="../index.html" >core模块</a> &#187; </li>
       <li><a href="index.html" accesskey="U">event</a> &#187; </li> 
     </ul>
@@ -114,7 +115,7 @@ font-size: 44px;padding-left: 100px;">开放JS</h2>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first last simple">
-<li><strong>selector</strong> (<em>string|HTMLCollection|Array&lt;HTMLElement&gt;</em>) &#8211; 字符串格式参见 <em class="xref std std-ref">KISSY selector</em></li>
+<li><strong>selector</strong> (<em>string|HTMLCollection|Array&lt;HTMLElement&gt;</em>) &#8211; 字符串格式参见 <a class="reference internal" href="../dom/selector.html#dom-selector"><em>KISSY selector</em></a></li>
 <li><strong>eventType</strong> (<em>string</em>) &#8211; 包含一个或多个事件名称的字符串, 多个事件名以空格分开</li>
 <li><strong>filter</strong> (<em>string</em>) &#8211; 可参见 <tt class="xref py py-func docutils literal"><span class="pre">dom.filter()</span></tt> 的 filter 参数</li>
 <li><strong>fn</strong> (<em>function(eventObject)</em>) &#8211; 当事件触发时的回调函数</li>
@@ -125,11 +126,11 @@ font-size: 44px;padding-left: 100px;">开放JS</h2>
 </tbody>
 </table>
 <p>该方法是 <tt class="docutils literal"><span class="pre">on</span></tt> 方法的增强. 当 on 方法被调用时, 符合选择器的元素被绑定事件处理器, 而后面添加的元素则没有, 即他们需要另外一次绑定, 例如</p>
-<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;body&gt;</span>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;clickme&quot;</span><span class="nt">&gt;</span>
     Click here
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 </pre></div>
 </div>
 <p>绑定一个 click 事件的事件触发器：</p>
@@ -139,25 +140,25 @@ font-size: 44px;padding-left: 100px;">开放JS</h2>
 </pre></div>
 </div>
 <p>当该元素被点击时, 调用对应的事件处理器. 但是如果新加入一个元素：</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">KISSY</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;&lt;div class=&quot;clickme&quot;&gt;Another target&lt;/div&gt;&#39;</span><span class="p">);</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">KISSY</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="s1">&#39;.container&#39;</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;&lt;div class=&quot;clickme&quot;&gt;Another target&lt;/div&gt;&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>新元素匹配选择器 <tt class="docutils literal"><span class="pre">clickme</span></tt> ,但是他如果不再次 on , 则在他上面的点击不会有任何效果.</p>
 <p>delegate 方法提供了解决方法, 如果这样调用：</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">Event</span><span class="p">.</span><span class="nx">delegate</span><span class="p">(</span><span class="nb">document</span><span class="p">,</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="s1">&#39;.clickme&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(){</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">Event</span><span class="p">.</span><span class="nx">delegate</span><span class="p">(</span><span class="s1">&#39;.container&#39;</span><span class="p">,</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="s1">&#39;.clickme&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(){</span>
    <span class="c1">// Bound handler called.</span>
 <span class="p">});</span>
 </pre></div>
 </div>
 <p>这样的话如果今后又添加了一个元素</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">KISSY</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;&lt;div class=&quot;clickme&quot;&gt;Another target&lt;/div&gt;&#39;</span><span class="p">);</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">KISSY</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="s1">&#39;.container&#39;</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;&lt;div class=&quot;clickme&quot;&gt;Another target&lt;/div&gt;&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>在新元素上点击仍然会调用之前的事件处理器.</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span class="kd">function</span> <span class="nx">d</span><span class="p">(){</span>
 <span class="p">}</span>
 
-<span class="nx">Event</span><span class="p">.</span><span class="nx">delegate</span><span class="p">(</span><span class="nb">document</span><span class="p">,</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="s1">&#39;.clickme&#39;</span><span class="p">,</span><span class="nx">d</span><span class="p">);</span>
+<span class="nx">Event</span><span class="p">.</span><span class="nx">delegate</span><span class="p">(</span><span class="s1">&#39;.container&#39;</span><span class="p">,</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="s1">&#39;.clickme&#39;</span><span class="p">,</span><span class="nx">d</span><span class="p">);</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -201,7 +202,8 @@ event.target 指向事件触发源, event.currentTarget 指向当前事件处理
       <a href="on.html" title="on"
          accesskey="P">上一页</a> | </li>
     <li><a href="../../../../index.html">OPENJS-v1.0 Document</a> &#187; </li>
-      <li><a href="../../index.html" >KISSY文档-v1.3.0</a> &#187; </li>
+      <li><a href="../../../index.html" >KISSY</a> &#187; </li>
+      <li><a href="../../index.html" >KISSY-v1.3.0</a> &#187; </li>
       <li><a href="../index.html" >core模块</a> &#187; </li>
       <li><a href="index.html" accesskey="U">event</a> &#187; </li> 
     </ul>
@@ -249,8 +251,34 @@ event.target 指向事件触发源, event.currentTarget 指向当前事件处理
 
 <div class="s-box">
     <div class="s-box-bd">
-        <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../index.html">KISSY文档-v1.3.0</a></li>
+        <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">KISSY</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">KISSY-v1.3.0</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">core模块</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../node/index.html">node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ajax/index.html">ajax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../anim/index.html">anim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dom/index.html">dom</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">event</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="on.html">on</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="">delegate</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="detach.html">detach</a></li>
+<li class="toctree-l5"><a class="reference internal" href="fire.html">fire</a></li>
+<li class="toctree-l5"><a class="reference internal" href="event-object.html">Object</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../ua/index.html">ua</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../components/index.html">组件API</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gallery/index.html">Kissy Gallery</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../alimap/index.html">阿里地图</a></li>
 </ul>
 
     </div>

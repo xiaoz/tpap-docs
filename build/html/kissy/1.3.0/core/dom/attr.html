@@ -1,0 +1,309 @@
+
+<!doctype html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+
+<title>attr &mdash; OPENJS-v1.0 Document</title>
+
+<link rel="stylesheet" href="http://g.tbcdn.cn/kissy/k/1.3.1/css/dpl/base-min.css"/>
+<link rel="stylesheet" href="../../../../_static/kissy.css"/>
+    <link rel="stylesheet" href="http://a.tbcdn.cn/s/kissy/gallery/sphinx/1.1.3/pygments.css" type="text/css" />
+<link rel="shortcut icon" href="http://a.tbcdn.cn/s/kissy/favicon.ico" type="image/x-icon" />
+<!--<link href='http://fonts.googleapis.com/css?family=Philosopher' rel='stylesheet' type='text/css'>-->
+
+<script>
+    var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE: true
+    };
+</script>
+    <script type="text/javascript" src="http://a.tbcdn.cn/s/kissy/gallery/sphinx/1.1.3/??jquery.js,underscore.js,doctools.js,searchtools.js"></script> 
+<script>
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-31470541-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+</head>
+<body><h1 class="logo">
+    <a alt="KISSY" href="http://10.12.16.7/shop-team/products/openjs/build/html/">
+
+    <h2 style="width: 100%;
+margin: 0 auto;
+color: white;
+font-weight: bold;
+font-size: 44px;padding-left: 100px;">开放JS</h2>
+
+</a></h1>
+<div id="header">
+
+
+    <ul class="navigation">
+        <li><a href="http://docs.kissyui.com">导航在这</a></li>
+    </ul>
+<div id="searchbox" class="searchbox">
+    <form class="search" action="../../../../search.html" method="get">
+        <input type="text" name="q" size="28" class="ipt"/>
+        <input type="submit" value="搜索" class="btn"/>
+        <input type="hidden" name="check_keywords" value="yes"/>
+        <input type="hidden" name="area" value="default"/>
+    </form>
+</div>
+
+</div>
+
+<div id="content">
+	<div  id="layout" class="layout grid-s6m0e7">
+			<div class="col-main">
+				<div class="main-wrap">
+                    
+
+<div class='related'>
+    <h3>导航</h3>
+    
+    <ul>
+    <li class="right" style="margin-right: 10px">
+      <a href="../../../../genindex.html" title="总目录"
+         accesskey="I">索引</a></li>
+    <li class="right" >
+      <a href="../../../../py-modindex.html" title="Python Module Index"
+         >模块</a> | </li>
+    <li class="right" >
+      <a href="hasAttr.html" title="hasAttr"
+         accesskey="N">下一页</a> | </li>
+    <li class="right" >
+      <a href="removeData.html" title="removeData"
+         accesskey="P">上一页</a> | </li>
+    <li><a href="../../../../index.html">OPENJS-v1.0 Document</a> &#187; </li>
+      <li><a href="../../../index.html" >KISSY</a> &#187; </li>
+      <li><a href="../../index.html" >KISSY-v1.3.0</a> &#187; </li>
+      <li><a href="../index.html" >core模块</a> &#187; </li>
+      <li><a href="index.html" accesskey="U">dom</a> &#187; </li> 
+    </ul>
+</div>
+					<div class="body">
+  <div class="section" id="attr">
+<h1>attr<a class="headerlink" href="#attr" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id1">
+<h2>组件<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><a class="reference internal" href="index.html#module-dom" title="dom"><tt class="xref py py-mod docutils literal"><span class="pre">dom</span></tt></a></div></blockquote>
+</div>
+<div class="section" id="id2">
+<h2>方法<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<dl class="function">
+<dt id="dom.attr">
+<tt class="descclassname">dom.</tt><tt class="descname">attr</tt><big>(</big><big>)</big><a class="headerlink" href="#dom.attr" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">String <strong>attr</strong> ( selector, name )</div>
+<div class="line">获取符合选择器的第一个元素的属性值.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first simple">
+<li><strong>selector</strong> (<em>string|HTMLCollection|Array&lt;HTMLElement&gt;</em>) &#8211; 字符串格式参见 <a class="reference internal" href="selector.html#dom-selector"><em>KISSY selector</em></a></li>
+<li><strong>name</strong> (<em>string</em>) &#8211; 属性名称 , 必须是以“data-”开头的字符串</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回:</th><td class="field-body"><p class="first last">对应属性名的属性值</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>例如</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="s1">&#39;checkbox&#39;</span> <span class="nx">data</span><span class="o">-</span><span class="nx">checked</span><span class="o">=</span><span class="s1">&#39;checked&#39;</span><span class="o">/&gt;</span>
+
+<span class="kd">var</span> <span class="nx">S</span> <span class="o">=</span> <span class="nx">KISSY</span><span class="p">,</span> <span class="nx">DOM</span> <span class="o">=</span> <span class="nx">S</span><span class="p">.</span><span class="nx">DOM</span><span class="p">;</span>
+<span class="nx">DOM</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;input&quot;</span><span class="p">,</span><span class="s2">&quot;data-checked&quot;</span><span class="p">)</span> <span class="c1">// =&gt; &quot;checked&quot;</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">void <strong>attr</strong> ( selector, name, value )</div>
+<div class="line">给符合选择器的所有元素设置属性值.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first last simple">
+<li><strong>selector</strong> (<em>string|HTMLCollection|Array&lt;HTMLElement&gt;</em>) &#8211; 字符串格式参见 <a class="reference internal" href="selector.html#dom-selector"><em>KISSY selector</em></a></li>
+<li><strong>name</strong> (<em>string</em>) &#8211; 属性名称 , 必须是以“data-”开头的字符串</li>
+<li><strong>value</strong> &#8211; 属性值</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>例如</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="o">&lt;</span><span class="nx">img</span><span class="o">&gt;</span>
+
+<span class="kd">var</span> <span class="nx">S</span> <span class="o">=</span> <span class="nx">KISSY</span><span class="p">,</span> <span class="nx">DOM</span> <span class="o">=</span> <span class="nx">S</span><span class="p">.</span><span class="nx">DOM</span><span class="p">;</span>
+
+<span class="nx">DOM</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;img&#39;</span><span class="p">,</span> <span class="s1">&#39;data-height&#39;</span><span class="p">,</span><span class="mi">400</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">DOM</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;img&#39;</span><span class="p">,</span> <span class="s1">&#39;data-height&#39;</span><span class="p">));</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+</div>
+                    
+
+<div class='related'>
+    <h3>导航</h3>
+    
+    <ul>
+    <li class="right" style="margin-right: 10px">
+      <a href="../../../../genindex.html" title="总目录"
+         accesskey="I">索引</a></li>
+    <li class="right" >
+      <a href="../../../../py-modindex.html" title="Python Module Index"
+         >模块</a> | </li>
+    <li class="right" >
+      <a href="hasAttr.html" title="hasAttr"
+         accesskey="N">下一页</a> | </li>
+    <li class="right" >
+      <a href="removeData.html" title="removeData"
+         accesskey="P">上一页</a> | </li>
+    <li><a href="../../../../index.html">OPENJS-v1.0 Document</a> &#187; </li>
+      <li><a href="../../../index.html" >KISSY</a> &#187; </li>
+      <li><a href="../../index.html" >KISSY-v1.3.0</a> &#187; </li>
+      <li><a href="../index.html" >core模块</a> &#187; </li>
+      <li><a href="index.html" accesskey="U">dom</a> &#187; </li> 
+    </ul>
+</div>
+					<div id="disqus_thread"></div>
+<script>
+    if(true && window.localStorage.getItem("kissy-commment")!="0"){
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kissy-docs'; // required: replace example with your forum shortname
+
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+     //var disqus_identifier = '/anim';
+     //var disqus_url = window.location;
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    }
+</script>
+<!--<div id="google-search-box">
+    <div id="cse" style="width: 100%;">Loading</div>
+    <script>
+        if(window.location.hostname.indexOf("kissyui.com")!=-1){
+            document.write('<script src="http://www.google.com/jsapi" type="text/javascript"><'+'/script>');
+        }
+    </script>
+    <script>
+        if(window.location.hostname.indexOf("kissyui.com")!=-1){
+            google.load('search', '1', {language : 'zh-CN', style : google.loader.themes.MINIMALIST});
+            google.setOnLoadCallback(function() {
+                var customSearchControl = new google.search.CustomSearchControl('012347804910294994683:n4uzb24gqdm');
+                customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+                customSearchControl.draw('cse');
+            }, true);
+        }
+    </script>
+</div>-->
+				</div>
+			</div>
+		
+    <div class="col-sub">
+
+<div class="s-box">
+    <div class="s-box-bd">
+        <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">KISSY</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">KISSY-v1.3.0</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">core模块</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../node/index.html">node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ajax/index.html">ajax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../anim/index.html">anim</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">dom</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="selector.html">selector</a></li>
+<li class="toctree-l5"><a class="reference internal" href="get.html">get</a></li>
+<li class="toctree-l5"><a class="reference internal" href="query.html">query</a></li>
+<li class="toctree-l5"><a class="reference internal" href="text.html">text</a></li>
+<li class="toctree-l5"><a class="reference internal" href="offset.html">offset</a></li>
+<li class="toctree-l5"><a class="reference internal" href="hasClass.html">hasClass</a></li>
+<li class="toctree-l5"><a class="reference internal" href="addClass.html">addClass</a></li>
+<li class="toctree-l5"><a class="reference internal" href="removeClass.html">removeClass</a></li>
+<li class="toctree-l5"><a class="reference internal" href="toggleClass.html">toggleClass</a></li>
+<li class="toctree-l5"><a class="reference internal" href="replaceClass.html">replaceClass</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data.html">data</a></li>
+<li class="toctree-l5"><a class="reference internal" href="hasData.html">hasData</a></li>
+<li class="toctree-l5"><a class="reference internal" href="removeData.html">removeData</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="">attr</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="hasAttr.html">hasAttr</a></li>
+<li class="toctree-l5"><a class="reference internal" href="removeAttr.html">removeAttr</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../event/index.html">event</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ua/index.html">ua</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../components/index.html">组件API</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gallery/index.html">Kissy Gallery</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../alimap/index.html">阿里地图</a></li>
+</ul>
+
+    </div>
+</div>
+    </div>
+    <div class="col-extra">
+        
+	<div class="s-box">
+		<div class="s-box-hd">
+			<h3>本页快速导航</h3>
+		</div>
+		<div class="s-box-bd">
+			<ul>
+<li><a class="reference internal" href="#">attr</a><ul>
+<li><a class="reference internal" href="#id1">组件</a></li>
+<li><a class="reference internal" href="#id2">方法</a></li>
+</ul>
+</li>
+</ul>
+
+		</div>
+	</div>
+
+    </div>
+	</div>
+    <script>
+        if(!$.trim($(".col-extra").html())){
+            $("#layout").removeClass("grid-s6m0e7").addClass("grid-s6m0");
+        }
+    </script>
+</div>
+<div id="footer">
+    &copy; Copyright 2013~2023,  Created by 开放JavaScript-Team
+</div>
+</body>
+</html>

@@ -87,7 +87,8 @@ font-size: 44px;padding-left: 100px;">开放JS</h2>
       <a href="index.html" title="event"
          accesskey="P">上一页</a> | </li>
     <li><a href="../../../../index.html">OPENJS-v1.0 Document</a> &#187; </li>
-      <li><a href="../../index.html" >KISSY文档-v1.3.0</a> &#187; </li>
+      <li><a href="../../../index.html" >KISSY</a> &#187; </li>
+      <li><a href="../../index.html" >KISSY-v1.3.0</a> &#187; </li>
       <li><a href="../index.html" >core模块</a> &#187; </li>
       <li><a href="index.html" accesskey="U">event</a> &#187; </li> 
     </ul>
@@ -114,7 +115,7 @@ font-size: 44px;padding-left: 100px;">开放JS</h2>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first last simple">
-<li><strong>selector</strong> (<em>string|HTMLCollection|Array&lt;HTMLElement&gt;</em>) &#8211; 字符串格式参见 <em class="xref std std-ref">KISSY selector</em></li>
+<li><strong>selector</strong> (<em>string|HTMLCollection|Array&lt;HTMLElement&gt;</em>) &#8211; 字符串格式参见 <a class="reference internal" href="../dom/selector.html#dom-selector"><em>KISSY selector</em></a></li>
 <li><strong>eventType</strong> (<em>string</em>) &#8211; 包含一个或多个事件名称的字符串, 多个事件名以空格分开。
 事件可以通过加点来表示分组，例如 &#8220;click.one&#8221; , &#8220;click.two&#8221;</li>
 <li><strong>fn</strong> (<em>function(eventObject)</em>) &#8211; 当事件触发时的回调函数</li>
@@ -155,39 +156,39 @@ font-size: 44px;padding-left: 100px;">开放JS</h2>
 <h2>Demo<a class="headerlink" href="#demo" title="永久链接至标题">¶</a></h2>
 <blockquote>
 <div><p><strong>基本用法</strong></p>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">Event</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;#foo&#39;</span><span class="p">,</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(){</span>
-    <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;clicked : &#39;</span><span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
-<span class="p">});</span>
-</pre></div>
+<div class="highlight-javascript"><pre>&lt;div id="foo"&gt;haha&lt;/div&gt;
+
+KISSY.Event.on('#foo','click',function(e){
+     console.log('clicked : ',this.innerHTML, e.type);  // clicked :  hahahahahha click
+});</pre>
 </div>
-<p>上面的代码作用是：为 id 为 foo 的元素绑定 click 事件.当用户在该元素内部点击时, 则 alert 会弹出来.</p>
+<p>上面的代码作用是：为 id 为 foo 的元素绑定 click 事件.当用户在该元素内部点击时, 记录点击对象的内容和点击事件的类型.</p>
 <p><strong>事件分组</strong></p>
-<blockquote>
-<div><div class="highlight-javascript"><div class="highlight"><pre><span class="nx">Event</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;#foo&#39;</span><span class="p">,</span><span class="s1">&#39;click.one&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(){</span>
-    <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;clicked : &#39;</span><span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
-<span class="p">});</span>
+<div class="highlight-javascript"><pre>&lt;div id="foo"&gt;haha&lt;/div&gt;
 
-<span class="nx">Event</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;#foo&#39;</span><span class="p">,</span><span class="s1">&#39;click.two&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(){</span>
-    <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;clicked 2 : &#39;</span><span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
-<span class="p">});</span>
+KISSY.Event.on('#foo','click.one',function(){
+    console.log('clicked : '+this.innerHTML);
+});
 
-<span class="nx">Event</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s1">&#39;#foo&#39;</span><span class="p">,</span><span class="s1">&#39;.two&#39;</span><span class="p">);</span>
-</pre></div>
+KISSY.Event.on('#foo','click.two',function(){
+    console.log('clicked 2 : '+this.innerHTML);
+    KISSY.Event.remove('#foo','.two');
+});</pre>
 </div>
-<p>上面的代码作用是：为 id 为 foo 的元素绑定 click 事件.当用户在该元素内部点击时, 则 alert 会弹出来.
-后面同样绑定的 click 事件被分到另一个组，而这个组的事件在接下来被宣布清除.</p>
-</div></blockquote>
+<p>上面的代码作用是：为 id 为 foo 的元素绑定 click 事件.当用户在该元素内部点击时, 记录点击对象信息.
+后面同样绑定的 click 事件被分到另一个组，而这个组的事件在事件触发后被宣布清除.
+再次点击foo元素，则只会触发第一组的事件.</p>
 <p><strong>多个事件用空格分开, 可以同时绑定多个事件</strong></p>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">Event</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;#foo&#39;</span><span class="p">,</span><span class="s1">&#39;mouseenter mouseleave&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">DOM</span><span class="p">.</span><span class="nx">toggleClass</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="s2">&quot;enter&quot;</span><span class="p">);</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">KISSY</span><span class="p">.</span><span class="nx">Event</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;#foo&#39;</span><span class="p">,</span><span class="s1">&#39;mouseenter mouseleave&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">KISSY</span><span class="p">.</span><span class="nx">DOM</span><span class="p">.</span><span class="nx">toggleClass</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="s2">&quot;enter&quot;</span><span class="p">);</span>
 <span class="p">});</span>
 </pre></div>
 </div>
 <p>上述代码的作用是：一开始 foo 节点没有 enter 样式类, 当鼠标进入时给该节点添加 enter 样式类, 当鼠标移出时把 enter 样式类去掉. 这样就达到了 hover 的效果.</p>
-<p>当事件发生时, 事件处理器回调函数会被传递给一个事件对象参数.具体可见 <tt class="xref py py-class docutils literal"><span class="pre">Object</span></tt> .</p>
+<p>当事件发生时, 事件处理器回调函数会被传递给一个事件对象参数.具体可见 <a class="reference internal" href="event-object.html#event.Object" title="event.Object"><tt class="xref py py-class docutils literal"><span class="pre">Object</span></tt></a> .</p>
 <p>返回 <tt class="docutils literal"><span class="pre">false</span></tt> 相当于调用了事件对象的 <tt class="xref py py-meth docutils literal"><span class="pre">preventDefault()</span></tt> 以及 <tt class="xref py py-meth docutils literal"><span class="pre">stopPropagation()</span></tt></p>
 <p><strong>在事件处理器中使用事件对象</strong></p>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">Event</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;#foo&#39;</span><span class="p">,</span><span class="s1">&#39;mouseup mousedown&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">KISSY</span><span class="p">.</span><span class="nx">Event</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;#foo&#39;</span><span class="p">,</span><span class="s1">&#39;mouseup mousedown&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">type</span> <span class="o">+</span><span class="s2">&quot; occured&quot;</span><span class="p">);</span>
 <span class="p">});</span>
 </pre></div>
@@ -198,7 +199,7 @@ font-size: 44px;padding-left: 100px;">开放JS</h2>
 <p class="last">KISSY 也对 <tt class="docutils literal"><span class="pre">mouseenter/mouseleave</span> <span class="pre">focusin/focusout</span></tt> 进行了兼容处理, 所有浏览器都可以使用这两个事件了.</p>
 </div>
 <p><strong>阻止链接的默认事件以及冒泡</strong></p>
-<div class="highlight-html"><div class="highlight"><pre>Event.on(&#39;a&#39;,&#39;click&#39;,function(){
+<div class="highlight-html"><div class="highlight"><pre>KISSY.Event.on(&#39;a&#39;,&#39;click&#39;,function(e){
     // 等价于 e.preventDefault(); e.stopPropagation();
     e.halt();
 });
@@ -228,7 +229,8 @@ font-size: 44px;padding-left: 100px;">开放JS</h2>
       <a href="index.html" title="event"
          accesskey="P">上一页</a> | </li>
     <li><a href="../../../../index.html">OPENJS-v1.0 Document</a> &#187; </li>
-      <li><a href="../../index.html" >KISSY文档-v1.3.0</a> &#187; </li>
+      <li><a href="../../../index.html" >KISSY</a> &#187; </li>
+      <li><a href="../../index.html" >KISSY-v1.3.0</a> &#187; </li>
       <li><a href="../index.html" >core模块</a> &#187; </li>
       <li><a href="index.html" accesskey="U">event</a> &#187; </li> 
     </ul>
@@ -276,8 +278,34 @@ font-size: 44px;padding-left: 100px;">开放JS</h2>
 
 <div class="s-box">
     <div class="s-box-bd">
-        <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../index.html">KISSY文档-v1.3.0</a></li>
+        <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">KISSY</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">KISSY-v1.3.0</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">core模块</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../node/index.html">node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ajax/index.html">ajax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../anim/index.html">anim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dom/index.html">dom</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">event</a><ul class="current">
+<li class="toctree-l5 current"><a class="current reference internal" href="">on</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="delegate.html">delegate</a></li>
+<li class="toctree-l5"><a class="reference internal" href="detach.html">detach</a></li>
+<li class="toctree-l5"><a class="reference internal" href="fire.html">fire</a></li>
+<li class="toctree-l5"><a class="reference internal" href="event-object.html">Object</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../ua/index.html">ua</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../components/index.html">组件API</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gallery/index.html">Kissy Gallery</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../alimap/index.html">阿里地图</a></li>
 </ul>
 
     </div>

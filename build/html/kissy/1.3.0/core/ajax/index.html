@@ -84,10 +84,11 @@ font-size: 44px;padding-left: 100px;">开放JS</h2>
       <a href="../anim/index.html" title="anim"
          accesskey="N">下一页</a> | </li>
     <li class="right" >
-      <a href="../index.html" title="core模块"
+      <a href="../node/node-index.html" title="index"
          accesskey="P">上一页</a> | </li>
     <li><a href="../../../../index.html">OPENJS-v1.0 Document</a> &#187; </li>
-      <li><a href="../../index.html" >KISSY文档-v1.3.0</a> &#187; </li>
+      <li><a href="../../../index.html" >KISSY</a> &#187; </li>
+      <li><a href="../../index.html" >KISSY-v1.3.0</a> &#187; </li>
       <li><a href="../index.html" accesskey="U">core模块</a> &#187; </li> 
     </ul>
 </div>
@@ -132,7 +133,6 @@ font-size: 44px;padding-left: 100px;">开放JS</h2>
 <li><a class="reference internal" href="#io.cfg.async" title="io.cfg.async"><tt class="xref py py-data docutils literal"><span class="pre">cfg.async</span></tt></a></li>
 <li><a class="reference internal" href="#io.cfg.cache" title="io.cfg.cache"><tt class="xref py py-data docutils literal"><span class="pre">cfg.cache</span></tt></a></li>
 <li><a class="reference internal" href="#io.cfg.contentType" title="io.cfg.contentType"><tt class="xref py py-data docutils literal"><span class="pre">cfg.contentType</span></tt></a></li>
-<li><a class="reference internal" href="#io.cfg.context" title="io.cfg.context"><tt class="xref py py-data docutils literal"><span class="pre">cfg.context</span></tt></a></li>
 <li><a class="reference internal" href="#io.cfg.crossDomain" title="io.cfg.crossDomain"><tt class="xref py py-data docutils literal"><span class="pre">cfg.crossDomain</span></tt></a></li>
 <li><a class="reference internal" href="#io.cfg.data" title="io.cfg.data"><tt class="xref py py-data docutils literal"><span class="pre">cfg.data</span></tt></a></li>
 <li><a class="reference internal" href="#io.cfg.serializeArray" title="io.cfg.serializeArray"><tt class="xref py py-data docutils literal"><span class="pre">cfg.serializeArray</span></tt></a></li>
@@ -150,39 +150,24 @@ font-size: 44px;padding-left: 100px;">开放JS</h2>
 <li><a class="reference internal" href="#io.cfg.type" title="io.cfg.type"><tt class="xref py py-data docutils literal"><span class="pre">cfg.type</span></tt></a></li>
 <li><a class="reference internal" href="#io.cfg.xdr" title="io.cfg.xdr"><tt class="xref py py-data docutils literal"><span class="pre">cfg.xdr</span></tt></a></li>
 <li><a class="reference internal" href="#io.cfg.xhrFields" title="io.cfg.xhrFields"><tt class="xref py py-data docutils literal"><span class="pre">cfg.xhrFields</span></tt></a></li>
-<li><a class="reference internal" href="#io.cfg.form" title="io.cfg.form"><tt class="xref py py-data docutils literal"><span class="pre">cfg.form</span></tt></a></li>
 <li><a class="reference internal" href="#io.cfg.beforeSend" title="io.cfg.beforeSend"><tt class="xref py py-data docutils literal"><span class="pre">cfg.beforeSend</span></tt></a></li>
 </ul>
 </div></blockquote>
 </div>
 <div class="section" id="id5">
-<h2>属性<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
-<blockquote>
-<div><ul class="simple">
-<li><a class="reference internal" href="#io.readyState" title="io.readyState"><tt class="xref py py-attr docutils literal"><span class="pre">readyState</span></tt></a></li>
-<li><a class="reference internal" href="#io.status" title="io.status"><tt class="xref py py-attr docutils literal"><span class="pre">status</span></tt></a></li>
-<li><a class="reference internal" href="#io.statusText" title="io.statusText"><tt class="xref py py-attr docutils literal"><span class="pre">statusText</span></tt></a></li>
-<li><a class="reference internal" href="#io.responseText" title="io.responseText"><tt class="xref py py-attr docutils literal"><span class="pre">responseText</span></tt></a></li>
-</ul>
-</div></blockquote>
-</div>
-<div class="section" id="id6">
-<h2>方法详情<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<h2>方法详情<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <dl class="class">
 <dt id="io.IO">
 <em class="property">class </em><tt class="descclassname">io.</tt><tt class="descname">IO</tt><a class="headerlink" href="#io.IO" title="永久链接至目标">¶</a></dt>
 <dd><div class="line-block">
 <div class="line"><strong>IO</strong> ( cfg )</div>
-<div class="line">构建 io 请求并发送, 继承自 <tt class="xref py py-class docutils literal"><span class="pre">Promise</span></tt> .</div>
+<div class="line">构建 io 请求并发送.</div>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>cfg</strong> (<em>Object</em>) &#8211; 用来配置请求的键值对对象.
-所有的配置项都是可选的,可以通过
-<tt class="xref py py-func docutils literal"><span class="pre">io.setupConfig()</span></tt>
-来设置默认配置.</td>
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>cfg</strong> (<em>Object</em>) &#8211; 用来配置请求的键值对对象,所有的配置项都是可选的.</td>
 </tr>
 </tbody>
 </table>
@@ -190,13 +175,13 @@ font-size: 44px;padding-left: 100px;">开放JS</h2>
 
 </div>
 <div class="section" id="io-config">
-<span id="id7"></span><h2>参数配置详情<a class="headerlink" href="#io-config" title="永久链接至标题">¶</a></h2>
+<span id="id6"></span><h2>参数配置详情<a class="headerlink" href="#io-config" title="永久链接至标题">¶</a></h2>
 <dl class="data">
 <dt id="io.cfg.url">
 <tt class="descclassname">cfg.</tt><tt class="descname">url</tt><a class="headerlink" href="#io.cfg.url" title="永久链接至目标">¶</a></dt>
 <dd><p>{String} - 类型 String. 本次请求发送的地址.
 IO 接口采用白名单机制，换句话说，不是所有url都可以进行io请求的。
-IO接口的url环境白名单为 &#8216;taegrid.taobao.com&#8217;和&#8217;uz.taobao.com&#8217;， 用于线上, 本地url白名单为&#8217;<a href="#id8"><span class="problematic" id="id9">*</span></a>.taobao.net&#8217;, &#8216; <a href="#id10"><span class="problematic" id="id11">*</span></a>.taobaoapps.net&#8217;，可在测试时使用.</p>
+IO接口的url环境白名单为 &#8216;taegrid.taobao.com&#8217;和&#8217;uz.taobao.com&#8217;， 用于线上, 本地url白名单为&#8217;<a href="#id7"><span class="problematic" id="id8">*</span></a>.taobao.net&#8217;, &#8216; <a href="#id9"><span class="problematic" id="id10">*</span></a>.taobaoapps.net&#8217;，可在测试时使用.</p>
 </dd></dl>
 
 <dl class="data">
@@ -206,9 +191,6 @@ IO接口的url环境白名单为 &#8216;taegrid.taobao.com&#8217;和&#8217;uz.ta
 一起确定当前发送给服务器的 Accept 头. 默认包括</p>
 <blockquote>
 <div><div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
-    <span class="nx">xml</span><span class="o">:</span> <span class="s2">&quot;application/xml, text/xml&quot;</span><span class="p">,</span>
-    <span class="nx">html</span><span class="o">:</span> <span class="s2">&quot;text/html&quot;</span><span class="p">,</span>
-    <span class="nx">text</span><span class="o">:</span> <span class="s2">&quot;text/plain&quot;</span><span class="p">,</span>
     <span class="nx">json</span><span class="o">:</span> <span class="s2">&quot;application/json, text/javascript&quot;</span>
 <span class="p">}</span>
 </pre></div>
@@ -247,7 +229,7 @@ IO接口的url环境白名单为 &#8216;taegrid.taobao.com&#8217;和&#8217;uz.ta
 <dl class="data">
 <dt id="io.cfg.cache">
 <tt class="descclassname">cfg.</tt><tt class="descname">cache</tt><a class="headerlink" href="#io.cfg.cache" title="永久链接至目标">¶</a></dt>
-<dd><p>{Boolean} -  <a class="reference internal" href="#io.cfg.dataType" title="io.cfg.dataType"><tt class="xref py py-data docutils literal"><span class="pre">dataType</span></tt></a> 为 <strong>script</strong> 或 <strong>jsonp</strong> 时默认 false，其他默认为 true. false 时则会自动给请求 url 加上时间戳.</p>
+<dd><p>{Boolean} -  <a class="reference internal" href="#io.cfg.dataType" title="io.cfg.dataType"><tt class="xref py py-data docutils literal"><span class="pre">dataType</span></tt></a> 为 <strong>jsonp</strong> 时默认 false，其他默认为 true. false 时则会自动给请求 url 加上时间戳.</p>
 </dd></dl>
 
 <dl class="data">
@@ -258,21 +240,6 @@ IO接口的url环境白名单为 &#8216;taegrid.taobao.com&#8217;和&#8217;uz.ta
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
 <p class="last">&#8220;application/x-www-form-urlencoded&#8221; 时的数据总是以 utf-8 的编码传往服务器端.</p>
-</div>
-</dd></dl>
-
-<dl class="data">
-<dt id="io.cfg.context">
-<tt class="descclassname">cfg.</tt><tt class="descname">context</tt><a class="headerlink" href="#io.cfg.context" title="永久链接至目标">¶</a></dt>
-<dd><p>{Object} - 设置回调函数中的 this 值,默认为当前配置项.例如可以把一个 dom 节点作为 complete 回调函数的上下文:</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="k">new</span> <span class="nx">IO</span><span class="p">({</span>
-    <span class="nx">url</span><span class="o">:</span><span class="s1">&#39;test.html&#39;</span><span class="p">,</span>
-    <span class="nx">context</span><span class="o">:</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span>
-    <span class="nx">complete</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;complete&quot;</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">});</span>
-</pre></div>
 </div>
 </dd></dl>
 
@@ -318,11 +285,10 @@ IO接口的url环境白名单为 &#8216;taegrid.taobao.com&#8217;和&#8217;uz.ta
 <dl class="data">
 <dt id="io.cfg.error">
 <tt class="descclassname">cfg.</tt><tt class="descname">error</tt><a class="headerlink" href="#io.cfg.error" title="永久链接至目标">¶</a></dt>
-<dd><p>{Function} -  <strong>error</strong> (null, textStatus, io) 请求失败时的回调函数.这个函数接受 2 个参数：</p>
+<dd><p>{Function} -  <strong>error</strong> (null, textStatus) 请求失败时的回调函数.这个函数接受 1 个参数：</p>
 <blockquote>
 <div><ul class="simple">
 <li>textStatus 表示错误信息，包括 &#8220;timeout&#8221; , &#8220;error&#8221; , &#8220;abort&#8221; 等</li>
-<li>io 表示这次请求代表的 io 实例.</li>
 </ul>
 </div></blockquote>
 </dd></dl>
@@ -330,12 +296,11 @@ IO接口的url环境白名单为 &#8216;taegrid.taobao.com&#8217;和&#8217;uz.ta
 <dl class="data">
 <dt id="io.cfg.success">
 <tt class="descclassname">cfg.</tt><tt class="descname">success</tt><a class="headerlink" href="#io.cfg.success" title="永久链接至目标">¶</a></dt>
-<dd><p>{Function} -  <strong>success</strong> ( data , textStatus , io) 请求成功时的回调函数.该函数传入三个参数.</p>
+<dd><p>{Function} -  <strong>success</strong> ( data , textStatus) 请求成功时的回调函数.该函数传入两个参数.</p>
 <blockquote>
 <div><ul class="simple">
 <li>data : 根据 dataType 格式化服务器响应信息的响应对象</li>
 <li>textStatus : 描述成功的状态，一般是 &#8220;success&#8221;</li>
-<li>io : 本次请求的 io 实例.</li>
 </ul>
 </div></blockquote>
 </dd></dl>
@@ -343,12 +308,11 @@ IO接口的url环境白名单为 &#8216;taegrid.taobao.com&#8217;和&#8217;uz.ta
 <dl class="data">
 <dt id="io.cfg.complete">
 <tt class="descclassname">cfg.</tt><tt class="descname">complete</tt><a class="headerlink" href="#io.cfg.complete" title="永久链接至目标">¶</a></dt>
-<dd><p>{Function} -  <strong>complete</strong> ( data , textStatus , io) 请求完成时的回调函数.该函数传入三个参数.</p>
+<dd><p>{Function} -  <strong>complete</strong> ( data , textStatus) 请求完成时的回调函数.该函数传入两个参数.</p>
 <blockquote>
 <div><ul class="simple">
 <li>data : 根据 dataType 格式化服务器响应信息的响应对象，失败触发时为 null</li>
 <li>textStatus : 描述成功的状态，一般是 &#8220;success&#8221;</li>
-<li>io : 本次请求的 io 实例.</li>
 </ul>
 </div></blockquote>
 <div class="admonition note">
@@ -375,6 +339,32 @@ IO接口的url环境白名单为 &#8216;taegrid.taobao.com&#8217;和&#8217;uz.ta
 <dd><p>{String|Function} - 覆盖这次 jsonp 请求 callback 函数对应的值 (<tt class="docutils literal"><span class="pre">callback={jsonpCallback}</span></tt>). 这个值将取代 kissy 默认生成的 UUID 值.</p>
 <blockquote>
 <div>当传入函数时，该函数需要返回字符串，每次请求都会调用该函数得到用于替换的字符串.</div></blockquote>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">KISSY</span><span class="p">.</span><span class="nx">io</span><span class="p">({</span>
+    <span class="c1">//指定 callback 的参数,请求 url 会生成 &quot;url?callback={$jsonpCallback}&quot;</span>
+    <span class="nx">jsonpCallback</span><span class="o">:</span> <span class="s2">&quot;jsonp100&quot;</span><span class="p">,</span>
+    <span class="c1">//指定 callback 的别名,请求url会生成 &quot;url?{$jsonp}=jsonp123456&quot;， 默认就是callback</span>
+    <span class="nx">jsonp</span><span class="o">:</span> <span class="s2">&quot;callback&quot;</span> <span class="p">,</span>
+    <span class="c1">//url 地址</span>
+    <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;urladdress&quot;</span><span class="p">,</span>
+    <span class="c1">//string|json发起请求需要附加的数据,默认为 null</span>
+    <span class="nx">data</span><span class="o">:</span> <span class="p">{</span><span class="s2">&quot;p&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">},</span>
+    <span class="c1">// function请求成功的回调,回调参数为 data(内容),textStatus(请求状态),xhr(ajax对象)</span>
+    <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="nx">textStatus</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//callback</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;success&quot;</span><span class="p">)</span>
+    <span class="p">},</span>
+    <span class="c1">//function 请求完成的回调，在 success 调用之后触发,参数同 success</span>
+    <span class="nx">complete</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+         <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;complete&quot;</span><span class="p">)</span>
+    <span class="p">},</span>
+    <span class="c1">// 请求错误时的回调</span>
+    <span class="nx">error</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="p">},</span>
+    <span class="c1">//发送请求类型是jsonp</span>
+    <span class="nx">dataType</span><span class="o">:</span><span class="s2">&quot;jsonp&quot;</span>
+<span class="p">});</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="data">
@@ -464,38 +454,17 @@ IO接口的url环境白名单为 &#8216;taegrid.taobao.com&#8217;和&#8217;uz.ta
 </dd></dl>
 
 <dl class="data">
-<dt id="io.cfg.form">
-<tt class="descclassname">cfg.</tt><tt class="descname">form</tt><a class="headerlink" href="#io.cfg.form" title="永久链接至目标">¶</a></dt>
-<dd><p>{String} -  选择器字符串 <em class="xref std std-ref">KISSY selector</em></p>
-<ul class="simple">
-<li>如果 form 的 enctype 为 <cite>&#8220;multipart/form-data`</cite> 则会采用 <a class="reference external" href="http://www.webtoolkit.info/ajax-file-upload.html">iframe</a> 的方式进行无刷新文件上传，</li>
-<li>否则将 form 内的输入域和值序列化后通过 xhr 发送到服务器.</li>
-</ul>
-</dd></dl>
-
-<dl class="data">
 <dt id="io.cfg.beforeSend">
 <tt class="descclassname">cfg.</tt><tt class="descname">beforeSend</tt><a class="headerlink" href="#io.cfg.beforeSend" title="永久链接至目标">¶</a></dt>
-<dd><p>{Function} - 发送请求前的拦截函数，传入参数 （xhrObject, config）</p>
-<ul class="simple">
-<li>xhrObject 为 <tt class="xref py py-class docutils literal"><span class="pre">io.XhrObj</span></tt> 类型</li>
-</ul>
+<dd><p>{Function} - 发送请求前的拦截函数</p>
 <p>例如可以通过该函数实现上传进度监控</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">IO</span><span class="p">({</span>
-    <span class="nx">url</span><span class="o">:</span><span class="s1">&#39;./upload.php&#39;</span><span class="p">,</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="nx">KISSY</span><span class="p">.</span><span class="nx">io</span><span class="p">({</span>
+    <span class="nx">url</span><span class="o">:</span><span class="s1">&#39;./upload.php&#39;</span><span class="p">,</span>    <span class="c1">//实际使用必须是白名单中地址</span>
     <span class="nx">type</span><span class="o">:</span><span class="s2">&quot;post&quot;</span><span class="p">,</span>
-    <span class="nx">processData</span><span class="o">:</span><span class="kc">false</span><span class="p">,</span>
-    <span class="nx">data</span><span class="o">:</span><span class="nx">formData</span><span class="p">,</span>
     <span class="nx">dataType</span><span class="o">:</span><span class="s1">&#39;json&#39;</span><span class="p">,</span>
-    <span class="nx">contentType</span><span class="o">:</span><span class="kc">false</span><span class="p">,</span>
-    <span class="nx">beforeSend</span><span class="o">:</span><span class="kd">function</span> <span class="p">(</span><span class="nx">xhr</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">beforeSend</span><span class="o">:</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
         <span class="c1">// 上传监听 upload</span>
-        <span class="nx">xhr</span><span class="p">.</span><span class="nx">getNativeXhr</span><span class="p">().</span><span class="nx">upload</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;progress&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">ev</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">S</span><span class="p">.</span><span class="nx">log</span><span class="p">({</span> <span class="s1">&#39;loaded&#39;</span><span class="o">:</span><span class="nx">ev</span><span class="p">.</span><span class="nx">loaded</span><span class="p">,</span> <span class="s1">&#39;total&#39;</span><span class="o">:</span><span class="nx">ev</span><span class="p">.</span><span class="nx">total</span> <span class="p">});</span>
-        <span class="p">});</span>
-    <span class="p">},</span>
-    <span class="nx">success</span><span class="o">:</span><span class="kd">function</span> <span class="p">(</span><span class="nx">d</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">S</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">d</span><span class="p">);</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;sending...&quot;</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">});</span>
 </pre></div>
@@ -503,88 +472,30 @@ IO接口的url环境白名单为 &#8216;taegrid.taobao.com&#8217;和&#8217;uz.ta
 </dd></dl>
 
 </div>
-<div class="section" id="id13">
-<h2>属性详情<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h2>
-<dl class="attribute">
-<dt id="io.readyState">
-<tt class="descclassname">io.</tt><tt class="descname">readyState</tt><a class="headerlink" href="#io.readyState" title="永久链接至目标">¶</a></dt>
-<dd><p>{Number} - 表示请求完成状态。可用于判断当前请求是否完成. 4 表示完成，否则表示正在进行中.(xhr 会有更多取值，jsonp script 只有 0(初始化) 1(发送中) 4(完成))</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="io.status">
-<tt class="descclassname">io.</tt><tt class="descname">status</tt><a class="headerlink" href="#io.status" title="永久链接至目标">¶</a></dt>
-<dd><p>{Number} - 响应状态码. xhr 会有更多取值。<tt class="docutils literal"><span class="pre">jsonp</span> <span class="pre">script</span></tt> 只有 200(成功) , 500(出错)</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="io.statusText">
-<tt class="descclassname">io.</tt><tt class="descname">statusText</tt><a class="headerlink" href="#io.statusText" title="永久链接至目标">¶</a></dt>
-<dd><p>{String} - 响应状态字符串. 最终同回调 <a class="reference internal" href="#io.cfg.complete" title="io.cfg.complete"><tt class="xref py py-data docutils literal"><span class="pre">complete</span></tt></a> 中的 <tt class="docutils literal"><span class="pre">textStatus</span></tt> 一致.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="io.responseText">
-<tt class="descclassname">io.</tt><tt class="descname">responseText</tt><big>(</big><em>responseXML</em><big>)</big><a class="headerlink" href="#io.responseText" title="永久链接至目标">¶</a></dt>
-<dd><p>{String} - 返回响应对应的 text 和 xml（如果需要）.</p>
-</dd></dl>
-
-</div>
 <div class="section" id="demo">
 <h2>Demo<a class="headerlink" href="#demo" title="永久链接至标题">¶</a></h2>
 <blockquote>
 <div><p><strong>发送数据给服务器，服务器返回后通知用户</strong></p>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="k">new</span> <span class="nx">IO</span><span class="p">({</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">KISSY</span><span class="p">.</span><span class="nx">io</span><span class="p">({</span>
    <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;POST&quot;</span><span class="p">,</span>
    <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;some.php&quot;</span><span class="p">,</span>
    <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
     <span class="nx">x</span><span class="o">:</span><span class="s1">&#39;y&#39;</span>
    <span class="p">},</span>
    <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">msg</span><span class="p">){</span>
-     <span class="nx">alert</span><span class="p">(</span> <span class="s2">&quot;Data Saved: &quot;</span> <span class="o">+</span> <span class="nx">msg</span> <span class="p">);</span>
+     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="s2">&quot;Data Saved: &quot;</span> <span class="o">+</span> <span class="nx">msg</span> <span class="p">);</span>
    <span class="p">}</span>
  <span class="p">});</span>
 </pre></div>
 </div>
 <p><strong>取得最新的 html 并显示</strong></p>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="k">new</span> <span class="nx">IO</span><span class="p">({</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">KISSY</span><span class="p">.</span><span class="nx">io</span><span class="p">({</span>
   <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;test.html&quot;</span><span class="p">,</span>
   <span class="nx">cache</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">html</span><span class="p">){</span>
     <span class="nx">KISSY</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="s2">&quot;#results&quot;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">html</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">});</span>
-</pre></div>
-</div>
-<p><strong>发送 xml 文档给服务器</strong></p>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">xmlDocument</span><span class="o">=</span><span class="nx">S</span><span class="p">.</span><span class="nx">parseXML</span><span class="p">(</span><span class="s2">&quot;&lt;a&gt;h&lt;/a&gt;&quot;</span><span class="p">);</span>
-
-<span class="k">new</span> <span class="nx">IO</span><span class="p">({</span>
-   <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;page.php&quot;</span><span class="p">,</span>
-   <span class="nx">processData</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-   <span class="nx">contentType</span><span class="o">:</span><span class="s1">&#39;text/xml&#39;</span><span class="p">,</span>
-   <span class="nx">data</span><span class="o">:</span> <span class="nx">xmlDocument</span><span class="p">,</span>
-   <span class="nx">type</span><span class="o">:</span><span class="s1">&#39;post&#39;</span>
- <span class="p">});</span>
-</pre></div>
-</div>
-<p><strong>通过 xhr 发送 form 内容</strong></p>
-<p>自动序列化 <tt class="docutils literal"><span class="pre">form</span></tt> 为查询串通过 <tt class="docutils literal"><span class="pre">xhr</span></tt> 发送给服务器端</p>
-<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;form&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">&#39;test&#39;</span> <span class="na">value=</span><span class="s">&#39;v&#39;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;/form&gt;</span>
-
-<span class="nt">&lt;script&gt;</span>
-    <span class="k">new</span> <span class="nx">IO</span><span class="p">({</span>
-        <span class="nx">url</span><span class="o">:</span><span class="s1">&#39;send.php&#39;</span><span class="p">,</span>
-        <span class="nx">form</span><span class="o">:</span><span class="s1">&#39;#test&#39;</span><span class="p">,</span>
-        <span class="nx">type</span><span class="o">:</span><span class="s1">&#39;post&#39;</span><span class="p">,</span>
-        <span class="nx">dataType</span><span class="o">:</span><span class="s1">&#39;json&#39;</span><span class="p">,</span>
-        <span class="nx">success</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">d</span><span class="p">,</span><span class="nx">s</span><span class="p">,</span><span class="nx">xhr</span><span class="p">){</span>
-            <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;success&#39;</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="p">});</span>
-<span class="nt">&lt;/script&gt;</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -608,10 +519,11 @@ IO接口的url环境白名单为 &#8216;taegrid.taobao.com&#8217;和&#8217;uz.ta
       <a href="../anim/index.html" title="anim"
          accesskey="N">下一页</a> | </li>
     <li class="right" >
-      <a href="../index.html" title="core模块"
+      <a href="../node/node-index.html" title="index"
          accesskey="P">上一页</a> | </li>
     <li><a href="../../../../index.html">OPENJS-v1.0 Document</a> &#187; </li>
-      <li><a href="../../index.html" >KISSY文档-v1.3.0</a> &#187; </li>
+      <li><a href="../../../index.html" >KISSY</a> &#187; </li>
+      <li><a href="../../index.html" >KISSY-v1.3.0</a> &#187; </li>
       <li><a href="../index.html" accesskey="U">core模块</a> &#187; </li> 
     </ul>
 </div>
@@ -659,17 +571,26 @@ IO接口的url环境白名单为 &#8216;taegrid.taobao.com&#8217;和&#8217;uz.ta
 <div class="s-box">
     <div class="s-box-bd">
         <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">KISSY文档-v1.3.0</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../../components/index.html">组件API</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html">core模块</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="">ajax</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../anim/index.html">anim</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../event/index.html">event</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ua/index.html">ua</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">KISSY</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">KISSY-v1.3.0</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">core模块</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../node/index.html">node</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="">ajax</a><ul class="simple">
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="../anim/index.html">anim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dom/index.html">dom</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../event/index.html">event</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ua/index.html">ua</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../../components/index.html">组件API</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gallery/index.html">Kissy Gallery</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../alimap/index.html">阿里地图</a></li>
 </ul>
 
     </div>
@@ -687,10 +608,8 @@ IO接口的url环境白名单为 &#8216;taegrid.taobao.com&#8217;和&#8217;uz.ta
 <li><a class="reference internal" href="#id2">组件</a></li>
 <li><a class="reference internal" href="#id3">构造函数</a></li>
 <li><a class="reference internal" href="#id4">参数配置</a></li>
-<li><a class="reference internal" href="#id5">属性</a></li>
-<li><a class="reference internal" href="#id6">方法详情</a></li>
+<li><a class="reference internal" href="#id5">方法详情</a></li>
 <li><a class="reference internal" href="#io-config">参数配置详情</a></li>
-<li><a class="reference internal" href="#id13">属性详情</a></li>
 <li><a class="reference internal" href="#demo">Demo</a></li>
 </ul>
 </li>

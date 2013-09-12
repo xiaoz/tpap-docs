@@ -56,37 +56,42 @@ Demo
 
     .. code-block:: javascript
 
-        Event.on('#foo','click',function(){
-            alert('clicked : '+this.id);
+        <div id="foo">haha</div>
+
+        KISSY.Event.on('#foo','click',function(e){
+             console.log('clicked : ',this.innerHTML, e.type);  // clicked :  hahahahahha click
         });
 
-    上面的代码作用是：为 id 为 foo 的元素绑定 click 事件.当用户在该元素内部点击时, 则 alert 会弹出来.
+    上面的代码作用是：为 id 为 foo 的元素绑定 click 事件.当用户在该元素内部点击时, 记录点击对象的内容和点击事件的类型.
 
 
     **事件分组**
 
-        .. code-block:: javascript
+    .. code-block:: javascript
 
-            Event.on('#foo','click.one',function(){
-                alert('clicked : '+this.id);
-            });
+        <div id="foo">haha</div>
 
-            Event.on('#foo','click.two',function(){
-                alert('clicked 2 : '+this.id);
-            });
+        KISSY.Event.on('#foo','click.one',function(){
+            console.log('clicked : '+this.innerHTML);
+        });
 
-            Event.remove('#foo','.two');
+        KISSY.Event.on('#foo','click.two',function(){
+            console.log('clicked 2 : '+this.innerHTML);
+            KISSY.Event.remove('#foo','.two');
+        });
 
-        上面的代码作用是：为 id 为 foo 的元素绑定 click 事件.当用户在该元素内部点击时, 则 alert 会弹出来.
-        后面同样绑定的 click 事件被分到另一个组，而这个组的事件在接下来被宣布清除.
+    上面的代码作用是：为 id 为 foo 的元素绑定 click 事件.当用户在该元素内部点击时, 记录点击对象信息.
+    后面同样绑定的 click 事件被分到另一个组，而这个组的事件在事件触发后被宣布清除.
+    再次点击foo元素，则只会触发第一组的事件.
+
 
 
     **多个事件用空格分开, 可以同时绑定多个事件**
 
     .. code-block:: javascript
 
-        Event.on('#foo','mouseenter mouseleave', function(e) {
-          DOM.toggleClass(this,"enter");
+        KISSY.Event.on('#foo','mouseenter mouseleave', function(e) {
+          KISSY.DOM.toggleClass(this,"enter");
         });
 
     上述代码的作用是：一开始 foo 节点没有 enter 样式类, 当鼠标进入时给该节点添加 enter 样式类, 当鼠标移出时把 enter 样式类去掉. 这样就达到了 hover 的效果.
@@ -99,7 +104,7 @@ Demo
 
     .. code-block:: javascript
 
-         Event.on('#foo','mouseup mousedown', function(event) {
+         KISSY.Event.on('#foo','mouseup mousedown', function(event) {
             console.log(event.type +" occured");
          });
 
@@ -114,7 +119,7 @@ Demo
 
     .. code-block:: html
 
-        Event.on('a','click',function(){
+        KISSY.Event.on('a','click',function(e){
             // 等价于 e.preventDefault(); e.stopPropagation();
             e.halt();
         });

@@ -87,7 +87,8 @@ font-size: 44px;padding-left: 100px;">开放JS</h2>
       <a href="delegate.html" title="delegate"
          accesskey="P">上一页</a> | </li>
     <li><a href="../../../../index.html">OPENJS-v1.0 Document</a> &#187; </li>
-      <li><a href="../../index.html" >KISSY文档-v1.3.0</a> &#187; </li>
+      <li><a href="../../../index.html" >KISSY</a> &#187; </li>
+      <li><a href="../../index.html" >KISSY-v1.3.0</a> &#187; </li>
       <li><a href="../index.html" >core模块</a> &#187; </li>
       <li><a href="index.html" accesskey="U">event</a> &#187; </li> 
     </ul>
@@ -114,7 +115,7 @@ font-size: 44px;padding-left: 100px;">开放JS</h2>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first last simple">
-<li><strong>selector</strong> (<em>string|HTMLCollection|Array&lt;HTMLElement&gt;</em>) &#8211; 字符串格式参见 <em class="xref std std-ref">KISSY selector</em></li>
+<li><strong>selector</strong> (<em>string|HTMLCollection|Array&lt;HTMLElement&gt;</em>) &#8211; 字符串格式参见 <a class="reference internal" href="../dom/selector.html#dom-selector"><em>KISSY selector</em></a></li>
 <li><strong>eventType</strong> (<em>string</em>) &#8211; 包含一个或多个事件名称的字符串, 多个事件名以空格分开，
 也可以包含事件分组，例如 &#8220;click.one&#8221; , &#8221;.two&#8221; 等</li>
 <li><strong>fn</strong> (<em>function(eventObject)</em>) &#8211; 绑定事件时的回调函数</li>
@@ -125,33 +126,33 @@ font-size: 44px;padding-left: 100px;">开放JS</h2>
 </tbody>
 </table>
 <p>用 <tt class="docutils literal"><span class="pre">on</span></tt> 绑定的事件处理器可以用 <tt class="docutils literal"><span class="pre">detach</span></tt> 解除绑定. 最简单的情况 <tt class="docutils literal"><span class="pre">detach(elem)</span></tt> 解除该元素上的所有绑定.</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">Event</span><span class="p">.</span><span class="nx">detach</span><span class="p">(</span><span class="s1">&#39;#foo&#39;</span><span class="p">);</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">KISSY</span><span class="p">.</span><span class="nx">Event</span><span class="p">.</span><span class="nx">detach</span><span class="p">(</span><span class="s1">&#39;#foo&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>上面的代码解除了 foo 元素上所有事件的事件处理器, 我们也可以解除某一个事件的全部事件处理器:</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">Event</span><span class="p">.</span><span class="nx">detach</span><span class="p">(</span><span class="s1">&#39;#foo&#39;</span><span class="p">,</span><span class="s1">&#39;click&#39;</span><span class="p">);</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">KISSY</span><span class="p">.</span><span class="nx">Event</span><span class="p">.</span><span class="nx">detach</span><span class="p">(</span><span class="s1">&#39;#foo&#39;</span><span class="p">,</span><span class="s1">&#39;click&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>当时如果程序对同一事件指定了不同的事件处理器, 这时就需要后面两个参数了</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">handler</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;The quick brown fox jumps over the lazy dog.&#39;</span><span class="p">);</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;The quick brown fox jumps over the lazy dog.&#39;</span><span class="p">);</span>
 <span class="p">};</span>
-<span class="nx">Event</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;#foo&#39;</span><span class="p">,</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="nx">handler</span><span class="p">);</span>
-<span class="nx">Event</span><span class="p">.</span><span class="nx">detach</span><span class="p">(</span><span class="s1">&#39;#foo&#39;</span><span class="p">,</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="nx">handler</span><span class="p">);</span>
+<span class="nx">KISSY</span><span class="p">.</span><span class="nx">Event</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;#foo&#39;</span><span class="p">,</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="nx">handler</span><span class="p">);</span>
+<span class="nx">KISSY</span><span class="p">.</span><span class="nx">Event</span><span class="p">.</span><span class="nx">detach</span><span class="p">(</span><span class="s1">&#39;#foo&#39;</span><span class="p">,</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="nx">handler</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>通过指定第三个参数, 我们可以保证该事件的其他事件处理器不受影响, 注意下面的代码则不会生效：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">handler</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;The quick brown fox jumps over the lazy dog.&#39;</span><span class="p">);</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;The quick brown fox jumps over the lazy dog.&#39;</span><span class="p">);</span>
 <span class="p">};</span>
 <span class="kd">var</span> <span class="nx">obj</span><span class="o">=</span><span class="p">{</span><span class="nx">x</span><span class="o">:</span><span class="mi">1</span><span class="p">};</span>
-<span class="nx">Event</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;#foo&#39;</span><span class="p">,</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="nx">handler</span><span class="p">,</span><span class="nx">obj</span><span class="p">);</span>
+<span class="nx">KISSY</span><span class="p">.</span><span class="nx">Event</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;#foo&#39;</span><span class="p">,</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="nx">handler</span><span class="p">,</span><span class="nx">obj</span><span class="p">);</span>
 
-<span class="nx">Event</span><span class="p">.</span><span class="nx">detach</span><span class="p">(</span><span class="s1">&#39;#foo&#39;</span><span class="p">,</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;The quick brown fox jumps over the lazy dog.&#39;</span><span class="p">);</span>
+<span class="nx">KISSY</span><span class="p">.</span><span class="nx">Event</span><span class="p">.</span><span class="nx">detach</span><span class="p">(</span><span class="s1">&#39;#foo&#39;</span><span class="p">,</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;The quick brown fox jumps over the lazy dog.&#39;</span><span class="p">);</span>
 <span class="p">},</span><span class="nx">obj</span><span class="p">);</span>
 
-<span class="nx">Event</span><span class="p">.</span><span class="nx">detach</span><span class="p">(</span><span class="s1">&#39;#foo&#39;</span><span class="p">,</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="nx">handler</span><span class="p">,{</span><span class="nx">x</span><span class="o">:</span><span class="mi">1</span><span class="p">});</span>
+<span class="nx">KISSY</span><span class="p">.</span><span class="nx">Event</span><span class="p">.</span><span class="nx">detach</span><span class="p">(</span><span class="s1">&#39;#foo&#39;</span><span class="p">,</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="nx">handler</span><span class="p">,{</span><span class="nx">x</span><span class="o">:</span><span class="mi">1</span><span class="p">});</span>
 </pre></div>
 </div>
 <p>虽然后面的两个 <tt class="docutils literal"><span class="pre">detach</span></tt> 参数从字面上来看完全一样, 但是由于是不同的对象, 所有仍然不会生效.
@@ -194,7 +195,8 @@ font-size: 44px;padding-left: 100px;">开放JS</h2>
       <a href="delegate.html" title="delegate"
          accesskey="P">上一页</a> | </li>
     <li><a href="../../../../index.html">OPENJS-v1.0 Document</a> &#187; </li>
-      <li><a href="../../index.html" >KISSY文档-v1.3.0</a> &#187; </li>
+      <li><a href="../../../index.html" >KISSY</a> &#187; </li>
+      <li><a href="../../index.html" >KISSY-v1.3.0</a> &#187; </li>
       <li><a href="../index.html" >core模块</a> &#187; </li>
       <li><a href="index.html" accesskey="U">event</a> &#187; </li> 
     </ul>
@@ -242,8 +244,34 @@ font-size: 44px;padding-left: 100px;">开放JS</h2>
 
 <div class="s-box">
     <div class="s-box-bd">
-        <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../index.html">KISSY文档-v1.3.0</a></li>
+        <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">KISSY</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">KISSY-v1.3.0</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">core模块</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../node/index.html">node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ajax/index.html">ajax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../anim/index.html">anim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dom/index.html">dom</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">event</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="on.html">on</a></li>
+<li class="toctree-l5"><a class="reference internal" href="delegate.html">delegate</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="">detach</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="fire.html">fire</a></li>
+<li class="toctree-l5"><a class="reference internal" href="event-object.html">Object</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../ua/index.html">ua</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../components/index.html">组件API</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gallery/index.html">Kissy Gallery</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../alimap/index.html">阿里地图</a></li>
 </ul>
 
     </div>

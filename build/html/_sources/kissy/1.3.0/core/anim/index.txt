@@ -3,7 +3,6 @@
 anim
 ===============================================
 
-| 动画
 
 .. hint::
 
@@ -32,18 +31,8 @@ anim
   * :meth:`~Anim.prototype.stop`
   * :meth:`~Anim.prototype.pause`
   * :meth:`~Anim.prototype.resume`
-  
-讲台方法
-----------------------------------------------
-  
-  * :meth:`Anim.isRunning`
-  * :meth:`Anim.isPaused`
-  * :meth:`Anim.stop`
 
-事件
------------------------------------------------
 
-  * :func:`~Anim.Events.complete`
 
 构造函数详情
 -----------------------------------------------
@@ -70,7 +59,6 @@ anim
         
     :param Number duration: 默认为 1 , 动画持续时间, 以秒为单元.
     :param String easing: 默认为 'easeNone' , 动画平滑函数, 可取值 "easeNone","easeIn","easeOut","easeBoth","easeInStrong", "easeOutStrong","easeBothStrong","elasticIn","elasticOut", "elasticBoth","backIn","backOut","backBoth", "bounceIn","bounceOut","bounceBoth".
-                        效果预览, 可以参考 :ref:`easing 可视化 <easing_visual>` .
     :param function completeFn: 动画到最后一帧后的回调函数.
     
     
@@ -144,92 +132,26 @@ anim
     | **resume** ()
     | 在动画实例上调用, 继续当前动画实例的动画.
 
-.. method:: Anim.isRunning
-
-    | static **Anim.isRunning** (elem)
-    | :class:`Anim` 的静态方法, 用于判断 elem 上是否有动画对象在执行.
-
-    :param HTMLElement|window elem: 作用动画的元素节点.
-    :rtype: Boolean
 
 
 
-.. method:: Anim.isPaused
 
-
-
-    | static **Anim.isPaused** (elem)
-    | :class:`Anim` 的静态方法, 用于判断 elem 上是否有动画对象在暂停.
-
-    :param HTMLElement|window elem: 作用动画的元素节点.
-    :rtype: Boolean
-
-.. method:: Anim.stop
-
-
-
-    | static **Anim.stop** (elem, end, clearQueue, queueName)
-    | :class:`Anim` 的静态方法, 停止某元素上的动画（集合）.
-
-    :param HTMLElement|window elem: 作用动画的元素节点.
-    :param Boolean end: 此参数同实例方法 :meth:`stop` 中的 finish 参数.
-    :param Boolean clearQueue: 默认为 false, 是否清除动画队列中余下的动画.
-    :param String queueName: 队列名字. 
-    
-                            设置 queueName 后, 表示停止元素上指定队列中的所有动画:
-                            
-                                * null 表示默认队列的动画
-                                * false 表示不排队的动画
-                                * string 类型表示指定名称的队列的动画
-                             
-                             不设置时, 表示停止所有队列中的所有动画;
-
-
-
-.. method:: Anim.pause
-
-    | static **Anim.pause** (elem, queueName)
-    | :class:`Anim` 的静态方法, 暂停某元素上的动画（集合）.
-
-    :param HTMLElement|window elem: 作用动画的元素节点.
-    :param String queueName: 队列名字.
-
-                            设置 queueName 后, 表示停止元素上指定队列中的所有动画:
-
-                                * null 表示默认队列的动画
-                                * false 表示不排队的动画
-                                * string 类型表示指定名称的队列的动画
-
-                             不设置时, 表示暂停所有队列中的所有动画;
-
-
-
-.. method:: Anim.resume
-
-    | static **Anim.resume** (elem, queueName)
-    | :class:`Anim` 的静态方法, 继续某元素上的动画（集合）.
-
-    :param HTMLElement|window elem: 作用动画的元素节点.
-    :param String queueName: 队列名字.
-
-                            设置 queueName 后, 表示停止元素上指定队列中的所有动画:
-
-                                * null 表示默认队列的动画
-                                * false 表示不排队的动画
-                                * string 类型表示指定名称的队列的动画
-
-                             不设置时, 表示继续所有队列中的所有动画;
-
-
-事件详情
+demo 代码样例
 -----------------------------------------------
 
-.. function:: Anim.Events.complete
 
-    | **complete** ()
-    | 动画结束后, 触发该事件.
+    **基本的Anim以及方法的示例**
 
+    .. raw:: html
 
-.. note::
+        <iframe width="100%" height="70"  class="iframe-demo" src="http://tpap-docs.taegrid.taobao.com/kissy/1.3.0/core/anim/anim.php"></iframe>
 
-    队列的使用, 可以参考 `动画实例 <http://docs.kissyui.com/docs/html/demo/core/anim/demo6.html>`_
+     **对应DEMO html/php的代码**
+
+        .. literalinclude:: /raw/tpap/kissy/1.3.0/core/anim/anim.php
+           :language: html
+
+     **对应DEMO javascript的代码**
+
+        .. literalinclude:: /raw/tpap/kissy/1.3.0/core/anim/anim.js
+           :language: javascript

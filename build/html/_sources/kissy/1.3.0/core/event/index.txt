@@ -3,7 +3,7 @@
 event
 ====================================
 
-| 事件
+| KISSY支持的事件
 
 .. hint::
 
@@ -33,6 +33,7 @@ event
    delegate.rst   
    detach.rst
    fire.rst
+   event-object.rst
 
 .. hint::
 

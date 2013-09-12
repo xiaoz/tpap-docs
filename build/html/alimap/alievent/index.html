@@ -420,6 +420,25 @@ font-size: 44px;padding-left: 100px;">开放JS</h2>
 <blockquote>
 <div><p><strong>三个简单的demo例子</strong></p>
 <iframe width="100%" height="260"  class="iframe-demo" src="http://tpap-docs.taegrid.taobao.com/kissy/1.3.0/component/calendar.php"></iframe><p><strong>对应DEMO html/php的代码</strong></p>
+<div class="highlight-python"><pre>&lt;!--include kissy core and calendar file--&gt;
+&lt;cajamodules include="kissy/1.3.0/core,kissy/1.3.0/calendar"/&gt;
+
+&lt;!--refer js file--&gt;
+&lt;script src="/kissy/1.3.0/component/calendar.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;
+    &lt;label for=""&gt;simple-calendar:&lt;input type="text" class="simple-calendar"/&gt;&lt;/label&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+    &lt;label for=""&gt;min date calendar:&lt;input type="text" class="mindate-calendar"/&gt;&lt;/label&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+    &lt;label for=""&gt;can input date calendar:&lt;input type="text" class="caninput-calendar"/&gt;&lt;/label&gt;
+&lt;/p&gt;
+</pre>
+</div>
 </div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -427,6 +446,37 @@ font-size: 44px;padding-left: 100px;">开放JS</h2>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">language:</th><td class="field-body"><p class="first">html</p>
 <p><strong>对应DEMO javascript的代码</strong></p>
+<div class="highlight-python"><pre>var DOM = KISSY.DOM;
+var Calendar = KISSY.Calendar;//namespace in KISSY
+
+
+//simple calendar  click input, then calendar popup show.
+new Calendar('.simple-calendar', {
+    popup: true
+});
+
+new Calendar('.mindate-calendar', {
+    popup: true,
+    minDate: new Date()
+});
+
+//only can select the past time
+var input = DOM.get('.caninput-calendar');
+
+//dom element supportted too;
+var cal = new Calendar(input, {popup: true, maxDate: new Date()});
+cal.on('select', function (e) {
+    var selectDate = new Date(e.date); //e.date is string here
+    input.value = selectDate.getFullYear() + "-" + selectDate.getMonth();
+    cal.hide();//hide
+});
+
+//test event
+cal.on('monthChange',function(e){
+    console.log(e.date);
+});
+</pre>
+</div>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">language:</th><td class="field-body"><p class="first last">javascript</p>
@@ -504,19 +554,10 @@ font-size: 44px;padding-left: 100px;">开放JS</h2>
 <div class="s-box">
     <div class="s-box-bd">
         <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../kissy/1.3.0/index.html">KISSY-v1.3.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kissy/index.html">KISSY</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">阿里地图</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../alimap/index.html">AliMap</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Calendar</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id2">构造函数</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id3">参数配置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id4">实例方法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id5">事件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id6">构造函数详情</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id7">参数配置详情</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id8">方法详情</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id9">事件详情</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#demo">demo 代码样例</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Calendar</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../aliinfowindow/index.html">AliLatLng 对象</a></li>

@@ -29,39 +29,39 @@ detach
 
     .. code-block:: javascript
 
-        Event.detach('#foo');
+        KISSY.Event.detach('#foo');
 
     上面的代码解除了 foo 元素上所有事件的事件处理器, 我们也可以解除某一个事件的全部事件处理器:
 
     .. code-block:: javascript
 
-        Event.detach('#foo','click');
+        KISSY.Event.detach('#foo','click');
 
     当时如果程序对同一事件指定了不同的事件处理器, 这时就需要后面两个参数了
 
     .. code-block:: javascript
 
         var handler = function() {
-          alert('The quick brown fox jumps over the lazy dog.');
+          console.log('The quick brown fox jumps over the lazy dog.');
         };
-        Event.on('#foo','click', handler);
-        Event.detach('#foo','click', handler);
+        KISSY.Event.on('#foo','click', handler);
+        KISSY.Event.detach('#foo','click', handler);
 
     通过指定第三个参数, 我们可以保证该事件的其他事件处理器不受影响, 注意下面的代码则不会生效：
 
     .. code-block:: javascript
 
         var handler = function() {
-          alert('The quick brown fox jumps over the lazy dog.');
+          console.log('The quick brown fox jumps over the lazy dog.');
         };
         var obj={x:1};
-        Event.on('#foo','click', handler,obj);
+        KISSY.Event.on('#foo','click', handler,obj);
 
-        Event.detach('#foo','click', function() {
-          alert('The quick brown fox jumps over the lazy dog.');
+        KISSY.Event.detach('#foo','click', function() {
+          console.log('The quick brown fox jumps over the lazy dog.');
         },obj);
 
-        Event.detach('#foo','click', handler,{x:1});
+        KISSY.Event.detach('#foo','click', handler,{x:1});
 
     虽然后面的两个 ``detach`` 参数从字面上来看完全一样, 但是由于是不同的对象, 所有仍然不会生效.
     如果需要解除特定的事件处理器, 我们需要同一个对象( 函数 )引用, 而不是恰好字面上相同的不同对象.
