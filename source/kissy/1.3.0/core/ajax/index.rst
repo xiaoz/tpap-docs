@@ -38,7 +38,6 @@ ajax
   * :data:`cfg.async`
   * :data:`cfg.cache`
   * :data:`cfg.contentType`
-  * :data:`cfg.context`
   * :data:`cfg.crossDomain`
   * :data:`cfg.data`
   * :data:`cfg.serializeArray`
@@ -56,17 +55,7 @@ ajax
   * :data:`cfg.type`
   * :data:`cfg.xdr`
   * :data:`cfg.xhrFields`
-  * :data:`cfg.form`
   * :data:`cfg.beforeSend`
-
-
-属性
------------------------------------------------
-
-  * :attr:`readyState`
-  * :attr:`status`
-  * :attr:`statusText`
-  * :attr:`responseText`
 
 
 方法详情
@@ -75,12 +64,9 @@ ajax
 .. class:: IO
 
     | **IO** ( cfg )
-    | 构建 io 请求并发送, 继承自 :class:`~seed.Promise` .
+    | 构建 io 请求并发送.
 
-    :param Object cfg: 用来配置请求的键值对对象.
-        所有的配置项都是可选的,可以通过
-        :func:`io.setupConfig`
-        来设置默认配置.
+    :param Object cfg: 用来配置请求的键值对对象,所有的配置项都是可选的.
 
 
 .. _io-config:
@@ -103,9 +89,6 @@ ajax
         .. code-block:: javascript
 
             {
-                xml: "application/xml, text/xml",
-                html: "text/html",
-                text: "text/plain",
                 json: "application/json, text/javascript"
             }
 
@@ -133,7 +116,7 @@ ajax
 
 .. data:: cfg.cache
 
-    {Boolean} -  :data:`~cfg.dataType` 为 **script** 或 **jsonp** 时默认 false，其他默认为 true. false 时则会自动给请求 url 加上时间戳.
+    {Boolean} -  :data:`~cfg.dataType` 为 **jsonp** 时默认 false，其他默认为 true. false 时则会自动给请求 url 加上时间戳.
 
 .. data:: cfg.contentType
 
@@ -143,19 +126,6 @@ ajax
     .. note::
         "application/x-www-form-urlencoded" 时的数据总是以 utf-8 的编码传往服务器端.
 
-.. data:: cfg.context
-
-    {Object} - 设置回调函数中的 this 值,默认为当前配置项.例如可以把一个 dom 节点作为 complete 回调函数的上下文:
-
-    .. code-block:: javascript
-
-        new IO({
-            url:'test.html',
-            context:document.body,
-            complete:function(){
-                this.className="complete";
-            }
-        });
 
 .. data:: cfg.crossDomain
 
@@ -192,26 +162,23 @@ ajax
 
 .. data:: cfg.error
 
-    {Function} -  **error** (null, textStatus, io) 请求失败时的回调函数.这个函数接受 2 个参数：
+    {Function} -  **error** (null, textStatus) 请求失败时的回调函数.这个函数接受 1 个参数：
 
         * textStatus 表示错误信息，包括 "timeout" , "error" , "abort" 等
-        * io 表示这次请求代表的 io 实例.
 
 .. data:: cfg.success
 
-    {Function} -  **success** ( data , textStatus , io) 请求成功时的回调函数.该函数传入三个参数.
+    {Function} -  **success** ( data , textStatus) 请求成功时的回调函数.该函数传入两个参数.
 
         * data : 根据 dataType 格式化服务器响应信息的响应对象
         * textStatus : 描述成功的状态，一般是 "success"
-        * io : 本次请求的 io 实例.
 
 .. data:: cfg.complete
 
-    {Function} -  **complete** ( data , textStatus , io) 请求完成时的回调函数.该函数传入三个参数.
+    {Function} -  **complete** ( data , textStatus) 请求完成时的回调函数.该函数传入两个参数.
 
         * data : 根据 dataType 格式化服务器响应信息的响应对象，失败触发时为 null
         * textStatus : 描述成功的状态，一般是 "success"
-        * io : 本次请求的 io 实例.
 
     .. note::
         无论成功或失败都会触发改回调.
@@ -229,6 +196,33 @@ ajax
     {String|Function} - 覆盖这次 jsonp 请求 callback 函数对应的值 (``callback={jsonpCallback}``). 这个值将取代 kissy 默认生成的 UUID 值.
 
         当传入函数时，该函数需要返回字符串，每次请求都会调用该函数得到用于替换的字符串.
+
+    .. code-block:: javascript
+
+            KISSY.io({
+                //指定 callback 的参数,请求 url 会生成 "url?callback={$jsonpCallback}"
+                jsonpCallback: "jsonp100",
+                //指定 callback 的别名,请求url会生成 "url?{$jsonp}=jsonp123456"， 默认就是callback
+                jsonp: "callback" ,
+                //url 地址
+                url: "urladdress",
+                //string|json发起请求需要附加的数据,默认为 null
+                data: {"p":1},
+                // function请求成功的回调,回调参数为 data(内容),textStatus(请求状态),xhr(ajax对象)
+                success: function(data, textStatus) {
+                    //callback
+                    console.log("success")
+                },
+                //function 请求完成的回调，在 success 调用之后触发,参数同 success
+                complete: function(data){
+                     console.log("complete")
+                },
+                // 请求错误时的回调
+                error: function(){
+                },
+                //发送请求类型是jsonp
+                dataType:"jsonp"
+            });
 
 
 .. data:: cfg.mimeType
@@ -297,61 +291,24 @@ ajax
             然后 x.taobao.com 的页面就可以和 y.taobao.com 通信了。
 
 
-.. data:: cfg.form
-
-    {String} -  选择器字符串 :ref:`KISSY selector <dom-selector>`
-
-    * 如果 form 的 enctype 为 `"multipart/form-data`` 则会采用 `iframe <http://www.webtoolkit.info/ajax-file-upload.html>`_ 的方式进行无刷新文件上传，
-    * 否则将 form 内的输入域和值序列化后通过 xhr 发送到服务器.
-
-
 .. data:: cfg.beforeSend
 
-    {Function} - 发送请求前的拦截函数，传入参数 （xhrObject, config）
+    {Function} - 发送请求前的拦截函数
 
-    * xhrObject 为 :class:`io.XhrObj` 类型
 
     例如可以通过该函数实现上传进度监控
 
     .. code-block:: javascript
 
-        var xhr = new IO({
-            url:'./upload.php',
+        var xhr = KISSY.io({
+            url:'./upload.php',    //实际使用必须是白名单中地址
             type:"post",
-            processData:false,
-            data:formData,
             dataType:'json',
-            contentType:false,
-            beforeSend:function (xhr) {
+            beforeSend:function () {
                 // 上传监听 upload
-                xhr.getNativeXhr().upload.addEventListener('progress', function (ev) {
-                    S.log({ 'loaded':ev.loaded, 'total':ev.total });
-                });
-            },
-            success:function (d) {
-                S.log(d);
+                console.log("sending...");
             }
         });
-
-
-属性详情
------------------------------------------------
-
-.. attribute:: readyState
-
-    {Number} - 表示请求完成状态。可用于判断当前请求是否完成. 4 表示完成，否则表示正在进行中.(xhr 会有更多取值，jsonp script 只有 0(初始化) 1(发送中) 4(完成))
-
-.. attribute:: status
-
-    {Number} - 响应状态码. xhr 会有更多取值。``jsonp script`` 只有 200(成功) , 500(出错)
-
-.. attribute:: statusText
-
-    {String} - 响应状态字符串. 最终同回调 :data:`~io.cfg.complete` 中的 ``textStatus`` 一致.
-
-.. attribute:: responseText(responseXML)
-
-    {String} - 返回响应对应的 text 和 xml（如果需要）.
 
 
 
@@ -362,14 +319,14 @@ Demo
 
     .. code-block:: javascript
 
-        new IO({
+        KISSY.io({
            type: "POST",
            url: "some.php",
            data: {
             x:'y'
            },
            success: function(msg){
-             alert( "Data Saved: " + msg );
+             console.log( "Data Saved: " + msg );
            }
          });
 
@@ -377,7 +334,7 @@ Demo
 
     .. code-block:: javascript
 
-        new IO({
+        KISSY.io({
           url: "test.html",
           cache: false,
           success: function(html){
@@ -385,38 +342,4 @@ Demo
           }
         });
 
-    **发送 xml 文档给服务器**
 
-    .. code-block:: javascript
-
-        var xmlDocument=S.parseXML("<a>h</a>");
-
-        new IO({
-           url: "page.php",
-           processData: false,
-           contentType:'text/xml',
-           data: xmlDocument,
-           type:'post'
-         });
-
-    **通过 xhr 发送 form 内容**
-
-    自动序列化 ``form`` 为查询串通过 ``xhr`` 发送给服务器端
-
-    .. code-block:: html
-
-        <form>
-            <input name='test' value='v' />
-        </form>
-
-        <script>
-            new IO({
-                url:'send.php',
-                form:'#test',
-                type:'post',
-                dataType:'json',
-                success:function(d,s,xhr){
-                    alert('success');
-                }
-            });
-        </script>

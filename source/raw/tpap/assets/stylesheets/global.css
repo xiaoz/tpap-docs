@@ -1,0 +1,9 @@
+.logresult{
+    border: 1px solid gray;
+    padding: 10px;
+}
+.logresult p{
+    border-bottom: 1px solid gray;
+    padding: 5px;
+    margin:0;
+}

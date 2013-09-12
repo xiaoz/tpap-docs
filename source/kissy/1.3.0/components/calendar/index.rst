@@ -228,13 +228,13 @@ demo 代码样例
 
     **对应DEMO html/php的代码**
 
-    .. literalinclude:: /raw/tpap/kissy/1.3.0/component/calendar.php
-       :language: html
+    .. literalinclude:: /raw/tpap/kissy/1.3.0/component/calendar/calendar.php
+        :language: html
 
     **对应DEMO javascript的代码**
 
-    .. literalinclude:: /raw/tpap/kissy/1.3.0/component/calendar.js
-       :language: javascript
+    .. literalinclude:: /raw/tpap/kissy/1.3.0/component/calendar/calendar.js
+        :language: javascript
 
 
 

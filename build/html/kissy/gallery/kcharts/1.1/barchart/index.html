@@ -1,0 +1,748 @@
+
+<!doctype html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+
+<title>BarChart &mdash; OPENJS-v1.0 Document</title>
+
+<link rel="stylesheet" href="http://g.tbcdn.cn/kissy/k/1.3.1/css/dpl/base-min.css"/>
+<link rel="stylesheet" href="../../../../../_static/kissy.css"/>
+    <link rel="stylesheet" href="http://a.tbcdn.cn/s/kissy/gallery/sphinx/1.1.3/pygments.css" type="text/css" />
+<link rel="shortcut icon" href="http://a.tbcdn.cn/s/kissy/favicon.ico" type="image/x-icon" />
+<!--<link href='http://fonts.googleapis.com/css?family=Philosopher' rel='stylesheet' type='text/css'>-->
+
+<script>
+    var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE: true
+    };
+</script>
+    <script type="text/javascript" src="http://a.tbcdn.cn/s/kissy/gallery/sphinx/1.1.3/??jquery.js,underscore.js,doctools.js,searchtools.js"></script> 
+<script>
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-31470541-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+</head>
+<body><h1 class="logo">
+    <a alt="KISSY" href="http://10.12.16.7/shop-team/products/openjs/build/html/">
+
+    <h2 style="width: 100%;
+margin: 0 auto;
+color: white;
+font-weight: bold;
+font-size: 44px;padding-left: 100px;">开放JS</h2>
+
+</a></h1>
+<div id="header">
+
+
+    <ul class="navigation">
+        <li><a href="http://docs.kissyui.com">导航在这</a></li>
+    </ul>
+<div id="searchbox" class="searchbox">
+    <form class="search" action="../../../../../search.html" method="get">
+        <input type="text" name="q" size="28" class="ipt"/>
+        <input type="submit" value="搜索" class="btn"/>
+        <input type="hidden" name="check_keywords" value="yes"/>
+        <input type="hidden" name="area" value="default"/>
+    </form>
+</div>
+
+</div>
+
+<div id="content">
+	<div  id="layout" class="layout grid-s6m0e7">
+			<div class="col-main">
+				<div class="main-wrap">
+                    
+
+<div class='related'>
+    <h3>导航</h3>
+    
+    <ul>
+    <li class="right" style="margin-right: 10px">
+      <a href="../../../../../genindex.html" title="总目录"
+         accesskey="I">索引</a></li>
+    <li class="right" >
+      <a href="../../../../../py-modindex.html" title="Python Module Index"
+         >模块</a> | </li>
+    <li class="right" >
+      <a href="../../../../../alimap/index.html" title="阿里地图"
+         accesskey="N">下一页</a> | </li>
+    <li class="right" >
+      <a href="../linechart/index.html" title="LineChart"
+         accesskey="P">上一页</a> | </li>
+    <li><a href="../../../../../index.html">OPENJS-v1.0 Document</a> &#187; </li>
+      <li><a href="../../../../index.html" >KISSY</a> &#187; </li>
+      <li><a href="../../../index.html" >Kissy Gallery</a> &#187; </li>
+      <li><a href="../index.html" accesskey="U">KCharts</a> &#187; </li> 
+    </ul>
+</div>
+					<div class="body">
+  <span class="target" id="module-barchart"></span><div class="section" id="barchart">
+<h1>BarChart<a class="headerlink" href="#barchart" title="永久链接至标题">¶</a></h1>
+<div class="line-block">
+<div class="line"><tt class="docutils literal"><span class="pre">柱状图</span></tt> 柱状图易于比较各组数据之间的差别。</div>
+</div>
+<div class="admonition hint">
+<p class="first admonition-title">提示</p>
+<p class="last">组件来源于 <a class="reference external" href="http://gallery.kissyui.com/kcharts/1.2/guide/barchart.html?spm=0.0.0.0.Q2DXC8">这里</a></p>
+</div>
+<div class="admonition important">
+<p class="first admonition-title">重要</p>
+<p>组件引入方式</p>
+<div class="last highlight-php"><div class="highlight"><pre><span class="x">&lt;cajamodules include=&quot;kissy/1.3.0/core,kissy/gallery/kcharts/1.1/index&quot; /&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>构造函数<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="#barchart.BarChart" title="barchart.BarChart"><tt class="xref py py-class docutils literal"><span class="pre">BarChart</span></tt></a></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id3">
+<h2>参数配置<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="#barchart.renderTo" title="barchart.renderTo"><tt class="xref py py-data docutils literal"><span class="pre">renderTo</span></tt></a></li>
+<li><a class="reference internal" href="#barchart.autoRender" title="barchart.autoRender"><tt class="xref py py-data docutils literal"><span class="pre">autoRender</span></tt></a></li>
+<li><a class="reference internal" href="#barchart.canvasAttr" title="barchart.canvasAttr"><tt class="xref py py-data docutils literal"><span class="pre">canvasAttr</span></tt></a></li>
+<li><a class="reference internal" href="#barchart.themeCls" title="barchart.themeCls"><tt class="xref py py-data docutils literal"><span class="pre">themeCls</span></tt></a></li>
+<li><a class="reference internal" href="#barchart.colors" title="barchart.colors"><tt class="xref py py-data docutils literal"><span class="pre">colors</span></tt></a></li>
+<li><a class="reference internal" href="#barchart.stackable" title="barchart.stackable"><tt class="xref py py-data docutils literal"><span class="pre">stackable</span></tt></a></li>
+<li><a class="reference internal" href="#barchart.zoomType" title="barchart.zoomType"><tt class="xref py py-data docutils literal"><span class="pre">zoomType</span></tt></a></li>
+<li><tt class="xref py py-data docutils literal"><span class="pre">title</span></tt></li>
+<li><a class="reference internal" href="#barchart.subTitle" title="barchart.subTitle"><tt class="xref py py-data docutils literal"><span class="pre">subTitle</span></tt></a></li>
+<li><a class="reference internal" href="#barchart.bars" title="barchart.bars"><tt class="xref py py-data docutils literal"><span class="pre">bars</span></tt></a></li>
+<li><a class="reference internal" href="#barchart.xAxis" title="barchart.xAxis"><tt class="xref py py-data docutils literal"><span class="pre">xAxis</span></tt></a></li>
+<li><a class="reference internal" href="#barchart.yAxis" title="barchart.yAxis"><tt class="xref py py-data docutils literal"><span class="pre">yAxis</span></tt></a></li>
+<li><a class="reference internal" href="#barchart.xGrids" title="barchart.xGrids"><tt class="xref py py-data docutils literal"><span class="pre">xGrids</span></tt></a></li>
+<li><a class="reference internal" href="#barchart.yGrids" title="barchart.yGrids"><tt class="xref py py-data docutils literal"><span class="pre">yGrids</span></tt></a></li>
+<li><a class="reference internal" href="#barchart.xLabels" title="barchart.xLabels"><tt class="xref py py-data docutils literal"><span class="pre">xLabels</span></tt></a></li>
+<li><a class="reference internal" href="#barchart.yLabels" title="barchart.yLabels"><tt class="xref py py-data docutils literal"><span class="pre">yLabels</span></tt></a></li>
+<li><a class="reference internal" href="#barchart.series" title="barchart.series"><tt class="xref py py-data docutils literal"><span class="pre">series</span></tt></a></li>
+<li><a class="reference internal" href="#barchart.tip" title="barchart.tip"><tt class="xref py py-data docutils literal"><span class="pre">tip</span></tt></a></li>
+<li><tt class="xref py py-data docutils literal"><span class="pre">comparable</span></tt></li>
+<li><a class="reference internal" href="../../../../1.3.0/core/anim/index.html#module-anim" title="anim"><tt class="xref py py-data docutils literal"><span class="pre">anim</span></tt></a></li>
+<li><a class="reference internal" href="#barchart.legend" title="barchart.legend"><tt class="xref py py-data docutils literal"><span class="pre">legend</span></tt></a></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id4">
+<h2>实例方法<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="#barchart.render" title="barchart.render"><tt class="xref py py-meth docutils literal"><span class="pre">render()</span></tt></a></li>
+<li><a class="reference internal" href="#barchart.clear" title="barchart.clear"><tt class="xref py py-meth docutils literal"><span class="pre">clear()</span></tt></a></li>
+<li><a class="reference internal" href="#barchart.on" title="barchart.on"><tt class="xref py py-meth docutils literal"><span class="pre">on()</span></tt></a></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id5">
+<h2>事件<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="#barchart.afterRender" title="barchart.afterRender"><tt class="xref py py-func docutils literal"><span class="pre">afterRender()</span></tt></a></li>
+<li><a class="reference internal" href="#barchart.paperLeave" title="barchart.paperLeave"><tt class="xref py py-func docutils literal"><span class="pre">paperLeave()</span></tt></a></li>
+<li><a class="reference internal" href="#barchart.barChange" title="barchart.barChange"><tt class="xref py py-func docutils literal"><span class="pre">barChange()</span></tt></a></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id6">
+<h2>构造函数详情<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<dl class="class">
+<dt id="barchart.BarChart">
+<em class="property">class </em><tt class="descclassname">barchart.</tt><tt class="descname">BarChart</tt><a class="headerlink" href="#barchart.BarChart" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><strong>KISSY.KCharts.BarChart</strong> (config)</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>config</strong> (<em>Object</em>) &#8211; 配置项, 详细见下方 <strong>参数配置详情</strong> .</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id7">
+<h2>参数配置详情<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+<dl class="data">
+<dt id="barchart.renderTo">
+<tt class="descclassname">barchart.</tt><tt class="descname">renderTo</tt><a class="headerlink" href="#barchart.renderTo" title="永久链接至目标">¶</a></dt>
+<dd><p>{selector|HTMLElement } -  容器 注:容器必须要有width和height的绝对值</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="barchart.autoRender">
+<tt class="descclassname">barchart.</tt><tt class="descname">autoRender</tt><a class="headerlink" href="#barchart.autoRender" title="永久链接至目标">¶</a></dt>
+<dd><p>{ Array } 是否自动渲染 如果为手动 则需要调用 render()方法</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="barchart.canvasAttr">
+<tt class="descclassname">barchart.</tt><tt class="descname">canvasAttr</tt><a class="headerlink" href="#barchart.canvasAttr" title="永久链接至目标">¶</a></dt>
+<dd><p>{Object} 设置图形区域位于容器的位置以及尺寸</p>
+<blockquote>
+<div><ul class="simple">
+<li>x { number } 水平距离</li>
+<li>y { number } 垂直距离</li>
+<li>width { number } 宽度</li>
+<li>height { number } 高度</li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="data">
+<dt id="barchart.themeCls">
+<tt class="descclassname">barchart.</tt><tt class="descname">themeCls</tt><a class="headerlink" href="#barchart.themeCls" title="永久链接至目标">¶</a></dt>
+<dd><p>{ string } 主题className 默认：&#8221;ks-chart-default&#8221;</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="barchart.colors">
+<tt class="descclassname">barchart.</tt><tt class="descname">colors</tt><a class="headerlink" href="#barchart.colors" title="永久链接至目标">¶</a></dt>
+<dd><p>{ array } 手动配置线的颜色 （可选）</p>
+<blockquote>
+<div>如 [{&#8220;DEFAULT&#8221;:&#8221;#fff&#8221;,&#8221;HOVER&#8221;:&#8221;#ccc&#8221;},{&#8220;DEFAULT&#8221;:&#8221;#fff&#8221;,&#8221;HOVER&#8221;:&#8221;#ccc&#8221;}] - DEFAULT { string } 默认颜色 - HOVER { string } hover颜色</div></blockquote>
+</dd></dl>
+
+<dl class="data">
+<dt id="barchart.stackable">
+<tt class="descclassname">barchart.</tt><tt class="descname">stackable</tt><a class="headerlink" href="#barchart.stackable" title="永久链接至目标">¶</a></dt>
+<dd><p>{Array} 是否堆叠展示 new!</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="barchart.zoomType">
+<tt class="descclassname">barchart.</tt><tt class="descname">zoomType</tt><a class="headerlink" href="#barchart.zoomType" title="永久链接至目标">¶</a></dt>
+<dd><p>{string} 横向/纵向柱形图 （可选） 默认 &#8220;x&#8221; 或 &#8220;y&#8221; new!</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="barchart.subTitle">
+<tt class="descclassname">barchart.</tt><tt class="descname">subTitle</tt><a class="headerlink" href="#barchart.subTitle" title="永久链接至目标">¶</a></dt>
+<dd><p>{Object} 副标题 同 title</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="barchart.bars">
+<tt class="descclassname">barchart.</tt><tt class="descname">bars</tt><a class="headerlink" href="#barchart.bars" title="永久链接至目标">¶</a></dt>
+<dd><p>{Object} 柱形属性配置</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="barchart.xAxis">
+<tt class="descclassname">barchart.</tt><tt class="descname">xAxis</tt><a class="headerlink" href="#barchart.xAxis" title="永久链接至目标">¶</a></dt>
+<dd><p>{Object} x 轴配置</p>
+<blockquote>
+<div><ul class="simple">
+<li>isShow { boolean } 是否渲染显示</li>
+<li>css { object } css样式</li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="data">
+<dt id="barchart.yAxis">
+<tt class="descclassname">barchart.</tt><tt class="descname">yAxis</tt><a class="headerlink" href="#barchart.yAxis" title="永久链接至目标">¶</a></dt>
+<dd><p>{Object} y轴配置</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="barchart.navigator">
+<tt class="descclassname">barchart.</tt><tt class="descname">navigator</tt><a class="headerlink" href="#barchart.navigator" title="永久链接至目标">¶</a></dt>
+<dd><ul class="simple">
+<li>isShow { Boolean } 是否渲染显示</li>
+<li>css { Object } css样式</li>
+<li>min { number } 纵坐标最小值</li>
+<li>max { number } 纵坐标最大值</li>
+<li>num { number } 纵轴刻度的份数</li>
+</ul>
+</dd></dl>
+
+<dl class="data">
+<dt id="barchart.xGrids">
+<tt class="descclassname">barchart.</tt><tt class="descname">xGrids</tt><a class="headerlink" href="#barchart.xGrids" title="永久链接至目标">¶</a></dt>
+<dd><p>{object} 横向网格配置</p>
+<blockquote>
+<div><ul class="simple">
+<li>isShow { boolean } 是否渲染显示</li>
+<li>css { object } css样式</li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="data">
+<dt id="barchart.yGrids">
+<tt class="descclassname">barchart.</tt><tt class="descname">yGrids</tt><a class="headerlink" href="#barchart.yGrids" title="永久链接至目标">¶</a></dt>
+<dd><p>{object} 纵向网格配置</p>
+<blockquote>
+<div><ul class="simple">
+<li>isShow { boolean } 是否渲染显示</li>
+<li>css { object } css样式</li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="data">
+<dt id="barchart.xLabels">
+<tt class="descclassname">barchart.</tt><tt class="descname">xLabels</tt><a class="headerlink" href="#barchart.xLabels" title="永久链接至目标">¶</a></dt>
+<dd><p>{object} x轴刻度文本</p>
+<blockquote>
+<div><ul class="simple">
+<li>isShow { boolean } 是否渲染显示</li>
+<li>css { object } css样式</li>
+<li>template { number} 输出的html文本</li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="data">
+<dt id="barchart.yLabels">
+<tt class="descclassname">barchart.</tt><tt class="descname">yLabels</tt><a class="headerlink" href="#barchart.yLabels" title="永久链接至目标">¶</a></dt>
+<dd><p>{object} y轴刻度文本 同 xLabels</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="barchart.series">
+<tt class="descclassname">barchart.</tt><tt class="descname">series</tt><a class="headerlink" href="#barchart.series" title="永久链接至目标">¶</a></dt>
+<dd><p>{array} 数据</p>
+<p>推荐</p>
+<div class="highlight-json"><pre>series:[{
+    text: 'Tokyo',
+    data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+}, {
+    text: 'New York',
+    data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
+}
+    , {
+        text: 'Berlin',
+        data: [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
+    }, {
+        text: 'London',
+        data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+    }
+]</pre>
+</div>
+</dd></dl>
+
+<dl class="data">
+<dt id="barchart.defineKey">
+<tt class="descclassname">barchart.</tt><tt class="descname">defineKey</tt><a class="headerlink" href="#barchart.defineKey" title="永久链接至目标">¶</a></dt>
+<dd><p>{object} 针对数据 data 对应的key定义</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="barchart.tip">
+<tt class="descclassname">barchart.</tt><tt class="descname">tip</tt><a class="headerlink" href="#barchart.tip" title="永久链接至目标">¶</a></dt>
+<dd><p>{object} 数据提示层配置</p>
+<blockquote>
+<div><ul class="simple">
+<li>template { string } 文本或者是模板 详见KISSY.Template</li>
+<li>css { object } css样式 注:&#8221;{COLOR}&#8221; 默认选择线的颜色，如{&#8220;border-color&#8221;:&#8221;{COLOR}&#8221;}</li>
+<li>anim { object } 动画配置 &#8220;easing&#8221; 和 &#8220;duration&#8221; 如 {easing:&#8221;easeOut&#8221;,duration:0.3}</li>
+<li>offset { object } tip的偏移量 &#8220;x&#8221; 和 &#8220;y&#8221; 如 {x:100,y:40}</li>
+<li>boundryDetect { boolean } 是否进行边缘检测</li>
+<li>alignX { string } 水平对齐方式 有&#8221;left&#8221; &#8220;center&#8221; &#8220;right&#8221;三种 默认 &#8220;left&#8221;</li>
+<li>alignY { string } 水平对齐方式 有&#8221;top&#8221; &#8220;middle&#8221; &#8220;bottom&#8221;三种 默认 &#8220;top&#8221;</li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="data">
+<dt id="barchart.legend">
+<tt class="descclassname">barchart.</tt><tt class="descname">legend</tt><a class="headerlink" href="#barchart.legend" title="永久链接至目标">¶</a></dt>
+<dd><p>{object} 图例配置</p>
+<blockquote>
+<div><ul class="simple">
+<li>isShow { boolean } 是否渲染显示</li>
+<li>css { object } css样式</li>
+<li>x { number } 水平偏移量</li>
+<li>y { number } 垂直偏移量</li>
+<li>layout {string} 垂直或水平展示 可选：&#8221;horizontal&#8221; 水平 &#8220;vertical&#8221; 垂直</li>
+<li>align {string} 水平对齐方式 可选：&#8221;left&#8221; 左对齐 &#8220;center&#8221; 居中 &#8220;right&#8221; 右对齐</li>
+<li>verticalAlign {string} 垂直对齐方式 可选：&#8221;top&#8221; 顶部对齐 &#8220;middle&#8221; 垂直居中 &#8220;bottom&#8221; 底部对齐</li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="id8">
+<h2>方法详情<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
+<dl class="method">
+<dt id="barchart.render">
+<tt class="descclassname">barchart.</tt><tt class="descname">render</tt><big>(</big><big>)</big><a class="headerlink" href="#barchart.render" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><strong>render</strong> ()</div>
+<div class="line">渲染图表</div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="barchart.clear">
+<tt class="descclassname">barchart.</tt><tt class="descname">clear</tt><big>(</big><big>)</big><a class="headerlink" href="#barchart.clear" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><strong>clear</strong> ()</div>
+<div class="line">清除画布上的所有内容</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>config</strong> (<em>Object</em>) &#8211; 配置项, 详细见上方 <strong>Configs Detail</strong></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="barchart.on">
+<tt class="descclassname">barchart.</tt><tt class="descname">on</tt><big>(</big><big>)</big><a class="headerlink" href="#barchart.on" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><strong>on</strong> (type, fnc)</div>
+<div class="line">事件注册</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first last simple">
+<li><strong>type</strong> (<em>String</em>) &#8211; 事件类型, 参考事件详情</li>
+<li><strong>fnc</strong> (<em>Function</em>) &#8211; 回调函数</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id9">
+<h2>事件详情<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
+<dl class="function">
+<dt id="barchart.afterRender">
+<tt class="descclassname">barchart.</tt><tt class="descname">afterRender</tt><big>(</big><big>)</big><a class="headerlink" href="#barchart.afterRender" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><strong>afterRender</strong></div>
+<div class="line">渲染完毕后</div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="barchart.paperLeave">
+<tt class="descclassname">barchart.</tt><tt class="descname">paperLeave</tt><big>(</big><big>)</big><a class="headerlink" href="#barchart.paperLeave" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><strong>paperLeave</strong></div>
+<div class="line">离开画布 (可以用来触发隐藏tip等动作)</div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="barchart.barChange">
+<tt class="descclassname">barchart.</tt><tt class="descname">barChange</tt><big>(</big><big>)</big><a class="headerlink" href="#barchart.barChange" title="永久链接至目标">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><strong>barChange</strong></div>
+<div class="line">柱之间的切换 (可以用来触发tip的移动和数据渲染)</div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="demo">
+<h2>demo 代码样例<a class="headerlink" href="#demo" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><p><strong>KCharts组件linechart,barchart,piechart DEMO</strong></p>
+<iframe width="100%" height="800"  class="iframe-demo" src="http://tpap-docs.taegrid.taobao.com/kissy/gallery/kcharts/1.1/kcharts.php"></iframe><p><strong>对应DEMO html/php的代码</strong></p>
+<div class="highlight-html"><div class="highlight"><pre><span class="c">&lt;!--include kissy core and kcharts file--&gt;</span>
+<span class="nt">&lt;cajamodules</span> <span class="na">include=</span><span class="s">&quot;kissy/1.3.0/core,kissy/gallery/kcharts/1.1/index&quot;</span><span class="nt">/&gt;</span>
+
+<span class="c">&lt;!--refer js file--&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;/assets/javascripts/log.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;/kissy/gallery/kcharts/1.1/kcharts.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+
+
+<span class="nt">&lt;h1&gt;</span>DEMO<span class="nt">&lt;/h1&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>
+<span class="nt">&lt;h3&gt;</span>linechart<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;linechart&quot;</span> <span class="na">style=</span><span class="s">&quot;height:300px;&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>
+<span class="nt">&lt;h3&gt;</span>barchart:<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;p&gt;</span>try to switch barchart with mouse<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;barchart&quot;</span> <span class="na">style=</span><span class="s">&quot;height:300px;&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>
+<span class="nt">&lt;h3&gt;</span>piechart:<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;p&gt;</span>long time anim,hehe<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;piechart&quot;</span> <span class="na">style=</span><span class="s">&quot;height:300px;&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+</pre></div>
+</div>
+<p><strong>对应DEMO javascript的代码</strong></p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">DOM</span> <span class="o">=</span> <span class="nx">KISSY</span><span class="p">.</span><span class="nx">DOM</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">LineChart</span> <span class="o">=</span> <span class="nx">KCharts</span><span class="p">.</span><span class="nx">LineChart</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">BarChart</span> <span class="o">=</span> <span class="nx">KCharts</span><span class="p">.</span><span class="nx">BarChart</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">PieChart</span> <span class="o">=</span> <span class="nx">KCharts</span><span class="p">.</span><span class="nx">PieChart</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">linechart</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">LineChart</span><span class="p">({</span>
+    <span class="nx">renderTo</span><span class="o">:</span> <span class="s2">&quot;.linechart&quot;</span><span class="p">,</span>
+    <span class="nx">title</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">content</span><span class="o">:</span> <span class="s2">&quot;week cosume:&quot;</span>
+    <span class="p">},</span>
+    <span class="nx">anim</span><span class="o">:</span> <span class="p">{},</span>
+    <span class="nx">subTitle</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">content</span><span class="o">:</span> <span class="s2">&quot;week fee record&quot;</span>
+    <span class="p">},</span>
+    <span class="nx">xAxis</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">text</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;Monday&#39;</span><span class="p">,</span> <span class="s1">&#39;Tuesday&#39;</span><span class="p">,</span> <span class="s1">&#39;Wednesday&#39;</span><span class="p">,</span> <span class="s1">&#39;Thursday&#39;</span><span class="p">,</span> <span class="s1">&#39;FRI&#39;</span><span class="p">,</span> <span class="s1">&#39;SAT&#39;</span><span class="p">,</span> <span class="s1">&#39;SUN&#39;</span><span class="p">]</span>
+    <span class="p">},</span>
+    <span class="nx">yAxis</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">min</span><span class="o">:</span> <span class="mi">0</span>
+    <span class="p">},</span>
+    <span class="nx">series</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nx">data</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">144</span><span class="p">,</span> <span class="mi">234</span><span class="p">,</span> <span class="mi">700</span><span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nx">tip</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">template</span><span class="o">:</span> <span class="s2">&quot;total：&lt;span&gt;{{y}}&lt;/span&gt; yuan&lt;br/&gt;&quot;</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="nx">linechart</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;afterRender&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">log</span><span class="p">(</span><span class="s1">&#39;after Render Callback&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="kd">var</span> <span class="nx">barChart</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BarChart</span><span class="p">({</span>
+    <span class="nx">renderTo</span><span class="o">:</span> <span class="s2">&quot;.barchart&quot;</span><span class="p">,</span>
+    <span class="nx">yLabels</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">css</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;marginLeft&quot;</span><span class="o">:</span> <span class="s2">&quot;-4px&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;font-family&quot;</span><span class="o">:</span> <span class="s2">&quot;Microsoft Yahei&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;font-size&quot;</span><span class="o">:</span> <span class="s2">&quot;10px&quot;</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nx">xLabels</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">css</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;font-family&quot;</span><span class="o">:</span> <span class="s2">&quot;Microsoft Yahei&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;font-size&quot;</span><span class="o">:</span> <span class="s2">&quot;10px&quot;</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nx">title</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">content</span><span class="o">:</span> <span class="s2">&quot;Monthly Average Temperature&quot;</span>
+    <span class="p">},</span>
+    <span class="nx">anim</span><span class="o">:</span> <span class="p">{},</span>
+    <span class="nx">subTitle</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">content</span><span class="o">:</span> <span class="s2">&quot;Source: WorldClimate.com&quot;</span>
+    <span class="p">},</span>
+    <span class="nx">lineType</span><span class="o">:</span> <span class="s2">&quot;arc&quot;</span><span class="p">,</span>
+    <span class="nx">xAxis</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">text</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;Jan&#39;</span><span class="p">,</span> <span class="s1">&#39;Feb&#39;</span><span class="p">,</span> <span class="s1">&#39;Mar&#39;</span><span class="p">,</span> <span class="s1">&#39;Apr&#39;</span><span class="p">,</span> <span class="s1">&#39;May&#39;</span><span class="p">,</span> <span class="s1">&#39;Jun&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;Jul&#39;</span><span class="p">,</span> <span class="s1">&#39;Aug&#39;</span><span class="p">,</span> <span class="s1">&#39;Sep&#39;</span><span class="p">,</span> <span class="s1">&#39;Oct&#39;</span><span class="p">,</span> <span class="s1">&#39;Nov&#39;</span><span class="p">,</span> <span class="s1">&#39;Dec&#39;</span><span class="p">]</span>
+    <span class="p">},</span>
+    <span class="nx">yAxis</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">num</span><span class="o">:</span> <span class="mi">7</span>
+    <span class="p">},</span>
+    <span class="nx">comparable</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nx">series</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;Tokyo&#39;</span><span class="p">,</span>
+            <span class="nx">data</span><span class="o">:</span> <span class="p">[</span><span class="mf">7.0</span><span class="p">,</span> <span class="mf">6.9</span><span class="p">,</span> <span class="mf">9.5</span><span class="p">,</span> <span class="mf">14.5</span><span class="p">,</span> <span class="mf">18.2</span><span class="p">,</span> <span class="mf">21.5</span><span class="p">,</span> <span class="mf">25.2</span><span class="p">,</span> <span class="mf">26.5</span><span class="p">,</span> <span class="mf">23.3</span><span class="p">,</span> <span class="mf">18.3</span><span class="p">,</span> <span class="mf">13.9</span><span class="p">,</span> <span class="mf">9.6</span><span class="p">]</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;New York&#39;</span><span class="p">,</span>
+            <span class="nx">data</span><span class="o">:</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">5.7</span><span class="p">,</span> <span class="mf">11.3</span><span class="p">,</span> <span class="mf">17.0</span><span class="p">,</span> <span class="mf">22.0</span><span class="p">,</span> <span class="mf">24.8</span><span class="p">,</span> <span class="mf">24.1</span><span class="p">,</span> <span class="mf">20.1</span><span class="p">,</span> <span class="mf">14.1</span><span class="p">,</span> <span class="mf">8.6</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">]</span>
+        <span class="p">}</span>
+        <span class="p">,</span>
+        <span class="p">{</span>
+            <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;Berlin&#39;</span><span class="p">,</span>
+            <span class="nx">data</span><span class="o">:</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span> <span class="mf">8.4</span><span class="p">,</span> <span class="mf">13.5</span><span class="p">,</span> <span class="mf">17.0</span><span class="p">,</span> <span class="mf">18.6</span><span class="p">,</span> <span class="mf">17.9</span><span class="p">,</span> <span class="mf">14.3</span><span class="p">,</span> <span class="mf">9.0</span><span class="p">,</span> <span class="mf">3.9</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;London&#39;</span><span class="p">,</span>
+            <span class="nx">data</span><span class="o">:</span> <span class="p">[</span><span class="mf">3.9</span><span class="p">,</span> <span class="mf">4.2</span><span class="p">,</span> <span class="mf">5.7</span><span class="p">,</span> <span class="mf">8.5</span><span class="p">,</span> <span class="mf">11.9</span><span class="p">,</span> <span class="mf">15.2</span><span class="p">,</span> <span class="mf">17.0</span><span class="p">,</span> <span class="mf">16.6</span><span class="p">,</span> <span class="mf">14.2</span><span class="p">,</span> <span class="mf">10.3</span><span class="p">,</span> <span class="mf">6.6</span><span class="p">,</span> <span class="mf">4.8</span><span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nx">legend</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">isShow</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="o">-</span><span class="mi">10</span>
+    <span class="p">},</span>
+    <span class="nx">tip</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">offset</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">x</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+            <span class="nx">y</span><span class="o">:</span> <span class="mi">10</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+<span class="nx">barChart</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;barChange&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">log</span><span class="p">(</span><span class="s1">&#39;user is switch barchart!&#39;</span><span class="p">);</span>
+<span class="p">})</span>
+
+<span class="kd">var</span> <span class="nx">piechart</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PieChart</span><span class="p">({</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Chrome&quot;</span><span class="p">,</span> <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">},</span>
+        <span class="p">{</span><span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;FireFox&quot;</span><span class="p">,</span> <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">},</span>
+        <span class="p">{</span><span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;IE&quot;</span><span class="p">,</span> <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">},</span>
+        <span class="p">{</span><span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Opera&quot;</span><span class="p">,</span> <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">},</span>
+        <span class="p">{</span><span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Safari&quot;</span><span class="p">,</span> <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;renderTo&quot;</span><span class="o">:</span> <span class="s2">&quot;.piechart&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;rpadding&quot;</span><span class="o">:</span> <span class="mi">80</span><span class="p">,</span>
+    <span class="s2">&quot;anim&quot;</span><span class="o">:</span> <span class="p">{</span><span class="s2">&quot;easing&quot;</span><span class="o">:</span> <span class="s2">&quot;swing&quot;</span><span class="p">,</span> <span class="s2">&quot;duration&quot;</span><span class="o">:</span> <span class="mi">5000</span><span class="p">}</span>
+<span class="p">});</span>
+<span class="nx">log</span><span class="p">(</span><span class="s2">&quot;duration anim 5s&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+
+</div>
+                    
+
+<div class='related'>
+    <h3>导航</h3>
+    
+    <ul>
+    <li class="right" style="margin-right: 10px">
+      <a href="../../../../../genindex.html" title="总目录"
+         accesskey="I">索引</a></li>
+    <li class="right" >
+      <a href="../../../../../py-modindex.html" title="Python Module Index"
+         >模块</a> | </li>
+    <li class="right" >
+      <a href="../../../../../alimap/index.html" title="阿里地图"
+         accesskey="N">下一页</a> | </li>
+    <li class="right" >
+      <a href="../linechart/index.html" title="LineChart"
+         accesskey="P">上一页</a> | </li>
+    <li><a href="../../../../../index.html">OPENJS-v1.0 Document</a> &#187; </li>
+      <li><a href="../../../../index.html" >KISSY</a> &#187; </li>
+      <li><a href="../../../index.html" >Kissy Gallery</a> &#187; </li>
+      <li><a href="../index.html" accesskey="U">KCharts</a> &#187; </li> 
+    </ul>
+</div>
+					<div id="disqus_thread"></div>
+<script>
+    if(true && window.localStorage.getItem("kissy-commment")!="0"){
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kissy-docs'; // required: replace example with your forum shortname
+
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+     //var disqus_identifier = '/anim';
+     //var disqus_url = window.location;
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    }
+</script>
+<!--<div id="google-search-box">
+    <div id="cse" style="width: 100%;">Loading</div>
+    <script>
+        if(window.location.hostname.indexOf("kissyui.com")!=-1){
+            document.write('<script src="http://www.google.com/jsapi" type="text/javascript"><'+'/script>');
+        }
+    </script>
+    <script>
+        if(window.location.hostname.indexOf("kissyui.com")!=-1){
+            google.load('search', '1', {language : 'zh-CN', style : google.loader.themes.MINIMALIST});
+            google.setOnLoadCallback(function() {
+                var customSearchControl = new google.search.CustomSearchControl('012347804910294994683:n4uzb24gqdm');
+                customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+                customSearchControl.draw('cse');
+            }, true);
+        }
+    </script>
+</div>-->
+				</div>
+			</div>
+		
+    <div class="col-sub">
+
+<div class="s-box">
+    <div class="s-box-bd">
+        <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../index.html">KISSY</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../1.3.0/index.html">KISSY-v1.3.0</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html">Kissy Gallery</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">KCharts</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../linechart/index.html">LineChart</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="">BarChart</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../alimap/index.html">阿里地图</a></li>
+</ul>
+
+    </div>
+</div>
+    </div>
+    <div class="col-extra">
+        
+	<div class="s-box">
+		<div class="s-box-hd">
+			<h3>本页快速导航</h3>
+		</div>
+		<div class="s-box-bd">
+			<ul>
+<li><a class="reference internal" href="#">BarChart</a><ul>
+<li><a class="reference internal" href="#id2">构造函数</a></li>
+<li><a class="reference internal" href="#id3">参数配置</a></li>
+<li><a class="reference internal" href="#id4">实例方法</a></li>
+<li><a class="reference internal" href="#id5">事件</a></li>
+<li><a class="reference internal" href="#id6">构造函数详情</a></li>
+<li><a class="reference internal" href="#id7">参数配置详情</a></li>
+<li><a class="reference internal" href="#id8">方法详情</a></li>
+<li><a class="reference internal" href="#id9">事件详情</a></li>
+<li><a class="reference internal" href="#demo">demo 代码样例</a></li>
+</ul>
+</li>
+</ul>
+
+		</div>
+	</div>
+
+    </div>
+	</div>
+    <script>
+        if(!$.trim($(".col-extra").html())){
+            $("#layout").removeClass("grid-s6m0e7").addClass("grid-s6m0");
+        }
+    </script>
+</div>
+<div id="footer">
+    &copy; Copyright 2013~2023,  Created by 开放JavaScript-Team
+</div>
+</body>
+</html>

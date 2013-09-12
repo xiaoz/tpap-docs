@@ -31,11 +31,11 @@ delegate
 
     .. code-block:: html
 
-        <body>
+        <div class="container">
           <div class="clickme">
             Click here
           </div>
-        </body>
+        </div>
 
     绑定一个 click 事件的事件触发器：
 
@@ -49,7 +49,7 @@ delegate
 
     .. code-block:: javascript
 
-        KISSY.all('body').append('<div class="clickme">Another target</div>');
+        KISSY.all('.container').append('<div class="clickme">Another target</div>');
 
     新元素匹配选择器 ``clickme`` ,但是他如果不再次 on , 则在他上面的点击不会有任何效果.
 
@@ -57,7 +57,7 @@ delegate
 
     .. code-block:: javascript
 
-        Event.delegate(document,'click','.clickme',function(){
+        Event.delegate('.container','click','.clickme',function(){
            // Bound handler called.
         });
 
@@ -65,7 +65,7 @@ delegate
 
     .. code-block:: javascript
 
-        KISSY.all('body').append('<div class="clickme">Another target</div>');
+        KISSY.all('.container').append('<div class="clickme">Another target</div>');
 
     在新元素上点击仍然会调用之前的事件处理器.
 
@@ -75,7 +75,7 @@ delegate
         function d(){
         }
 
-        Event.delegate(document,'click','.clickme',d);
+        Event.delegate('.container','click','.clickme',d);
 
 
     .. note::

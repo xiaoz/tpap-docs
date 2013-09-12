@@ -2,7 +2,7 @@
 ==========================================
 
 .. toctree::
-    :maxdepth: 3
+    :titlesonly:
 
     alimap/index
     alievent/index

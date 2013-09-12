@@ -1,12 +1,11 @@
 .. _index:
 
-
-tpap文档中心
+tpap 文档中心
 =============================
 
 
 .. toctree::
-    :maxdepth: 3
+    :titlesonly:
 
-    kissy/1.3.0/index
+    kissy/index
     alimap/index
